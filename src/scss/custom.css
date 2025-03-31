@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* product slider main page *
+
+/* ✅ اسلایدر */
+.custom-slider-container {
+  width: 70%;
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+}
+
+.custom-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 260px;
+  width: 220px;
+}
+
+.custom-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.custom-card h3 {
+  margin: 10px 0;
+}
+
+/* ✅ سکشن کناری */
+.custom-sidebar .custom-sidebar {
+  width: 300px;
+  height: auto;
+  /* background-color: white; */
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  background: red;
+  /* margin-right: 400px; */
+  margin: 0 au;
+  position: relative;
+  left: -11%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  /* margin-top: 120px; */
+  /* justify-content: center; */
+  align-items: ce;
+  /* margin: 0 auto; */
+  margin-top: 80px;
+}
+
+aside.custom-sidebar {
+  background: red;
+  position: relative;
+  left: -10%;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=custom.css.map */

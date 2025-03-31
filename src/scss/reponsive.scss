@@ -1,0 +1,18 @@
+@media screen and (max-width:768px) {
+    .flex__icon{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .wrapper__cosmetic{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .container__images__flex{
+        display: flex;
+        flex-direction: column;
+    }
+}

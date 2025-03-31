@@ -1,0 +1,127 @@
+/* main styles comes here */
+@import url("menu.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "IRENYekan";
+  src: url("public/IRENYekan.ttf");
+}
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: #f9f6f6;
+  background: linear-gradient(0deg, #f9f6f6 0%, #ffffff 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.info__section {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, #E367AA 0%, #E367AA 100%);
+  position: relative;
+  top: -144px;
+  height: 333px;
+}
+
+/* grid section categorize */
+h2.txt__center {
+  text-align: center;
+  padding: 40px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #3C3C3C;
+  font-weight: 700;
+}
+
+.flex__icon {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  padding: 60px;
+}
+
+img[data-radous=active] {
+  border-radius: 5px;
+  width: 120px;
+}
+
+h4[data-center=active] {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.cosmetic {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.wrapper__cosmetic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.9rem;
+  margin-top: 30px;
+}
+
+.flex {
+  border-radius: 1rem;
+  height: auto;
+  width: 850px;
+}
+
+.card {
+  width: 150px;
+  height: 220px;
+  background: #722020;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 80px;
+  height: 40px;
+  background: white;
+  border-radius: 40px 40px 0 0;
+  transform: translateX(-50%);
+}
+
+.container__images__flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37px;
+}
+
+img.left__picture__flex {
+  width: 900px;
+  height: 410px;
+  border-radius: 10px;
+}
+
+/* search bar *//*# sourceMappingURL=style.css.map */
