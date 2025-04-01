@@ -85,7 +85,7 @@ h4[ data-center="active"] {
 .flex {
     border-radius: 1rem;
     height: auto;
-    width: 850px;
+    width: 700px;
 }
 .card {
     width: 150px;
@@ -122,9 +122,12 @@ h4[ data-center="active"] {
     margin-top: 37px;
 }
 img.left__picture__flex {
-    width: 900px;
-    height: 410px;
-    border-radius: 10px;
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+    /* padding-block: 10px; */
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 /* search bar */

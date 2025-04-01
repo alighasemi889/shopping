@@ -10,23 +10,11 @@
   <link rel="stylesheet" href="src/scss/product.css">
   <link rel="stylesheet" href="src/scss/style.css">
   <link rel="stylesheet" href="src/scss/reponsive.css">
-  <link rel="stylesheet" href="src/scss/custom.scss">
-  <link rel="stylesheet" href="src/scss/loader.css">
-  
+  <link rel="stylesheet" href="src/scss/custom.css">
+  <link rel="stylesheet" href="src/scss/chatbot.css">
 </head>
 <body>
-  <!-- loader structure section -->
-  <div class="loader" id="loader">
-    <div class="cell d-0"></div>
-    <div class="cell d-1"></div>
-    <div class="cell d-2"></div>
-    <div class="cell d-1"></div>
-    <div class="cell d-2"></div>
-    <div class="cell d-2"></div>
-    <div class="cell d-3"></div>
-    <div class="cell d-3"></div>
-    <div class="cell d-4"></div>
-</div>
+
 <!-- finish loader -->
  <div class="wrapper__main__page container " id="content">
   <header >
@@ -81,6 +69,28 @@
 <!-- header finished -->
 <!-- اسلایدر -->
 <main>
+  <!-- chatbot wrapper -->
+  <div class="chatbot">
+      <!-- دکمه پشتیبانی -->
+      <button class="chat-btn" onclick="toggleChat()">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/customer-support.png" alt="پشتیبانی">
+    </button>
+
+    <!-- پنجره چت -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">پشتیبانی هوشمند</div>
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">سلام! لطفاً یکی از سوالات زیر رو انتخاب کن:</div>
+            <div class="faq-list" id="faqList">
+                <div class="faq-item" onclick="selectFAQ('قیمت محصول چنده؟')">قیمت محصول چنده؟</div>
+                <div class="faq-item" onclick="selectFAQ('چطور سفارش بدم؟')">چطور سفارش بدم؟</div>
+                <div class="faq-item" onclick="selectFAQ('ارسال چقدر طول میکشه؟')">ارسال چقدر طول میکشه؟</div>
+                <div class="faq-item" onclick="selectFAQ('محصولات شما گارانتی دارن؟')">محصولات شما گارانتی دارن؟</div>
+            </div>
+        </div>
+    </div>
+
+  </div>
 <div class="swiper-container mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
@@ -128,42 +138,42 @@
       <div class="swiper-wrapper">
           <div class="swiper-slide">
               <div class="custom-card">
-                  <img src="pro3.webp" alt="Card Image">
+                  <img src="images/product3.webp" alt="Card Image" loading="lazy">
                   <h3>کارت اول</h3>
                   <p>توضیحات کارت اول</p>
               </div>
           </div>
           <div class="swiper-slide">
               <div class="custom-card">
-                  <img src="pro2.webp" alt="Card Image">
+                  <img src="images/product1.webp" alt="Card Image" loading="lazy">
                   <h3>کارت دوم</h3>
                   <p>توضیحات کارت دوم</p>
               </div>
           </div>
           <div class="swiper-slide">
             <div class="custom-card">
-                <img src="pro2.webp" alt="Card Image">
+                <img src="images/product4.webp" alt="Card Image" loading="lazy">
                 <h3>کارت دوم</h3>
                 <p>توضیحات کارت دوم</p>
             </div>
         </div>
         <div class="swiper-slide">
           <div class="custom-card">
-              <img src="pro2.webp" alt="Card Image">
+              <img src="images/product2.jpg" alt="Card Image" loading="lazy">
               <h3>کارت دوم</h3>
               <p>توضیحات کارت دوم</p>
           </div>
       </div>
           <div class="swiper-slide">
               <div class="custom-card">
-                  <img src="pro1.webp" alt="Card Image">
+                  <img src="images/product3.webp" alt="Card Image" loading="lazy">
                   <h3>کارت سوم</h3>
                   <p>توضیحات کارت سوم</p>
               </div>
           </div>
           <div class="swiper-slide">
               <div class="custom-card">
-                  <img src="pro4.webp" alt="Card Image">
+                  <img src="images/product3.webp" alt="Card Image" loading="lazy">
                   <h3>کارت چهارم</h3>
                   <p>توضیحات کارت چهارم</p>
               </div>
@@ -245,13 +255,6 @@
   <script src="src/js/product.js"></script>
   <script src="src/js/main.js"></script>
   <script src="src/js/newpro.js"></script>
-  <!-- <script src="customswiper.js"></script> -->
-   <!-- loader js part -->
- <script>
-   setTimeout(() => {
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('content').style.display = 'block';
-        }, 2000);
- </script>
+  <script src="src/js/chatbot.js"></script>
 </body>
 </html>
