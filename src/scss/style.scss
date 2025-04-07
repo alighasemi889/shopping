@@ -64,8 +64,10 @@ img[data-radous="active"] {
 }
 
 h4[ data-center="active"] {
+    color: #3C3C3C;
+    font-size: 1.2rem;
     text-align: center;
-    font-size: 1.4rem;
+    white-space:nowrap;
 }
 
 .cosmetic {
