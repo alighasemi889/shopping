@@ -12,11 +12,13 @@
   <link rel="stylesheet" href="src/scss/reponsive.css">
   <link rel="stylesheet" href="src/scss/custom.css">
   <link rel="stylesheet" href="src/scss/chatbot.css">
-  <link rel="stylesheet" href="cosmetic__slider.css">
-  <link rel="stylesheet" href="bottom__scrool.css">
+  <!-- <link rel="stylesheet" href="cosmetic__slider.css"> -->
+  <link rel="stylesheet" href="src/scss/scrooltop.css">
   <link rel="stylesheet" href="infinite__slider.css">
-  <link rel="stylesheet" href="story.css">
+  <link rel="stylesheet" href="src/scss/story.css">
   <link rel="stylesheet" href="src/scss/notification.css">
+  <link rel="stylesheet" href="cosmetic__slider.css">
+  <link rel="stylesheet" href="src/scss/product__slider.css">
 </head>
 <body>
   <div id="notification" class="notification"></div>
@@ -76,27 +78,27 @@
 </header>
 <!-- insta slider -->
 <div class="slider-container">
-  <div class="thumbnail" 
+  <div class="thumbnail show-m"  
        style="background-image: url('images/small__slider.jpg');" 
        data-image="images/product4.webp" 
        data-title="خانه مدرن" 
        data-desc="یه خونه شیک و مدرن با طراحی مینیمال"></div>
-  <div class="thumbnail" 
+  <div class="thumbnail show-m" 
        style="background-image: url('images/small__slider.jpg');" 
        data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
        data-title="طبیعت" 
        data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
-       <div class="thumbnail" 
+       <div class="thumbnail show-m" 
        style="background-image: url('images/small__slider.jpg');" 
        data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
        data-title="طبیعت" 
        data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
-       <div class="thumbnail" 
+       <div class="thumbnail show-m" 
        style="background-image: url('images/small__slider.jpg');" 
        data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
        data-title="طبیعت" 
        data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
-       <div class="thumbnail" 
+       <div class="thumbnail show-m" 
        style="background-image: url('images/small__slider.jpg');" 
        data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
        data-title="طبیعت" 
@@ -460,46 +462,10 @@
   <script src="src/js/main.js"></script>
   <script src="src/js/newpro.js"></script>
   <script src="src/js/chatbot.js"></script>
-  <script src="cosmetic.js"></script>
-  <script src="top_bottom.js"></script>
-  <script src="story.js"></script>
-  <script>
-      const notification = document.getElementById('notification');
-        const content = document.getElementById('content__notif');
+  <script src="src/js/cosmetic.js"></script>
+  <script src="src/js/scrooltop.js"></script>
+  <script src="src/js/story.js"></script>
+  <script src="src/js/notification.js"></script>
 
-        // تابع برای نشون دادن نوتیفیکیشن
-        function showNotification(message, isOnline) {
-            notification.textContent = message;
-            notification.classList.add('show');
-            if (isOnline) {
-                notification.classList.add('online');
-            } else {
-                notification.classList.remove('online');
-            }
-            // بعد از 3 ثانیه محو بشه
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
-
-        // بررسی وضعیت اولیه
-        if (navigator.onLine) {
-            content.style.display = 'block'; // نمایش محتوا
-        } else {
-            showNotification('شما آفلاین هستید!', false);
-        }
-
-        // رویداد آفلاین شدن
-        window.addEventListener('offline', () => {
-            showNotification('شما آفلاین شدید!', false);
-            content.style.display = 'none'; // مخفی کردن محتوا
-        });
-
-        // رویداد آنلاین شدن
-        window.addEventListener('online', () => {
-            showNotification('شما دوباره آنلاین شدید!', true);
-            content.style.display = 'block'; // نمایش محتوا
-        });
-  </script>
 </body>
 </html>

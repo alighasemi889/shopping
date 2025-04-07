@@ -7,7 +7,7 @@
     justify-content: ri;
 }
 .container__toggle {
-    max-width: 1200px;
+    // max-width: 1200px;
     /* margin: 0 auto; */
     display: flex
 ;
@@ -16,14 +16,26 @@
     align-items: center;
     justify-content: center;
     margin: 40px 0 0 0;
+    width: 100%;
+    // background: red;
+    padding: 20px;
   }
   
   .btn__toggle {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    display: flex
+    ;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        font-size: 1.9rem;
+        width: 100%;
+        /* max-width: 100%; */
+        // justify-content: `;
+        justify-content: flex-end;
   }
+  .container__slider {
+    margin-left: auto;
+}
   
   .filter-btn {
     padding: 12px 25px;
@@ -76,8 +88,10 @@
     display: block;
     opacity: 1;
     transform: translateY(0);
-    width: 200px;
-    height: auto;
+    // width: 200px;
+    // height: auto;
+    width: 300px;
+    height: 300px;
   }
   
   .card img {
