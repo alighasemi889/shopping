@@ -16,3 +16,11 @@
         flex-direction: column;
     }
 }
+@media screen and (max-width:1000px){
+    .slider-container{
+        display: flex;
+    }
+    .show-m{
+        display: none;
+    }
+}
