@@ -1,8 +1,11 @@
 @charset "UTF-8";
 /* تنظیمات عمومی برای اسلایدر */
 .swiper-container {
+  position: relative;
   width: 100%;
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .swiper-slide {

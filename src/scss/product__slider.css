@@ -1,22 +1,22 @@
 @charset "UTF-8";
 .wrapper__slider {
   width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: ri;
 }
 
 .container__toggle {
-  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
-  /* position: relative; */
   align-items: center;
   justify-content: center;
   margin: 40px 0 0 0;
   width: 100%;
   padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn__toggle {
@@ -26,12 +26,14 @@
   margin-bottom: 30px;
   font-size: 1.9rem;
   width: 100%;
-  /* max-width: 100%; */
   justify-content: flex-end;
+  max-width: 100%;
 }
 
 .container__slider {
   margin-left: auto;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .filter-btn {
