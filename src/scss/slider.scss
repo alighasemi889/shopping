@@ -1,7 +1,10 @@
 /* تنظیمات عمومی برای اسلایدر */
 @mixin swiper-wrapper{
-  width: 100%;
   position: relative;
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
 }
 .swiper-container {
   @include swiper-wrapper()

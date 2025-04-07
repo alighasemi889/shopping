@@ -14,8 +14,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap:
-        1rem;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .thumbnail {
@@ -115,10 +119,10 @@
 }
 
 @media (max-width: 768px) {
-    .thumbnail {
-        width: 100px;
-        height: 100px;
-    }
+    // .thumbnail {
+    //     width: 100px;
+    //     height: 100px;
+    // }
 
     .modal-content {
         width: 95%;
