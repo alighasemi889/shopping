@@ -1,0 +1,66 @@
+
+.logo-slider {
+    width: 100%;
+    overflow: hidden; /* مخفی کردن لوگوهای اضافی */
+    position: relative;
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slider-track {
+    display: flex;
+    width: calc(150px * 10); /* عرض کل اسلایدر (5 لوگو اصلی + 5 لوگوی تکراری) */
+    animation: scroll 20s linear infinite; /* انیمیشن بی‌نهایت */
+  }
+  
+  .logo-slider:hover .slider-track {
+    animation-play-state: paused; /* توقف انیمیشن هنگام هاور */
+  }
+  
+  .logo {
+    flex: 0 0 150px; /* عرض هر لوگو */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* انیمیشن اسکرول بی‌نهایت */
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 5)); /* جابه‌جایی به اندازه 5 لوگو */
+    }
+  }
+  
+  /* ریسپانسیو */
+  @media (max-width: 768px) {
+    .logo {
+        flex: 0 0 120px; /* عرض کمتر در موبایل */
+        height: 40px;
+    }
+  
+    .slider-track {
+        width: calc(120px * 10); /* تنظیم عرض برای موبایل */
+        animation: scroll 15s linear infinite; /* سرعت بیشتر در موبایل */
+    }
+  
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-120px * 5));
+        }
+    }
+  }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Swiper Slider</title>
+  <title>Cosmetic</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.css" />
   <link rel="stylesheet" href="src/scss/menu.css">
   <link rel="stylesheet" href="src/scss/slider.css">
@@ -12,11 +12,19 @@
   <link rel="stylesheet" href="src/scss/reponsive.css">
   <link rel="stylesheet" href="src/scss/custom.css">
   <link rel="stylesheet" href="src/scss/chatbot.css">
+  <link rel="stylesheet" href="cosmetic__slider.css">
+  <link rel="stylesheet" href="bottom__scrool.css">
+  <link rel="stylesheet" href="infinite__slider.css">
+  <link rel="stylesheet" href="story.css">
+  <link rel="stylesheet" href="src/scss/notification.css">
 </head>
 <body>
+  <div id="notification" class="notification"></div>
 
-<!-- finish loader -->
- <div class="wrapper__main__page container " id="content">
+  <!-- btn for scrool top to bottom -->
+  <button class="scroll-to-top">↑</button>
+
+ <div class="wrapper__main__page container " id="content__notif">
   <header >
     <nav class="header__desktop">
         <div class="list">
@@ -32,9 +40,9 @@
               <div class="main__menu">
                 <li><a class="hidden" href="#">مراقبت از پوست</a></li>
                 <li><a class="hidden" href="#">لوازم آرایشی</a></li>
-                <li><a class="hidden" href="#">مراقبت از پوست</a></li>
-                <li><a class="hidden" href="#">مراقبت از پوست</a></li>
-                <li><a class="hidden" href="#">مراقبت از پوست</a></li>
+                <li><a class="hidden" href="#">مراقبت از مو</a></li>
+                <li><a class="hidden" href="#">وبلاگ</a></li>
+                <li><a class="hidden" href="#">تماس با ما</a></li>
               </div>
               <div class="left__side__icons">
                 <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M17.7241 16.1932L13.6436 12.1127C14.626 10.8049 15.1563 9.21299 15.1546 7.57728C15.1546 3.39919 11.7554 0 7.57728 0C3.39919 0 0 3.39919 0 7.57728C0 11.7554 3.39919 15.1546 7.57728 15.1546C9.21299 15.1563 10.8049 14.626 12.1127 13.6436L16.1932 17.7241C16.3998 17.9088 16.6692 18.0073 16.9461 17.9996C17.2231 17.9918 17.4865 17.8783 17.6824 17.6824C17.8783 17.4865 17.9918 17.2231 17.9996 16.9461C18.0073 16.6692 17.9088 16.3998 17.7241 16.1932ZM2.16494 7.57728C2.16494 6.50682 2.48237 5.4604 3.07708 4.57034C3.6718 3.68029 4.51709 2.98657 5.50607 2.57693C6.49504 2.16728 7.58328 2.0601 8.63318 2.26893C9.68307 2.47777 10.6475 2.99325 11.4044 3.75018C12.1613 4.5071 12.6768 5.47149 12.8856 6.52138C13.0945 7.57128 12.9873 8.65952 12.5776 9.64849C12.168 10.6375 11.4743 11.4828 10.5842 12.0775C9.69416 12.6722 8.64774 12.9896 7.57728 12.9896C6.14237 12.9879 4.76672 12.4171 3.75208 11.4025C2.73744 10.3878 2.16666 9.01219 2.16494 7.57728Z" fill="currentColor"></path></svg>
@@ -66,6 +74,80 @@
         </div>  
     </nav>
 </header>
+<!-- insta slider -->
+<div class="slider-container">
+  <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="images/product4.webp" 
+       data-title="خانه مدرن" 
+       data-desc="یه خونه شیک و مدرن با طراحی مینیمال"></div>
+  <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
+       data-title="طبیعت" 
+       data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
+       data-title="طبیعت" 
+       data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
+       data-title="طبیعت" 
+       data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
+       data-title="طبیعت" 
+       data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1518780664697-55e3ad937233" 
+       data-title="طبیعت" 
+       data-desc="منظره‌ای زیبا از طبیعت و کوه"></div>
+  <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1505691938895-43d051a43c6e" 
+       data-title="قهوه" 
+       data-desc="یه فنجون قهوه داغ برای صبح"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1505691938895-43d051a43c6e" 
+       data-title="قهوه" 
+       data-desc="یه فنجون قهوه داغ برای صبح"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1505691938895-43d051a43c6e" 
+       data-title="قهوه" 
+       data-desc="یه فنجون قهوه داغ برای صبح"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1505691938895-43d051a43c6e" 
+       data-title="قهوه" 
+       data-desc="یه فنجون قهوه داغ برای صبح"></div>
+       <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1505691938895-43d051a43c6e" 
+       data-title="قهوه" 
+       data-desc="یه فنجون قهوه داغ برای صبح"></div>
+  <div class="thumbnail" 
+       style="background-image: url('images/small__slider.jpg');" 
+       data-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48" 
+       data-title="ورزش" 
+       data-desc="یه روز پر انرژی توی باشگاه"></div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+      <span class="close-btn" id="closeBtn">×</span>
+      <img class="modal-image" id="modalImage" src="">
+      <div class="modal-text">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+      </div>
+  </div>
+</div>
 <!-- header finished -->
 <!-- اسلایدر -->
 <main>
@@ -244,17 +326,180 @@
       <img class="flex" src="images/home-cosmetics19.jpg" alt="picture" loading="lazy">
     </div>
   </section>
+  <div class="wrapper__slider">
+    <div class="container__toggle">
+      <div class="container__slider">
+        <!-- <h1>salam</h1> -->
+        <div class="container__toggle">
+          <div class="buttons__slider btn__toggle">
+              <button class="filter-btn active" data-category="category1">پودرها</button>
+              <button class="filter-btn" data-category="category2">لاک‌ها</button>
+              <button class="filter-btn" data-category="category3">برق لب‌ها</button>
+              <button class="filter-btn" data-category="category4">رژ لب‌ها</button>
+          </div>
+          <div class="cards-wrapper">
+              <div class="cards" id="cards">
+                  <!-- کارت‌های پیش‌فرض (دسته‌بندی 1) -->
+                  <div class="card" data-category="category1">
+                      <img src="images/product1.webp" alt="پودر فشرده">
+                      <h3>پودر فشرده NARS</h3>
+                      <p class="price">۱,۰۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category1">
+                      <img src="images/product2.jpg" alt="پودر مات">
+                      <h3>پودر مات MAC</h3>
+                      <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category1">
+                      <img src="images/product4.webp" alt="پودر برنزه">
+                      <h3>پودر برنزه Fenty</h3>
+                      <p class="price">۹۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category1">
+                      <img src="images/product3.webp" alt="پودر هایلایت">
+                      <h3>پودر هایلایت Dior</h3>
+                      <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
   
+                  <!-- کارت‌های دسته‌بندی 2 -->
+                  <div class="card" data-category="category2">
+                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+قرمز" alt="لاک ناخن قرمز">
+                      <h3>لاک ناخن قرمز OPI</h3>
+                      <p class="price">۳۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category2">
+                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+صورتی" alt="لاک ناخن صورتی">
+                      <h3>لاک ناخن صورتی Essie</h3>
+                      <p class="price">۳۵۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category2">
+                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+مشکی" alt="لاک ناخن مشکی">
+                      <h3>لاک ناخن مشکی Chanel</h3>
+                      <p class="price">۴۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category2">
+                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+براق" alt="لاک ناخن براق">
+                      <h3>لاک ناخن براق Sally Hansen</h3>
+                      <p class="price">۳۲۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+  
+                  <!-- کارت‌های دسته‌بندی 3 -->
+                  <div class="card" data-category="category3">
+                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+صورتی" alt="برق لب صورتی">
+                      <h3>برق لب صورتی NARS</h3>
+                      <p class="price">۵۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category3">
+                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+شفاف" alt="برق لب شفاف">
+                      <h3>برق لب شفاف Fenty</h3>
+                      <p class="price">۴۸۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category3">
+                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+قرمز" alt="برق لب قرمز">
+                      <h3>برق لب قرمز Dior</h3>
+                      <p class="price">۵۵۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category3">
+                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+براق" alt="برق لب براق">
+                      <h3>برق لب براق MAC</h3>
+                      <p class="price">۴۹۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+  
+                  <!-- کارت‌های دسته‌بندی 4 -->
+                  <div class="card" data-category="category4">
+                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+مات" alt="رژ لب مات">
+                      <h3>رژ لب مات Sisley</h3>
+                      <p class="price">۶۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category4">
+                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+صورتی" alt="رژ لب صورتی">
+                      <h3>رژ لب صورتی YSL</h3>
+                      <p class="price">۶۵۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category4">
+                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+قرمز" alt="رژ لب قرمز">
+                      <h3>رژ لب قرمز Chanel</h3>
+                      <p class="price">۷۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+                  <div class="card" data-category="category4">
+                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+براق" alt="رژ لب براق">
+                      <h3>رژ لب براق Gucci</h3>
+                      <p class="price">۶۸۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
 </main>
 
  </div>
 
- 
+  <!-- scripts files -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="src/js/slider.js"></script>
   <script src="src/js/product.js"></script>
   <script src="src/js/main.js"></script>
   <script src="src/js/newpro.js"></script>
   <script src="src/js/chatbot.js"></script>
+  <script src="cosmetic.js"></script>
+  <script src="top_bottom.js"></script>
+  <script src="story.js"></script>
+  <script>
+      const notification = document.getElementById('notification');
+        const content = document.getElementById('content__notif');
+
+        // تابع برای نشون دادن نوتیفیکیشن
+        function showNotification(message, isOnline) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            if (isOnline) {
+                notification.classList.add('online');
+            } else {
+                notification.classList.remove('online');
+            }
+            // بعد از 3 ثانیه محو بشه
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // بررسی وضعیت اولیه
+        if (navigator.onLine) {
+            content.style.display = 'block'; // نمایش محتوا
+        } else {
+            showNotification('شما آفلاین هستید!', false);
+        }
+
+        // رویداد آفلاین شدن
+        window.addEventListener('offline', () => {
+            showNotification('شما آفلاین شدید!', false);
+            content.style.display = 'none'; // مخفی کردن محتوا
+        });
+
+        // رویداد آنلاین شدن
+        window.addEventListener('online', () => {
+            showNotification('شما دوباره آنلاین شدید!', true);
+            content.style.display = 'block'; // نمایش محتوا
+        });
+  </script>
 </body>
 </html>

@@ -90,7 +90,8 @@ hr.line {
 }
 
 a.hidden {
-  font-size: 1.9em;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 a.mobile__link {
