@@ -19,10 +19,17 @@
   <link rel="stylesheet" href="src/scss/notification.css">
   <link rel="stylesheet" href="cosmetic__slider.css">
   <link rel="stylesheet" href="src/scss/product__slider.css">
+  <link rel="stylesheet" href="src/scss/banner.css">
+  <link rel="stylesheet" href="src/scss/scroolbar.css">
+  <link rel="stylesheet" href="src/scss/logo.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
   <div id="notification" class="notification"></div>
-
+  <div class="banner banner__top">
+    <img class="banner__image" src="images/banner__image.webp" alt="banner" loading="lazy">
+  </div>
   <!-- btn for scrool top to bottom -->
   <button class="scroll-to-top">↑</button>
 
@@ -77,7 +84,7 @@
     </nav>
 </header>
 <!-- insta slider -->
-<div class="slider-container">
+<div class="slider-container" data-aos="fade-right"  data-aos-duration="12000">
   <div class="thumbnail show-m"  
        style="background-image: url('images/story4.jpg');" 
        data-image="images/product4.webp" 
@@ -322,7 +329,7 @@
       </div>
   </div>
   <!-- cosmetic pictures section -->
-  <section class="cosmetic">
+  <section class="cosmetic" data-aos="flip-up">
     <div class="wrapper__cosmetic">
       <img class="flex" src="images/home-cosmetics18.jpg" alt="picture" loading="lazy">
       <img class="flex" src="images/home-cosmetics19.jpg" alt="picture" loading="lazy">
@@ -361,7 +368,7 @@
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category1">
-                      <img src="images/product3.webp" alt="پودر هایلایت">
+                      <img src="images/product3.webp" alt="پودر هایلایت" loading="lazy">
                       <h3>پودر هایلایت Dior</h3>
                       <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
@@ -369,25 +376,25 @@
   
                   <!-- کارت‌های دسته‌بندی 2 -->
                   <div class="card" data-category="category2">
-                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+قرمز" alt="لاک ناخن قرمز">
+                      <img src="images/product2.jpg" alt="لاک ناخن قرمز" loading="lazy">
                       <h3>لاک ناخن قرمز OPI</h3>
                       <p class="price">۳۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category2">
-                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+صورتی" alt="لاک ناخن صورتی">
+                      <img src="images/product3.webp" alt="لاک ناخن صورتی" loading="lazy">
                       <h3>لاک ناخن صورتی Essie</h3>
                       <p class="price">۳۵۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category2">
-                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+مشکی" alt="لاک ناخن مشکی">
+                      <img src="images/product4.webp" alt="لاک ناخن مشکی">
                       <h3>لاک ناخن مشکی Chanel</h3>
                       <p class="price">۴۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category2">
-                      <img src="https://via.placeholder.com/200x200.png?text=لاک+ناخن+براق" alt="لاک ناخن براق">
+                      <img src="images/product1.webp" alt="لاک ناخن براق">
                       <h3>لاک ناخن براق Sally Hansen</h3>
                       <p class="price">۳۲۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
@@ -395,25 +402,26 @@
   
                   <!-- کارت‌های دسته‌بندی 3 -->
                   <div class="card" data-category="category3">
-                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+صورتی" alt="برق لب صورتی">
+                      <img src="images/product2.jpg" alt="برق لب صورتی">
                       <h3>برق لب صورتی NARS</h3>
                       <p class="price">۵۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
+                  
                   <div class="card" data-category="category3">
-                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+شفاف" alt="برق لب شفاف">
+                      <img src="images/product2.jpg" alt="برق لب شفاف">
                       <h3>برق لب شفاف Fenty</h3>
                       <p class="price">۴۸۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category3">
-                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+قرمز" alt="برق لب قرمز">
+                      <img src="images/product1.webp" alt="برق لب قرمز">
                       <h3>برق لب قرمز Dior</h3>
                       <p class="price">۵۵۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category3">
-                      <img src="https://via.placeholder.com/200x200.png?text=برق+لب+براق" alt="برق لب براق">
+                      <img src="images/product3.webp" alt="برق لب براق">
                       <h3>برق لب براق MAC</h3>
                       <p class="price">۴۹۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
@@ -421,25 +429,25 @@
   
                   <!-- کارت‌های دسته‌بندی 4 -->
                   <div class="card" data-category="category4">
-                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+مات" alt="رژ لب مات">
+                      <img src="images/product3.webp" alt="رژ لب مات">
                       <h3>رژ لب مات Sisley</h3>
                       <p class="price">۶۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category4">
-                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+صورتی" alt="رژ لب صورتی">
+                      <img src="images/product2.jpg" alt="رژ لب صورتی">
                       <h3>رژ لب صورتی YSL</h3>
                       <p class="price">۶۵۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category4">
-                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+قرمز" alt="رژ لب قرمز">
+                      <img src="images/product3.webp" alt="رژ لب قرمز">
                       <h3>رژ لب قرمز Chanel</h3>
                       <p class="price">۷۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
                   </div>
                   <div class="card" data-category="category4">
-                      <img src="https://via.placeholder.com/200x200.png?text=رژ+لب+براق" alt="رژ لب براق">
+                      <img src="images/product2.jpg" alt="رژ لب براق">
                       <h3>رژ لب براق Gucci</h3>
                       <p class="price">۶۸۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
@@ -450,11 +458,80 @@
       </div>
     </div>
   </div>
-  <div class="flex__images">
+  <!-- flex images -->
+  <div class="flex__images" data-aos="flip-up">
     <img class="picture__one__flex image__border" src="images/cosmetic__picture__old.jpg" alt="picture" loading="lazy">
     <img class="picture__two__flex image__border" src="images/cosmetic__picture__old2.jpg" alt="picture" loading="lazy">
   </div>
-
+  <!-- logo slider  -->
+  <div class="logos">
+    <h3 class="brand">پر فروش ترین برند ها</h3>
+    <div class="logo_items">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    
+    </div>
+      <div class="logo_items">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
+    
+    </div>
+    </div>
+    <!-- skin images section -->
+     <section class="skin__container" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+      <img data-width="on" class="first__skin" src="images/skin1__image.webp" alt="پوست" loading="lazy" decoding="async">
+      <img data-width="on" class="second__skin" src="images/skin2__image.webp" alt="پوست" loading="lazy" decoding="async">
+      <img data-width="on" class="third__skin" src="images/skin3__image.webp" alt="پوست" loading="lazy" decoding="async">
+      <img data-width="on" class="fourth__skin" src="images/skin4__image.webp" alt="پوست" loading="lazy" decoding="async">
+     </section>
 </main>
 
  </div>
@@ -470,6 +547,10 @@
   <script src="src/js/scrooltop.js"></script>
   <script src="src/js/story.js"></script>
   <script src="src/js/notification.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <script src="aos.js"></script> -->
+  <script src="src/js/aos.js"></script>
+
 
 </body>
 </html>
