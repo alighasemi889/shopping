@@ -1,0 +1,13 @@
+.banner {
+    width: 100%;
+    // max-width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    --white:#fff;
+    color: var(--white);
+}
+.banner__image{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
