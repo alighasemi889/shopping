@@ -132,4 +132,21 @@ img.left__picture__flex {
     padding-left: 10px;
 }
 
-/* search bar */
+
+.flex__images {
+    display: flex
+;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 10px;
+    gap: 2rem;
+    overflow: hidden;
+    max-width: 100%;
+    max-width: 100%;
+}
+.image__border{
+    max-width: 100%;
+    border-radius: 10px;
+    width: 590px;
+    height: auto;
+}
