@@ -22,4 +22,25 @@
     .hide__mobile{
         display: none;
     }
+    .flex__images {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .skin__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .image__card,.image__fluid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .article__images{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
 }
