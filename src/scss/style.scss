@@ -1,5 +1,11 @@
-/* main styles comes here */
+/* import styles */
 @import url("menu.css");
+@import url("../scss/scroolbar.css");
+@import url("../scss/chatbot.css");
+@import url("../scss/banner.css");
+@import url("../scss/product.css");
+@import url("../scss/scrooltop.css");
+
 
 * {
     padding: 0;
@@ -176,7 +182,8 @@ img[data-width="on"]{
     margin: 70px 0 0 0;
 }
 .auto__special{
-    width: 400px;
+    // width: 400px;
+    width: 498.2px;
     height: auto;
     border-radius: 10px;
 }
