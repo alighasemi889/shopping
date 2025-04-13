@@ -1,5 +1,37 @@
 .footer__line {
   background: red;
-  width: 80%;
+  width: 100%;
   height: 4px;
+}
+
+nav.footer {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+ul.footer__first__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul.footer__second__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h4 {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+footer.footer__wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  direction: rtl;
 }/*# sourceMappingURL=footer.css.map */
