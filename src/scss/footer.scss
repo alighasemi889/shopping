@@ -1,0 +1,9 @@
+@mixin footer__line(){
+    background: red;
+    width: 80%;
+    height: 4px;
+    // background: red;
+}
+.footer__line{
+    @include footer__line();
+}
