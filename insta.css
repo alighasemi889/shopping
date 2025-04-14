@@ -1,7 +1,9 @@
-.container__instagram {
-    max-width: 1200px;
+.container__story__instagram {
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 32px 0;
+    box-sizing: border-box;
 }
 .stories-container {
     overflow-x: auto;
@@ -9,9 +11,11 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     white-space: nowrap;
-    padding: 16px;
+    padding: 16px 8px; /* کاهش حاشیه برای موبایل */
     display: flex;
     gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .stories-container::-webkit-scrollbar {
     display: none;
@@ -20,6 +24,7 @@
     scroll-snap-align: center;
     display: inline-block;
     text-align: center;
+    min-width: 100px; /* اطمینان از عرض مناسب */
 }
 .story-circle {
     width: 80px;
@@ -71,5 +76,13 @@
     }
     .modal video {
         max-height: 90vh;
+    }
+}
+@media (max-width: 767px) {
+    .stories-container {
+        padding: 16px 0; /* حذف حاشیه‌های اضافی در کناره‌ها */
+    }
+    .story-item {
+        min-width: 90px; /* عرض کمتر برای موبایل */
     }
 }
