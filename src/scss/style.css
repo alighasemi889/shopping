@@ -87,7 +87,7 @@ h4[data-center=active] {
 .flex {
   border-radius: 1rem;
   height: auto;
-  width: 700px;
+  width: 800px;
 }
 
 .card {
@@ -195,9 +195,9 @@ img[data-width=on] {
 
 .article__image {
   overflow: hidden;
-  width: 350.4px;
+  width: 405.4px;
   max-width: 100%;
-  height: 200px;
+  height: 221px;
   border-radius: 1rem;
 }
 
@@ -211,4 +211,58 @@ img[data-width=on] {
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+.right__txt__footer {
+  padding: 28px;
+  font-size: 19px;
+}
+
+.footer__flex__icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left__icon__footer {
+  margin: 0 90px 0;
+}
+
+img.footer__icon {
+  width: 90px;
+  border: 3px solid #ccc;
+}
+
+img.footer__logo.right__logo__footer {
+  margin: 0 183px;
+  padding-top: 100px;
+}
+
+h3.footer__txt__small {
+  color: #7a7a7a;
+  margin: 0 170px;
+}
+
+#small__svg {
+  width: 60px;
+  height: auto;
+  border: 2px thick;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8117647059);
+}
+
+.image__flex__footer {
+  width: 180px;
+  /* background: red; */
+  display: flex;
+  gap: 1rem;
+}
+
+.txt__contact {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 10px;
+  gap: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
