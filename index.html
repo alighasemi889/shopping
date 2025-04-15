@@ -19,17 +19,21 @@
   <link rel="stylesheet" href="src/scss/footer.css">
   <link rel="stylesheet" href="src/scss/banner.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="loader.css">
 
 </head>
 <body>
-  <div id="notification" class="notification"></div>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+    <div id="notification" class="notification"></div>
 . <div class="banner">
   <h1>از تخفیف های ما جا نمانید</h1>
 </div>
   <!-- btn for scrool top to bottom -->
   <!-- <button class="scroll-to-top">↑</button> -->
 
- <div class="wrapper__main__page container " id="content__notif">
+ <div class="wrapper__main__page container main-content hidden" id="content__notif">
   <header >
     <nav class="header__desktop">
         <div class="list">
@@ -45,7 +49,7 @@
               <div class="main__menu">
                 <li><a class="hidden" href="#">مراقبت از پوست</a></li>
                 <li><a class="hidden" href="#">لوازم آرایشی</a></li>
-                <li><a class="hidden" href="#">مراقبت از مو</a></li>
+                <li><a class="hidden" href="product.html">محصولات</a></li>
                 <li><a class="hidden" href="#">وبلاگ</a></li>
                 <li><a class="hidden" href="#">تماس با ما</a></li>
               </div>
@@ -699,6 +703,7 @@
   <script src="src/js/notification.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="src/js/aos.js"></script>
+  <script src="src/js/loader.js"></script>
 
 </body>
 </html>

@@ -14,11 +14,13 @@
 }
 
 @font-face {
-    font-family: "IRENYekan";
-    src: url("public/IRENYekan.ttf");
+    font-family: "yekan";
+    src: url("../../public/Yekan.woff");
+    font-weight: 600;
 }
 
 body {
+    font-family: "yekan";
     box-sizing: border-box;
     overflow-x: hidden;
     background: #f9f6f6;
