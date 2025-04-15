@@ -1,13 +1,13 @@
-.banner {
+@mixin banner(){
     width: 100%;
-    // max-width: 100%;
+    overflow: hidden;
+    background: rgb(30, 179, 91);
+    color: #fff;
     text-align: center;
-    font-size: 1.8rem;
-    --white:#fff;
-    color: var(--white);
+    padding: 10px;
+    margin-top: -20px;
+    font-size: .87em;
 }
-.banner__image{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+.banner{
+    @include banner()
 }
