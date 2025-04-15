@@ -4,7 +4,8 @@
     width: 100%;
     position: relative;
     max-width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-x: hidden;
 }
 .swiper-container {
   @include swiper-wrapper()
@@ -16,6 +17,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
   }
   
   .swiper-slide img {
