@@ -17,17 +17,20 @@
   <link rel="stylesheet" href="src/scss/logo.css">
   <link rel="stylesheet" href="src/scss/carousel.css">
   <link rel="stylesheet" href="src/scss/footer.css">
+  <link rel="stylesheet" href="banner.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="insta.css"> -->
 
 </head>
 <body>
   <div id="notification" class="notification"></div>
-  <div class="banner banner__top">
-    <img class="banner__image" src="images/banner__image.webp" alt="banner" loading="lazy">
-  </div>
+  <div class="banner">
+    <div class="banner-content">
+        <h1>خوش آمدید!</h1>
+        <p>بنری شیک و واکنش‌گرا برای سایت شما</p>
+    </div>
+</div>
   <!-- btn for scrool top to bottom -->
-  <button class="scroll-to-top">↑</button>
+  <!-- <button class="scroll-to-top">↑</button> -->
 
  <div class="wrapper__main__page container " id="content__notif">
   <header >
@@ -85,27 +88,7 @@
 <!-- اسلایدر -->
 <main>
   <!-- chatbot wrapper -->
-  <div class="chatbot">
-      <!-- دکمه پشتیبانی -->
-      <button class="chat-btn" onclick="toggleChat()">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/customer-support.png" alt="پشتیبانی">
-    </button>
 
-    <!-- پنجره چت -->
-    <div class="chat-window" id="chatWindow">
-        <div class="chat-header">پشتیبانی هوشمند</div>
-        <div class="chat-body" id="chatBody">
-            <div class="message bot-message">سلام! لطفاً یکی از سوالات زیر رو انتخاب کن:</div>
-            <div class="faq-list" id="faqList">
-                <div class="faq-item" onclick="selectFAQ('قیمت محصول چنده؟')">قیمت محصول چنده؟</div>
-                <div class="faq-item" onclick="selectFAQ('چطور سفارش بدم؟')">چطور سفارش بدم؟</div>
-                <div class="faq-item" onclick="selectFAQ('ارسال چقدر طول میکشه؟')">ارسال چقدر طول میکشه؟</div>
-                <div class="faq-item" onclick="selectFAQ('محصولات شما گارانتی دارن؟')">محصولات شما گارانتی دارن؟</div>
-            </div>
-        </div>
-    </div>
-
-  </div>
 <div class="swiper-container mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
@@ -715,81 +698,10 @@
   <script src="src/js/newpro.js"></script>
   <script src="src/js/chatbot.js"></script>
   <script src="src/js/cosmetic.js"></script>
-  <script src="src/js/scrooltop.js"></script>
-  <script src="src/js/story.js"></script>
+  <!-- <script src="src/js/scrooltop.js"></script> -->
   <script src="src/js/notification.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="src/js/aos.js"></script>
 
-  <script>
-    const carousel = document.getElementById('carousel');
-  
-    function scrollCarousel(direction) {
-      const scrollAmount = 160; // کارت + فاصله
-      carousel.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-<script>
-     const storiesContainer = document.querySelector('.stories-container');
-        const storyCircles = document.querySelectorAll('.story-circle');
-        const modal__story = document.getElementById('storyModal');
-        const video = modal__story.querySelector('video');
-
-        storyCircles.forEach(circle => {
-            circle.addEventListener('click', () => {
-                const videoUrl = circle.getAttribute('data-video');
-                video.querySelector('source').setAttribute('src', videoUrl);
-                video.load();
-                modal__story.style.display = 'flex';
-            });
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target !== video) {
-              modal__story.style.display = 'none';
-                video.pause();
-            }
-        });
-
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        storiesContainer.addEventListener('mousedown', (e) => {
-            isDown = true;
-            startX = e.pageX - storiesContainer.offsetLeft;
-            scrollLeft = storiesContainer.scrollLeft;
-        });
-
-        storiesContainer.addEventListener('mouseleave', () => {
-            isDown = false;
-        });
-
-        storiesContainer.addEventListener('mouseup', () => {
-            isDown = false;
-        });
-
-        storiesContainer.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - storiesContainer.offsetLeft;
-            const walk = (x - startX) * 2;
-            storiesContainer.scrollLeft = scrollLeft - walk;
-        });
-
-        storiesContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].pageX - storiesContainer.offsetLeft;
-            scrollLeft = storiesContainer.scrollLeft;
-        });
-
-        storiesContainer.addEventListener('touchmove', (e) => {
-            const x = e.touches[0].pageX - storiesContainer.offsetLeft;
-            const walk = (x - startX) * 2;
-            storiesContainer.scrollLeft = scrollLeft - walk;
-        });
-</script>
 </body>
 </html>

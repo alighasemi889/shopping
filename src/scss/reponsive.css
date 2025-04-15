@@ -8,10 +8,15 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    /* height: auto; */
   }
   .container__images__flex {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   .slider-container {
     display: flex;
@@ -43,5 +48,34 @@
   }
   .footer {
     flex-direction: column;
+  }
+  img[data-width=on] {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+  }
+  img.photo__box {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+  }
+  div.cards {
+    flex-wrap: wrap;
+  }
+  .img.left__picture__flex {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+  }
+  img.image__border {
+    width: 480px;
+    height: auto;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  div.cards {
+    display: flex;
+    gap: 1rem;
   }
 }/*# sourceMappingURL=reponsive.css.map */
