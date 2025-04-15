@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="src/scss/footer.css">
   <link rel="stylesheet" href="src/scss/banner.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="loader.css">
+  <link rel="stylesheet" href="src/scss/loader__new.css">
+  <link rel="stylesheet" href="src/scss/instagram.css">
 
 </head>
 <body>
@@ -84,7 +85,108 @@
     </nav>
 </header>
 <!-- instagram story slider -->
+<div class="ig-mobile-slider">
+  <div class="ig-story-container">
+      <div class="ig-story-circle" data-story="1">
+          <img src="images/article__image2.webp" alt="Story 1">
+      </div>
+      <div class="ig-story-circle" data-story="2">
+          <img src="images/story5.jpg" alt="Story 2">
+      </div>
+      <div class="ig-story-circle" data-story="3">
+          <img src="images/article__image2.webp" alt="Story 3">
+      </div>
+      <div class="ig-story-circle" data-story="4">
+          <img src="images/article__image1.webp" alt="Story 4">
+      </div>
+      <div class="ig-story-circle" data-story="5">
+          <img src="images/story6.webp" alt="Story 5">
+      </div>
+      <div class="ig-story-circle" data-story="6">
+          <img src="images/story4.webp" alt="Story 6">
+      </div>
+      <div class="ig-story-circle" data-story="7">
+          <img src="images/story4.webp" alt="Story 7">
+      </div>
+      <div class="ig-story-circle" data-story="8">
+          <img src="images/article__image3.webp" alt="Story 8">
+      </div>
+      <div class="ig-story-circle" data-story="9">
+          <img src="images/article__image1.webp" alt="Story 9">
+      </div>
+      <div class="ig-story-circle" data-story="10">
+          <img src="images/story4.webp" alt="Story 10">
+      </div>
+      <div class="ig-story-circle" data-story="10">
+        <img src="images/article__image3.webp" alt="Story 10">
+    </div>
+    <div class="ig-story-circle" data-story="10">
+      <img src="images/article__image2.webp" alt="Story 10">
+  </div>
+  <div class="ig-story-circle" data-story="10">
+    <img src="images/article__image3.webp" alt="Story 10">
+</div>
 
+  </div>
+</div>
+
+<div class="ig-desktop-grid">
+  <div class="ig-story-circle" data-story="1">
+      <img src="images/article__image2.webp" alt="Story 1">
+  </div>
+  <div class="ig-story-circle" data-story="1">
+    <img src="images/article__image4.webp" alt="Story 1">
+</div>
+<div class="ig-story-circle" data-story="1">
+  <img src="images/article__image3.webp" alt="Story 1">
+</div>
+<div class="ig-story-circle" data-story="1">
+  <img src="images/story4.jpg" alt="Story 1">
+</div>
+<div class="ig-story-circle" data-story="1">
+  <img src="images/article__image2.webp" alt="Story 1">
+</div>
+<div class="ig-story-circle" data-story="1">
+  <img src="images/story4.webp" alt="Story 1">
+</div>
+
+  <div class="ig-story-circle" data-story="2">
+      <img src="images/article__image2.webp" alt="Story 2">
+  </div>
+  <div class="ig-story-circle" data-story="3">
+      <img src="images/article__image3.webp" alt="Story 3">
+  </div>
+  <div class="ig-story-circle" data-story="4">
+      <img src="images/article__iamge3.webp" alt="Story 4">
+  </div>
+  <div class="ig-story-circle" data-story="5">
+      <img src="images/article__image3.webp" alt="Story 5">
+  </div>
+  <div class="ig-story-circle" data-story="6">
+      <img src="images/story5.jpg" alt="Story 6">
+  </div>
+  <div class="ig-story-circle" data-story="7">
+      <img src="images/story1.jpg" alt="Story 7">
+  </div>
+  <div class="ig-story-circle" data-story="8">
+      <img src="images/story6.webp" alt="Story 8">
+  </div>
+  <div class="ig-story-circle" data-story="9">
+      <img src="images/story3.jpg" alt="Story 9">
+  </div>
+  <div class="ig-story-circle" data-story="10">
+      <img src="images/story6.webp" alt="Story 10">
+  </div>
+</div>
+
+<div class="ig-story-viewer" id="storyViewer">
+  <div class="ig-story-content">
+      <img id="storyImage" src="" alt="Story">
+  </div>
+  <button class="close-btn" onclick="closeStory()">
+      <i class="fas fa-times"></i>
+  </button>
+</div>
 <!-- header finished -->
 <!-- اسلایدر -->
 <main>
@@ -704,6 +806,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="src/js/aos.js"></script>
   <script src="src/js/loader.js"></script>
+  <script src="src/js/instagram.js"></script>
 
 </body>
 </html>
