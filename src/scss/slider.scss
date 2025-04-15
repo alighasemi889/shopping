@@ -15,10 +15,12 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
   }
   
   .swiper-slide img {
     width: 100vw;
+    // overflow: hidden;
     height: auto;
     object-fit: cover;  /* به این معنا که تصویر بدون تغییر نسبت ابعاد، تمام عرض و ارتفاع اسلاید را پر می‌کند */
   }
