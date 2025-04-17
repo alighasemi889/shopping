@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اسلایدر محصولات با تاچ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      overflow: hidden;
+    }
+    .slider-section {
+      flex: 3;
+      min-width: 300px;
+      background-color: #e63946;
+      padding: 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .buy-now-section {
+      flex: 1;
+      min-width: 250px;
+      background-color: #fff;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid #eee;
+    }
+    .buy-now-section h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .buy-now-section p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+    .buy-now-section button {
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+    .buy-now-section button:hover {
+      background-color: #d00000;
+    }
+    .slider {
+      overflow: hidden;
+      position: relative;
+      flex: 1;
+    }
+    .slider-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: max-content;
+      touch-action: pan-y;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      margin: 0 15px;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+      height: 350px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      user-select: none;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card h3 {
+      font-size: 18px;
+      margin: 15px 0;
+      color: #333;
+    }
+    .card p {
+      font-size: 16px;
+      color: #666;
+    }
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .slider-controls button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      padding: 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      margin: 0 15px;
+      transition: background-color 0.3s;
+    }
+    .slider-controls button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+      }
+      .buy-now-section {
+        border-right: none;
+        border-top: 1px solid #eee;
+      }
+      .card {
+        width: 200px;
+        height: 300px;
+      }
+      .card img {
+        height: 140px;
+      }
+    }
+    @media (max-width: 768px) {
+      .slider-section {
+        flex-direction: column-reverse;
+      }
+      .buy-now-section {
+        flex-direction: column;
+        text-align: center;
+        border-top: none;
+        padding: 20px;
+      }
+      .buy-now-section h2 {
+        font-size: 24px;
+      }
+      .buy-now-section p {
+        font-size: 16px;
+      }
+      .buy-now-section button {
+        font-size: 16px;
+        padding: 12px;
+      }
+      .card {
+        width: 160px;
+        height: 260px;
+      }
+      .card img {
+        height: 100px;
+      }
+      .card h3 {
+        font-size: 16px;
+      }
+      .card p {
+        font-size: 14px;
+      }
+      .slider-controls button {
+        font-size: 24px;
+        padding: 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      .card {
+        width: 120px;
+        height: 200px;
+      }
+      .card img {
+        height: 80px;
+      }
+      .card h3 {
+        font-size: 14px;
+      }
+      .card p {
+        font-size: 12px;
+      }
+      .slider-controls button {
+        font-size: 20px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="buy-now-section">
+      <h2>سریع‌تر بخرید!</h2>
+      <p>فرصت‌های ویژه در انتظار شماست، همین حالا اقدام کنید!</p>
+      <button>خرید کنید</button>
+    </div>
+    <div class="slider-section">
+      <div class="slider">
+        <div class="slider-container" id="sliderContainer">
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 1">
+            <h3>محصول 1</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 2">
+            <h3>محصول 2</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 3">
+            <h3>محصول 3</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 4">
+            <h3>محصول 4</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 5">
+            <h3>محصول 5</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 6">
+            <h3>محصول 6</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 7">
+            <h3>محصول 7</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 8">
+            <h3>محصول 8</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 9">
+            <h3>محصول 9</h3>
+            <p>توضیح مختصر</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/200" alt="محصول 10">
+            <h3>محصول 10</h3>
+            <p>توضیح مختصر</p>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button onclick="slideLeft()"><i class="fas fa-chevron-right"></i></button>
+          <button onclick="slideRight()"><i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currentIndex = 0;
+    const cards = document.querySelectorAll('.card');
+    const totalCards = cards.length;
+    const visibleCards = 5;
+    let cardWidth = cards[0].offsetWidth + 30; // Including margin
+    let startX = 0;
+    let isDragging = false;
+
+    const sliderContainer = document.getElementById('sliderContainer');
+
+    function slideLeft() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    }
+
+    function slideRight() {
+      if (currentIndex < totalCards - visibleCards) {
+        currentIndex++;
+        updateSlider();
+      }
+    }
+
+    function updateSlider() {
+      sliderContainer.style.transform = `translateX(${currentIndex * cardWidth}px)`;
+    }
+
+    // Touch and swipe functionality
+    sliderContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+      sliderContainer.style.transition = 'none';
+    });
+
+    sliderContainer.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const currentX = e.touches[0].clientX;
+      const diffX = startX - currentX;
+      sliderContainer.style.transform = `translateX(${(currentIndex * cardWidth + diffX)}px)`;
+    });
+
+    sliderContainer.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+      const currentX = e.changedTouches[0].clientX;
+      const diffX = startX - currentX;
+      if (Math.abs(diffX) > cardWidth / 3) { // Swipe threshold
+        if (diffX > 0 && currentIndex < totalCards - visibleCards) {
+          slideRight();
+        } else if (diffX < 0 && currentIndex > 0) {
+          slideLeft();
+        } else {
+          updateSlider();
+        }
+      } else {
+        updateSlider();
+      }
+    });
+
+    // Mouse drag functionality for desktop
+    let isMouseDown = false;
+    sliderContainer.addEventListener('mousedown', (e) => {
+      startX = e.clientX;
+      isMouseDown = true;
+      sliderContainer.style.transition = 'none';
+      e.preventDefault();
+    });
+
+    sliderContainer.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      const currentX = e.clientX;
+      const diffX = startX - currentX;
+      sliderContainer.style.transform = `translateX(${(currentIndex * cardWidth + diffX)}px)`;
+    });
+
+    sliderContainer.addEventListener('mouseup', (e) => {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+      const currentX = e.clientX;
+      const diffX = startX - currentX;
+      if (Math.abs(diffX) > cardWidth / 3) {
+        if (diffX > 0 && currentIndex < totalCards - visibleCards) {
+          slideRight();
+        } else if (diffX < 0 && currentIndex > 0) {
+          slideLeft();
+        } else {
+          updateSlider();
+        }
+      } else {
+        updateSlider();
+      }
+    });
+
+    sliderContainer.addEventListener('mouseleave', () => {
+      if (isMouseDown) {
+        isMouseDown = false;
+        sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+        updateSlider();
+      }
+    });
+
+    // Prevent default drag behavior
+    sliderContainer.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Recalculate card width on resize
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].offsetWidth + 30;
+      updateSlider();
+    });
+  </script>
+</body>
+</html>
