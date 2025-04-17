@@ -1,10 +1,103 @@
+@charset "UTF-8";
+/* ریست اولیه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* استایل بنر */
 .banner {
   width: 100%;
-  overflow: hidden;
-  background: rgb(30, 179, 91);
-  color: #fff;
+  background: linear-gradient(90deg, #2c3e50, #3498db); /* گرادیانت آبی تیره به روشن */
+  color: #ffffff;
   text-align: center;
-  padding: 10px;
-  margin-top: -34px;
-  font-size: 0.87em;
+  padding: 12px 10px;
+  position: relative;
+  font-family: "Vazir", sans-serif;
+  line-height: 1.5;
+}
+
+/* محتوای بنر */
+.banner-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* تیتر بنر */
+.banner-content h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* سایه برای خوانایی */
+}
+
+/* دکمه CTA */
+.cta-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #2ecc71; /* سبز ملایم */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: pulse 3s infinite; /* پالس ملایم‌تر */
+}
+
+/* افکت پالس برای دکمه */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.5);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 8px rgba(46, 204, 113, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ریسپانسیو برای تبلت */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .banner-content h1 {
+    font-size: 1.5rem;
+  }
+  .cta-button {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+  }
+}
+/* ریسپانسیو برای موبایل */
+@media (max-width: 480px) {
+  .banner {
+    padding: 10px 5px;
+  }
+  .banner-content h1 {
+    font-size: 1.3rem;
+  }
+  .cta-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+/* محتوای اصلی سایت (برای تست) */
+.content {
+  padding: 20px;
+  text-align: center;
 }/*# sourceMappingURL=banner.css.map */

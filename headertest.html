@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کازمتیک</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: #f3f4f6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .right__side {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo__header .logo {
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo__header .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .group:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #4b5563;
+            margin-left: 0.5rem;
+        }
+
+        .input {
+            border: none;
+            outline: none;
+            background: transparent;
+            width: 200px;
+            font-size: 0.9rem;
+            color: #1f2937;
+        }
+
+        .input::placeholder {
+            color: #9ca3af;
+        }
+
+        .left__side {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn__header {
+            background: linear-gradient(45deg, #10b981, #34d399);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn__header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .notif__icon {
+            width: 24px;
+            height: 24px;
+            filter: invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .notif__icon:hover {
+            transform: rotate(15deg);
+        }
+
+        .main__header {
+            background: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            padding: 0.5rem 2rem;
+        }
+
+        .nav__main {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav__main li a {
+            color: #1f2937;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav__main li a:hover {
+            background: #f3f4f6;
+            color: #4f46e5;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .right__side {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .input {
+                width: 100%;
+            }
+
+            .nav__main {
+                gap: 1rem;
+                justify-content: space-around;
+            }
+
+            .nav__main li a {
+                font-size: 0.85rem;
+                padding: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo__header .logo {
+                height: 32px;
+            }
+
+            .btn__header {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .group {
+                width: 100%;
+            }
+
+            .nav__main {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="right__side">
+                <div class="logo__header">
+                    <img class="logo" src="full-horizontal.svg" alt="لوگو">
+                </div>
+                <div class="group">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                            ></path>
+                        </g>
+                    </svg>
+                    <input class="input" type="search" placeholder="جستجو در کازمتیک" />
+                </div>
+            </div>
+            <div class="left__side">
+                <div class="btn">
+                    <button class="btn__header">ورود | ثبت نام</button>
+                    <img class="notif__icon" src="icons8-notification-50.png" alt="اعلان">
+                </div>
+            </div>
+        </nav>
+        <nav class="main__header">
+            <ul class="nav__main">
+                <li><a href="#">محصولات</a></li>
+                <li><a href="#">پوست</a></li>
+                <li><a href="#">مو</a></li>
+                <li><a href="#">آرایش</a></li>
+                <li><a href="#">عطر</a></li>
+                <li><a href="#">برندها</a></li>
+                <li><a href="#">تخفیف‌ها</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
