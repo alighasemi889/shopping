@@ -1,268 +1,447 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>محصولات - زیبایی تو</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Vazir', sans-serif;
-            direction: rtl;
-        }
-        @font-face {
-            font-family: 'Vazir';
-            src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff') format('woff');
-        }
+      body {
+        font-family: "Vazir", sans-serif;
+        direction: rtl;
+      }
+      @font-face {
+        font-family: "Vazir";
+        src: url("https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff")
+          format("woff");
+      }
+      .filter-sidebar {
+        position: sticky;
+        top: 20px;
+      }
+      .filter-toggle {
+        display: none;
+      }
+      .filter-sidebar.active {
+        display: block;
+      }
+      @media (max-width: 768px) {
         .filter-sidebar {
-            position: sticky;
-            top: 20px;
+          display: none;
+          position: fixed;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 75%;
+          z-index: 1000;
+          background: white;
+          box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+          overflow-y: auto;
         }
         .filter-toggle {
-            display: none;
+          display: block;
         }
-        .filter-sidebar.active {
-            display: block;
-        }
-        @media (max-width: 768px) {
-            .filter-sidebar {
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100%;
-                width: 75%;
-                z-index: 1000;
-                background: white;
-                box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-                overflow-y: auto;
-            }
-            .filter-toggle {
-                display: block;
-            }
-        }
+      }
     </style>
-</head>
-<body class="bg-gray-100">
+  </head>
+  <body class="bg-gray-100">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-pink-600">زیبایی تو</h1>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#" class="text-gray-600 hover:text-pink-600">خانه</a>
-                <a href="#" class="text-gray-600 hover:text-pink-600">محصولات</a>
-                <a href="#" class="text-gray-600 hover:text-pink-600">وبلاگ</a>
-                <a href="#" class="text-gray-600 hover:text-pink-600">تماس</a>
-            </nav>
-            <div class="flex items-center">
-                <button class="md:hidden text-pink-600 filter-toggle" onclick="toggleFilter()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18M6 10h12M9 16h6" />
-                    </svg>
-                </button>
-                <button class="md:hidden text-pink-600 ml-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </div>
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-pink-600">زیبایی تو</h1>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#" class="text-gray-600 hover:text-pink-600">خانه</a>
+          <a href="#" class="text-gray-600 hover:text-pink-600">محصولات</a>
+          <a href="#" class="text-gray-600 hover:text-pink-600">وبلاگ</a>
+          <a href="#" class="text-gray-600 hover:text-pink-600">تماس</a>
+        </nav>
+        <div class="flex items-center">
+          <button
+            class="md:hidden text-pink-600 filter-toggle"
+            onclick="toggleFilter()"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 4h18M6 10h12M9 16h6"
+              />
+            </svg>
+          </button>
+          <button class="md:hidden text-pink-600 ml-4">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
-        <div class="flex flex-col md:flex-row gap-6">
-            <!-- Filter Sidebar -->
-            <aside class="w-full md:w-1/4 bg-white rounded-lg shadow-md p-6 filter-sidebar">
-                <div class="flex justify-between items-center mb-4 md:hidden">
-                    <h2 class="text-xl font-bold text-gray-800">فیلتر محصولات</h2>
-                    <button onclick="toggleFilter()" class="text-pink-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <!-- Category Filter -->
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-2">دسته‌بندی</h3>
-                    <div class="space-y-2">
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 category-filter" value="رژ لب">
-                            <span class="text-gray-600">رژ لب</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 category-filter" value="کرم پودر">
-                            <span class="text-gray-600">کرم پودر</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 category-filter" value="ریمل">
-                            <span class="text-gray-600">ریمل</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 category-filter" value="سایه چشم">
-                            <span class="text-gray-600">سایه چشم</span>
-                        </label>
-                    </div>
-                </div>
-                <!-- Price Filter -->
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-2">محدوده قیمت</h3>
-                    <div class="flex items-center justify-between">
-                        <input type="number" id="min-price" placeholder="از" class="w-1/2 p-2 border rounded-lg mx-1">
-                        <input type="number" id="max-price" placeholder="تا" class="w-1/2 p-2 border rounded-lg mx-1">
-                    </div>
-                    <button onclick="applyPriceFilter()" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">اعمال فیلتر</button>
-                </div>
-                <!-- Brand Filter -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-700 mb-2">برند</h3>
-                    <div class="space-y-2">
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 brand-filter" value="لورآل">
-                            <span class="text-gray-600">لورآل</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 brand-filter" value="میبلین">
-                            <span class="text-gray-600">میبلین</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2 brand-filter" value="دیور">
-                            <span class="text-gray-600">دیور</span>
-                        </label>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- Products Grid -->
-            <div class="w-full md:w-3/4">
-                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Product Card 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card" data-category="رژ لب" data-brand="لورآل" data-price="250000">
-                        <img src="images/article__image4.webp" alt="رژ لب مات" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">رژ لب مات</h3>
-                            <p class="text-gray-600 text-sm">رنگ‌های جذاب و ماندگار</p>
-                            <p class="text-pink-600 font-bold mt-2">250,000 تومان</p>
-                            <button onclick="addToCart('رژ لب مات', 250000)" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">افزودن به سبد خرید</button>
-                        </div>
-                    </div>
-                    <!-- Product Card 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card" data-category="کرم پودر" data-brand="میبلین" data-price="350000">
-                        <img src="images/article__image4.webp" alt="کرم پودر" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">کرم پودر</h3>
-                            <p class="text-gray-600 text-sm">پوشش کامل و طبیعی</p>
-                            <p class="text-pink-600 font-bold mt-2">350,000 تومان</p>
-                            <button onclick="addToCart('کرم پودر', 350000)" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">افزودن به سبد خرید</button>
-                        </div>
-                    </div>
-                    <!-- Product Card 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card" data-category="ریمل" data-brand="دیور" data-price="200000">
-                        <img src="images/article__image4.webp" alt="ریمل حجم‌دهنده" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">ریمل حجم‌دهنده</h3>
-                            <p class="text-gray-600 text-sm">مژه‌هایی بلند و پرپشت</p>
-                            <p class="text-pink-600 font-bold mt-2">200,000 تومان</p>
-                            <button onclick="addToCart('ریمل حجم‌دهنده', 200000)" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">افزودن به سبد خرید</button>
-                        </div>
-                    </div>
-                    <!-- Product Card 4 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card" data-category="سایه چشم" data-brand="لورآل" data-price="400000">
-                        <img src="images/article__image4.webp" alt="پالت سایه" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">پالت سایه</h3>
-                            <p class="text-gray-600 text-sm">ترکیب رنگ‌های متنوع</p>
-                            <p class="text-pink-600 font-bold mt-2">400,000 تومان</p>
-                            <button onclick="addToCart('پالت سایه', 400000)" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">افزودن به سبد خرید</button>
-                        </div>
-                    </div>
-                    <!-- Product Card 5 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card" data-category="رژ لب" data-brand="میبلین" data-price="280000">
-                        <img src="images/article__image4.webp" alt="رژ لب براق" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">رژ لب براق</h3>
-                            <p class="text-gray-600 text-sm">براق و مرطوب‌کننده</p>
-                            <p class="text-pink-600 font-bold mt-2">280,000 تومان</p>
-                            <button onclick="addToCart('رژ لب براق', 280000)" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">افزودن به سبد خرید</button>
-                        </div>
-                    </div>
-                    <!-- Product Card 6 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card" data-category="کرم پودر" data-brand="دیور" data-price="320000">
-                        <img src="images/article__image4.webp" alt="فونداسیون" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">فونداسیون</h3>
-                            <p class="text-gray-600 text-sm">پوشش سبک و بادوام</p>
-                            <p class="text-pink-600 font-bold mt-2">320,000 تومان</p>
-                            <button onclick="addToCart('فونداسیون', 320000)" class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">افزودن به سبد خرید</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- Filter Sidebar -->
+        <aside
+          class="w-full md:w-1/4 bg-white rounded-lg shadow-md p-6 filter-sidebar"
+        >
+          <div class="flex justify-between items-center mb-4 md:hidden">
+            <h2 class="text-xl font-bold text-gray-800">فیلتر محصولات</h2>
+            <button onclick="toggleFilter()" class="text-pink-600">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- Category Filter -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">دسته‌بندی</h3>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="mr-2 category-filter"
+                  value="رژ لب"
+                />
+                <span class="text-gray-600">رژ لب</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="mr-2 category-filter"
+                  value="کرم پودر"
+                />
+                <span class="text-gray-600">کرم پودر</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="mr-2 category-filter"
+                  value="ریمل"
+                />
+                <span class="text-gray-600">ریمل</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="mr-2 category-filter"
+                  value="سایه چشم"
+                />
+                <span class="text-gray-600">سایه چشم</span>
+              </label>
             </div>
+          </div>
+          <!-- Price Filter -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
+              محدوده قیمت
+            </h3>
+            <div class="flex items-center justify-between">
+              <input
+                type="number"
+                id="min-price"
+                placeholder="از"
+                class="w-1/2 p-2 border rounded-lg mx-1"
+              />
+              <input
+                type="number"
+                id="max-price"
+                placeholder="تا"
+                class="w-1/2 p-2 border rounded-lg mx-1"
+              />
+            </div>
+            <button
+              onclick="applyPriceFilter()"
+              class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+            >
+              اعمال فیلتر
+            </button>
+          </div>
+          <!-- Brand Filter -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">برند</h3>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="mr-2 brand-filter"
+                  value="لورآل"
+                />
+                <span class="text-gray-600">لورآل</span>
+              </label>
+              <label class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="mr-2 brand-filter"
+                  value="میبلین"
+                />
+                <span class="text-gray-600">میبلین</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2 brand-filter" value="دیور" />
+                <span class="text-gray-600">دیور</span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products Grid -->
+        <div class="w-full md:w-3/4">
+          <div
+            id="products-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Product Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card"
+              data-category="رژ لب"
+              data-brand="لورآل"
+              data-price="250000"
+            >
+              <img
+                src="images/article__image4.webp"
+                alt="رژ لب مات"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">رژ لب مات</h3>
+                <p class="text-gray-600 text-sm">رنگ‌های جذاب و ماندگار</p>
+                <p class="text-pink-600 font-bold mt-2">250,000 تومان</p>
+                <button
+                  onclick="addToCart('رژ لب مات', 250000)"
+                  class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card"
+              data-category="کرم پودر"
+              data-brand="میبلین"
+              data-price="350000"
+            >
+              <img
+                src="images/article__image4.webp"
+                alt="کرم پودر"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">کرم پودر</h3>
+                <p class="text-gray-600 text-sm">پوشش کامل و طبیعی</p>
+                <p class="text-pink-600 font-bold mt-2">350,000 تومان</p>
+                <button
+                  onclick="addToCart('کرم پودر', 350000)"
+                  class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card"
+              data-category="ریمل"
+              data-brand="دیور"
+              data-price="200000"
+            >
+              <img
+                src="images/article__image4.webp"
+                alt="ریمل حجم‌دهنده"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">
+                  ریمل حجم‌دهنده
+                </h3>
+                <p class="text-gray-600 text-sm">مژه‌هایی بلند و پرپشت</p>
+                <p class="text-pink-600 font-bold mt-2">200,000 تومان</p>
+                <button
+                  onclick="addToCart('ریمل حجم‌دهنده', 200000)"
+                  class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card"
+              data-category="سایه چشم"
+              data-brand="لورآل"
+              data-price="400000"
+            >
+              <img
+                src="images/article__image4.webp"
+                alt="پالت سایه"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">پالت سایه</h3>
+                <p class="text-gray-600 text-sm">ترکیب رنگ‌های متنوع</p>
+                <p class="text-pink-600 font-bold mt-2">400,000 تومان</p>
+                <button
+                  onclick="addToCart('پالت سایه', 400000)"
+                  class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card"
+              data-category="رژ لب"
+              data-brand="میبلین"
+              data-price="280000"
+            >
+              <img
+                src="images/article__image4.webp"
+                alt="رژ لب براق"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">رژ لب براق</h3>
+                <p class="text-gray-600 text-sm">براق و مرطوب‌کننده</p>
+                <p class="text-pink-600 font-bold mt-2">280,000 تومان</p>
+                <button
+                  onclick="addToCart('رژ لب براق', 280000)"
+                  class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition product-card"
+              data-category="کرم پودر"
+              data-brand="دیور"
+              data-price="320000"
+            >
+              <img
+                src="images/article__image4.webp"
+                alt="فونداسیون"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-800">فونداسیون</h3>
+                <p class="text-gray-600 text-sm">پوشش سبک و بادوام</p>
+                <p class="text-pink-600 font-bold mt-2">320,000 تومان</p>
+                <button
+                  onclick="addToCart('فونداسیون', 320000)"
+                  class="mt-4 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition"
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-purple-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-4">© 1404  cosmetic - تمامی حقوق محفوظ است</p>
-            <!-- <div class="flex justify-center space-x-4">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-4">© 1404 cosmetic - تمامی حقوق محفوظ است</p>
+        <!-- <div class="flex justify-center space-x-4">
                 <a href="#" class="hover:text-pink-300">اینستاگرام</a>
                 <a href="#" class="hover:text-pink-300">تلگرام</a>
                 <a href="#" class="hover:text-pink-300">واتساپ</a>
             </div> -->
-        </div>
+      </div>
     </footer>
 
     <script>
-        // Toggle Filter Sidebar on Mobile
-        function toggleFilter() {
-            const sidebar = document.querySelector('.filter-sidebar');
-            sidebar.classList.toggle('active');
-        }
+      // Toggle Filter Sidebar on Mobile
+      function toggleFilter() {
+        const sidebar = document.querySelector(".filter-sidebar");
+        sidebar.classList.toggle("active");
+      }
 
-        // Cart Functionality
-        let cart = [];
-        function addToCart(productName, price) {
-            cart.push({ name: productName, price: price });
-            alert(`${productName} به سبد خرید اضافه شد!`);
-            console.log('سبد خرید:', cart); // For debugging
-        }
+      // Cart Functionality
+      let cart = [];
+      function addToCart(productName, price) {
+        cart.push({ name: productName, price: price });
+        alert(`${productName} به سبد خرید اضافه شد!`);
+        console.log("سبد خرید:", cart); // For debugging
+      }
 
-        // Filter Functionality
-        function applyFilters() {
-            const categories = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value);
-            const brands = Array.from(document.querySelectorAll('.brand-filter:checked')).map(cb => cb.value);
-            const minPrice = parseInt(document.getElementById('min-price').value) || 0;
-            const maxPrice = parseInt(document.getElementById('max-price').value) || Infinity;
+      // Filter Functionality
+      function applyFilters() {
+        const categories = Array.from(
+          document.querySelectorAll(".category-filter:checked"),
+        ).map((cb) => cb.value);
+        const brands = Array.from(
+          document.querySelectorAll(".brand-filter:checked"),
+        ).map((cb) => cb.value);
+        const minPrice =
+          parseInt(document.getElementById("min-price").value) || 0;
+        const maxPrice =
+          parseInt(document.getElementById("max-price").value) || Infinity;
 
-            const products = document.querySelectorAll('.product-card');
+        const products = document.querySelectorAll(".product-card");
 
-            products.forEach(product => {
-                const productCategory = product.dataset.category;
-                const productBrand = product.dataset.brand;
-                const productPrice = parseInt(product.dataset.price);
+        products.forEach((product) => {
+          const productCategory = product.dataset.category;
+          const productBrand = product.dataset.brand;
+          const productPrice = parseInt(product.dataset.price);
 
-                const categoryMatch = categories.length === 0 || categories.includes(productCategory);
-                const brandMatch = brands.length === 0 || brands.includes(productBrand);
-                const priceMatch = productPrice >= minPrice && productPrice <= maxPrice;
+          const categoryMatch =
+            categories.length === 0 || categories.includes(productCategory);
+          const brandMatch =
+            brands.length === 0 || brands.includes(productBrand);
+          const priceMatch =
+            productPrice >= minPrice && productPrice <= maxPrice;
 
-                if (categoryMatch && brandMatch && priceMatch) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
+          if (categoryMatch && brandMatch && priceMatch) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
 
-        // Apply Price Filter
-        function applyPriceFilter() {
-            applyFilters();
-        }
+      // Apply Price Filter
+      function applyPriceFilter() {
+        applyFilters();
+      }
 
-        // Event Listeners for Filters
-        document.querySelectorAll('.category-filter, .brand-filter').forEach(checkbox => {
-            checkbox.addEventListener('change', applyFilters);
+      // Event Listeners for Filters
+      document
+        .querySelectorAll(".category-filter, .brand-filter")
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", applyFilters);
         });
     </script>
-</body>
+  </body>
 </html>

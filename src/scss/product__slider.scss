@@ -1,136 +1,139 @@
 .wrapper__slider {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container__toggle {
-  display: flex
-  ;
-      flex-direction: column;
-      gap: 1rem;
-      flex-wrap: wrap;
-    margin: 40px 0 0 0;
-    width: 100%;
-    padding: 20px;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .btn__toggle {
-    display: flex ;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 30px;
-        // font-size: 1.9rem;
-        width: 100%;
-        justify-content: flex-end;
-        max-width: 100%;
-  }
-  .container__slider {
-    margin-left: auto;
-    max-width: 100%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 40px 0 0 0;
+  width: 100%;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
-  
-  .filter-btn {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    // background: linear-gradient(135deg, #4facfe, #00f2fe); /* گرادیانت آبی شیک */
-    color: white;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background: #D72685;
-    border-width: 1px 1px 1px 1px;
-  }
-  
-  .filter-btn:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #00f2fe, #4facfe);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .filter-btn.active {
-    background: linear-gradient(135deg, #1e90ff, #00b4db);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cards-wrapper {
-    position: relative;
-    width: 100%;
-  }
-  
-  .cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    display: none; /* به صورت پیش‌فرض مخفی */
-  }
-  
-  .card.visible {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    height: 377.2px;
-    width: 287.8px;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .card h3 {
-    font-size: 1.2em;
-    color: #4a4a4a;
-    margin-bottom: 10px;
-  }
-  
-  .card .price {
-    font-size: 1.1em;
-    color: #e74c3c;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .add-to-cart {
-    background: #2ecc71;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s;
-  }
-  
-  .add-to-cart:hover {
-    background: #27ae60;
-  }
-  
-  /* ریسپانسیو */
 
-    .filter-btn {
-        padding: 10px 15px;
-        font-size: 1.76em;
-    }
-  
+.btn__toggle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  // font-size: 1.9rem;
+  width: 100%;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+.container__slider {
+  margin-left: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.filter-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  // background: linear-gradient(135deg, #4facfe, #00f2fe); /* گرادیانت آبی شیک */
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.3s,
+    box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #d72685;
+  border-width: 1px 1px 1px 1px;
+}
+
+.filter-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #1e90ff, #00b4db);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cards-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  display: none; /* به صورت پیش‌فرض مخفی */
+}
+
+.card.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  height: 377.2px;
+  width: 287.8px;
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.card .price {
+  font-size: 1.1em;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #27ae60;
+}
+
+/* ریسپانسیو */
+
+.filter-btn {
+  padding: 10px 15px;
+  font-size: 1.76em;
+}

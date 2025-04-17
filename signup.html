@@ -1,196 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ثبت نام</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت نام</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      direction: rtl;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #a5f3fc, #3b82f6);
-    }
+      body {
+        font-family: "Vazirmatn", sans-serif;
+        direction: rtl;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #a5f3fc, #3b82f6);
+      }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    .form-group.email::before {
-      content: '';
-      position: absolute;
-      top: 2.5rem;
-      left: 0.75rem;
-      width: 1.25rem;
-      height: 1.25rem;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231e40af'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5V6l8 5 8-5z'/%3E%3C/svg%3E");
-      opacity: 0.7;
-    }
+      .form-group.email::before {
+        content: "";
+        position: absolute;
+        top: 2.5rem;
+        left: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231e40af'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5V6l8 5 8-5z'/%3E%3C/svg%3E");
+        opacity: 0.7;
+      }
 
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      75% { transform: translateX(5px); }
-    }
-  </style>
-</head>
-<body class="flex items-center justify-center">
-  <div class="signup-container bg-white/90 p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md mx-4 animate-[fadeIn_0.5s_ease-in] backdrop-blur-md">
-    <h2 class="text-2xl sm:text-3xl font-bold text-center text-indigo-900 mb-6">تأیید ایمیل</h2>
-    <form id="signupForm" novalidate class="space-y-6">
-      <div class="form-group email relative">
-        <label for="email" class="block text-sm font-medium text-indigo-900 mb-2">ایمیل:</label>
-        <input type="email" id="email" placeholder="ایمیل خود را وارد کنید" required 
-               class="w-full p-3 pr-10 rounded-lg bg-indigo-50 text-indigo-900 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 hover:bg-white shadow-sm">
-        <div id="emailError" class="error text-red-500 text-xs mt-1 hidden animate-[shake_0.3s_ease]"></div>
-      </div>
-      <button type="submit" id="submitButton" 
-              class="w-full p-3 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold text-sm hover:from-indigo-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed">
-        ارسال کد تأیید
-      </button>
-      <div id="otpSection" class="form-group space-y-4 hidden">
-        <label for="otp" class="block text-sm font-medium text-indigo-900 mb-2">کد تأیید:</label>
-        <input type="text" id="otp" placeholder="کد دریافتی را وارد کنید" required 
-               class="w-full p-3 rounded-lg bg-indigo-50 text-indigo-900 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 hover:bg-white shadow-sm">
-        <div id="otpError" class="error text-red-500 text-xs mt-1 hidden animate-[shake_0.3s_ease]"></div>
-        <button type="button" id="verifyButton" 
-                class="w-full p-3 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold text-sm hover:from-indigo-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl">
-          تأیید کد
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-5px);
+        }
+        75% {
+          transform: translateX(5px);
+        }
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center">
+    <div
+      class="signup-container bg-white/90 p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md mx-4 animate-[fadeIn_0.5s_ease-in] backdrop-blur-md"
+    >
+      <h2
+        class="text-2xl sm:text-3xl font-bold text-center text-indigo-900 mb-6"
+      >
+        تأیید ایمیل
+      </h2>
+      <form id="signupForm" novalidate class="space-y-6">
+        <div class="form-group email relative">
+          <label
+            for="email"
+            class="block text-sm font-medium text-indigo-900 mb-2"
+            >ایمیل:</label
+          >
+          <input
+            type="email"
+            id="email"
+            placeholder="ایمیل خود را وارد کنید"
+            required
+            class="w-full p-3 pr-10 rounded-lg bg-indigo-50 text-indigo-900 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 hover:bg-white shadow-sm"
+          />
+          <div
+            id="emailError"
+            class="error text-red-500 text-xs mt-1 hidden animate-[shake_0.3s_ease]"
+          ></div>
+        </div>
+        <button
+          type="submit"
+          id="submitButton"
+          class="w-full p-3 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold text-sm hover:from-indigo-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed"
+        >
+          ارسال کد تأیید
         </button>
-      </div>
-    </form>
-  </div>
+        <div id="otpSection" class="form-group space-y-4 hidden">
+          <label
+            for="otp"
+            class="block text-sm font-medium text-indigo-900 mb-2"
+            >کد تأیید:</label
+          >
+          <input
+            type="text"
+            id="otp"
+            placeholder="کد دریافتی را وارد کنید"
+            required
+            class="w-full p-3 rounded-lg bg-indigo-50 text-indigo-900 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 hover:bg-white shadow-sm"
+          />
+          <div
+            id="otpError"
+            class="error text-red-500 text-xs mt-1 hidden animate-[shake_0.3s_ease]"
+          ></div>
+          <button
+            type="button"
+            id="verifyButton"
+            class="w-full p-3 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold text-sm hover:from-indigo-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            تأیید کد
+          </button>
+        </div>
+      </form>
+    </div>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    // مقداردهی اولیه EmailJS
-    emailjs.init("EbINVIBxNELPW9CNc"); // جای YOUR_PUBLIC_KEY کلید عمومی خودت رو بذار
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // مقداردهی اولیه EmailJS
+      emailjs.init("EbINVIBxNELPW9CNc"); // جای YOUR_PUBLIC_KEY کلید عمومی خودت رو بذار
 
-    const form = document.getElementById('signupForm');
-    const emailInput = document.getElementById('email');
-    const otpInput = document.getElementById('otp');
-    const submitButton = document.getElementById('submitButton');
-    const verifyButton = document.getElementById('verifyButton');
-    const otpSection = document.getElementById('otpSection');
-    const emailError = document.getElementById('emailError');
-    const otpError = document.getElementById('otpError');
+      const form = document.getElementById("signupForm");
+      const emailInput = document.getElementById("email");
+      const otpInput = document.getElementById("otp");
+      const submitButton = document.getElementById("submitButton");
+      const verifyButton = document.getElementById("verifyButton");
+      const otpSection = document.getElementById("otpSection");
+      const emailError = document.getElementById("emailError");
+      const otpError = document.getElementById("otpError");
 
-    let generatedOTP = '';
+      let generatedOTP = "";
 
-    // تابع اعتبارسنجی ایمیل
-    function validateEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-
-    // تابع نمایش خطا
-    function showError(element, message) {
-      element.textContent = message;
-      element.style.display = 'block';
-    }
-
-    // تابع مخفی کردن خطا
-    function hideError(element) {
-      element.textContent = '';
-      element.style.display = 'none';
-    }
-
-    // تولید کد OTP رندوم
-    function generateOTP() {
-      return Math.floor(100000 + Math.random() * 900000).toString(); // کد 6 رقمی
-    }
-
-    // ارسال فرم برای دریافت ایمیل
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = emailInput.value;
-
-      if (!validateEmail(email)) {
-        showError(emailError, 'لطفاً یک ایمیل معتبر وارد کنید.');
-        return;
+      // تابع اعتبارسنجی ایمیل
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
       }
 
-      hideError(emailError);
-      submitButton.disabled = true;
-      submitButton.textContent = 'در حال ارسال...';
-
-      // تولید OTP
-      generatedOTP = generateOTP();
-
-      // ارسال ایمیل با EmailJS
-      emailjs.send("service_8z9uecv", "template_8vqum7o", {
-        to_email: email,
-        otp: generatedOTP
-      }).then(() => {
-        alert('کد تأیید به ایمیل شما ارسال شد!');
-        otpSection.style.display = 'block';
-        submitButton.disabled = false;
-        submitButton.textContent = 'ارسال کد تأیید';
-        emailInput.disabled = true;
-      }).catch((error) => {
-        showError(emailError, 'خطا در ارسال ایمیل. دوباره امتحان کنید.');
-        submitButton.disabled = false;
-        submitButton.textContent = 'ارسال کد تأیید';
-        console.error('EmailJS Error:', error);
-      });
-    });
-
-    // تأیید کد OTP
-    verifyButton.addEventListener('click', () => {
-      const enteredOTP = otpInput.value;
-
-      if (enteredOTP === '') {
-        showError(otpError, 'لطفاً کد تأیید را وارد کنید.');
-        return;
+      // تابع نمایش خطا
+      function showError(element, message) {
+        element.textContent = message;
+        element.style.display = "block";
       }
 
-      if (enteredOTP === generatedOTP) {
-        hideError(otpError);
+      // تابع مخفی کردن خطا
+      function hideError(element) {
+        element.textContent = "";
+        element.style.display = "none";
+      }
 
-        // ذخیره ایمیل در LocalStorage
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        if (users.some(user => user.email === emailInput.value)) {
-          showError(emailError, 'این ایمیل قبلاً ثبت شده است.');
+      // تولید کد OTP رندوم
+      function generateOTP() {
+        return Math.floor(100000 + Math.random() * 900000).toString(); // کد 6 رقمی
+      }
+
+      // ارسال فرم برای دریافت ایمیل
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = emailInput.value;
+
+        if (!validateEmail(email)) {
+          showError(emailError, "لطفاً یک ایمیل معتبر وارد کنید.");
           return;
         }
 
-        users.push({ email: emailInput.value });
-        localStorage.setItem('users', JSON.stringify(users));
-
-        alert('تأیید موفقیت‌آمیز! خوش اومدی!');
-        form.reset();
-        otpSection.style.display = 'none';
-        emailInput.disabled = false;
-
-        // هدایت به صفحه دیگه (اختیاری)
-        // window.location.href = 'dashboard.html';
-      } else {
-        showError(otpError, 'کد تأیید اشتباه است.');
-      }
-    });
-
-    // اعتبارسنجی زنده ایمیل
-    emailInput.addEventListener('input', () => {
-      if (emailInput.value === '') {
         hideError(emailError);
-      } else if (!validateEmail(emailInput.value)) {
-        showError(emailError, 'لطفاً یک ایمیل معتبر وارد کنید.');
-      } else {
-        hideError(emailError);
-      }
-    });
-  </script>
-</body>
+        submitButton.disabled = true;
+        submitButton.textContent = "در حال ارسال...";
+
+        // تولید OTP
+        generatedOTP = generateOTP();
+
+        // ارسال ایمیل با EmailJS
+        emailjs
+          .send("service_8z9uecv", "template_8vqum7o", {
+            to_email: email,
+            otp: generatedOTP,
+          })
+          .then(() => {
+            alert("کد تأیید به ایمیل شما ارسال شد!");
+            otpSection.style.display = "block";
+            submitButton.disabled = false;
+            submitButton.textContent = "ارسال کد تأیید";
+            emailInput.disabled = true;
+          })
+          .catch((error) => {
+            showError(emailError, "خطا در ارسال ایمیل. دوباره امتحان کنید.");
+            submitButton.disabled = false;
+            submitButton.textContent = "ارسال کد تأیید";
+            console.error("EmailJS Error:", error);
+          });
+      });
+
+      // تأیید کد OTP
+      verifyButton.addEventListener("click", () => {
+        const enteredOTP = otpInput.value;
+
+        if (enteredOTP === "") {
+          showError(otpError, "لطفاً کد تأیید را وارد کنید.");
+          return;
+        }
+
+        if (enteredOTP === generatedOTP) {
+          hideError(otpError);
+
+          // ذخیره ایمیل در LocalStorage
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          if (users.some((user) => user.email === emailInput.value)) {
+            showError(emailError, "این ایمیل قبلاً ثبت شده است.");
+            return;
+          }
+
+          users.push({ email: emailInput.value });
+          localStorage.setItem("users", JSON.stringify(users));
+
+          alert("تأیید موفقیت‌آمیز! خوش اومدی!");
+          form.reset();
+          otpSection.style.display = "none";
+          emailInput.disabled = false;
+
+          // هدایت به صفحه دیگه (اختیاری)
+          // window.location.href = 'dashboard.html';
+        } else {
+          showError(otpError, "کد تأیید اشتباه است.");
+        }
+      });
+
+      // اعتبارسنجی زنده ایمیل
+      emailInput.addEventListener("input", () => {
+        if (emailInput.value === "") {
+          hideError(emailError);
+        } else if (!validateEmail(emailInput.value)) {
+          showError(emailError, "لطفاً یک ایمیل معتبر وارد کنید.");
+        } else {
+          hideError(emailError);
+        }
+      });
+    </script>
+  </body>
 </html>

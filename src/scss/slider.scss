@@ -1,41 +1,42 @@
 /* تنظیمات عمومی برای اسلایدر */
-@mixin swiper-wrapper{
+@mixin swiper-wrapper {
   position: relative;
-    width: 100%;
-    position: relative;
-    max-width: 100%;
-    // overflow: hidden;
-    overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+  // overflow: hidden;
+  overflow-x: hidden;
 }
 .swiper-container {
-  @include swiper-wrapper()
-  }
-  
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .swiper-slide img {
-    width: 100vw;
-    // overflow: hidden;
-    height: auto;
-    object-fit: cover;  /* به این معنا که تصویر بدون تغییر نسبت ابعاد، تمام عرض و ارتفاع اسلاید را پر می‌کند */
-  }
-  
-  /* دکمه‌های ناوبری */
-  .swiper-button-next, .swiper-button-prev {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-  }
-  
-  /* دایره‌های ناوبری */
-  .swiper-pagination-bullet {
-    background-color: #fff;
-  }
-  
+  @include swiper-wrapper();
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.swiper-slide img {
+  width: 100vw;
+  // overflow: hidden;
+  height: auto;
+  object-fit: cover; /* به این معنا که تصویر بدون تغییر نسبت ابعاد، تمام عرض و ارتفاع اسلاید را پر می‌کند */
+}
+
+/* دکمه‌های ناوبری */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* دایره‌های ناوبری */
+.swiper-pagination-bullet {
+  background-color: #fff;
+}
+
 //  swiper slider

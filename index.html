@@ -1,54 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cosmetic</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="src/scss/menu.css">
-  <link rel="stylesheet" href="src/scss/slider.css">
-  <link rel="stylesheet" href="src/scss/style.css">
-  <link rel="stylesheet" href="src/scss/reponsive.css">
-  <link rel="stylesheet" href="src/scss/custom.css">
-  <link rel="stylesheet" href="infinite__slider.css">
-  <link rel="stylesheet" href="src/scss/story.css">
-  <link rel="stylesheet" href="src/scss/notification.css">
-  <link rel="stylesheet" href="src/scss/product__slider.css">
-  <link rel="stylesheet" href="src/scss/logo.css">
-  <link rel="stylesheet" href="src/scss/carousel.css">
-  <link rel="stylesheet" href="src/scss/footer.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="src/scss/loader__new.css">
-  <link rel="stylesheet" href="src/scss/instagram.css">
-  <link rel="stylesheet" href="src/scss/banner.css">
-</head>
-<body>
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmetic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="src/scss/menu.css" />
+    <link rel="stylesheet" href="src/scss/slider.css" />
+    <link rel="stylesheet" href="src/scss/style.css" />
+    <link rel="stylesheet" href="src/scss/reponsive.css" />
+    <link rel="stylesheet" href="src/scss/custom.css" />
+    <link rel="stylesheet" href="infinite__slider.css" />
+    <link rel="stylesheet" href="src/scss/story.css" />
+    <link rel="stylesheet" href="src/scss/notification.css" />
+    <link rel="stylesheet" href="src/scss/product__slider.css" />
+    <link rel="stylesheet" href="src/scss/logo.css" />
+    <link rel="stylesheet" href="src/scss/carousel.css" />
+    <link rel="stylesheet" href="src/scss/footer.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/scss/loader__new.css" />
+    <link rel="stylesheet" href="src/scss/instagram.css" />
+    <link rel="stylesheet" href="src/scss/banner.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
     <div id="notification" class="notification"></div>
     <div class="banner">
       <div class="banner-content">
-          <h1>تخفیف ویژه ۳۰٪!</h1>
-          <p>فقط تا پایان هفته! همین حالا خرید کنید.</p>
-          <a href="#shop" class="cta-button">خرید کن</a>
+        <h1>تخفیف ویژه ۳۰٪!</h1>
+        <p>فقط تا پایان هفته! همین حالا خرید کنید.</p>
+        <a href="#shop" class="cta-button">خرید کن</a>
       </div>
-  </div>
-  <!-- btn for scrool top to bottom -->
-  <!-- <button class="scroll-to-top">↑</button> -->
+    </div>
+    <!-- btn for scrool top to bottom -->
+    <!-- <button class="scroll-to-top">↑</button> -->
 
- <div class="wrapper__main__page container main-content hidden" id="content__notif">
-  <header >
-    <nav class="header__desktop">
-        <div class="list">
+    <div
+      class="wrapper__main__page container main-content hidden"
+      id="content__notif"
+    >
+      <header>
+        <nav class="header__desktop">
+          <div class="list">
             <ul>
               <div class="right__side__logo">
                 <div class="hamberger">
-                  <svg id="mobile__hamberger" class="hidden svg__mobile" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="currentColor"><path d="M2.00056 2.28571H16.8577C17.1608 2.28571 17.4515 2.16531 17.6658 1.95098C17.8802 1.73665 18.0006 1.44596 18.0006 1.14286C18.0006 0.839753 17.8802 0.549063 17.6658 0.334735C17.4515 0.120408 17.1608 0 16.8577 0H2.00056C1.69745 0 1.40676 0.120408 1.19244 0.334735C0.978109 0.549063 0.857702 0.839753 0.857702 1.14286C0.857702 1.44596 0.978109 1.73665 1.19244 1.95098C1.40676 2.16531 1.69745 2.28571 2.00056 2.28571ZM0.857702 8C0.857702 7.6969 0.978109 7.40621 1.19244 7.19188C1.40676 6.97755 1.69745 6.85714 2.00056 6.85714H22.572C22.8751 6.85714 23.1658 6.97755 23.3801 7.19188C23.5944 7.40621 23.7148 7.6969 23.7148 8C23.7148 8.30311 23.5944 8.59379 23.3801 8.80812C23.1658 9.02245 22.8751 9.14286 22.572 9.14286H2.00056C1.69745 9.14286 1.40676 9.02245 1.19244 8.80812C0.978109 8.59379 0.857702 8.30311 0.857702 8ZM0.857702 14.8571C0.857702 14.554 0.978109 14.2633 1.19244 14.049C1.40676 13.8347 1.69745 13.7143 2.00056 13.7143H12.2863C12.5894 13.7143 12.8801 13.8347 13.0944 14.049C13.3087 14.2633 13.4291 14.554 13.4291 14.8571C13.4291 15.1602 13.3087 15.4509 13.0944 15.6653C12.8801 15.8796 12.5894 16 12.2863 16H2.00056C1.69745 16 1.40676 15.8796 1.19244 15.6653C0.978109 15.4509 0.857702 15.1602 0.857702 14.8571Z" fill="currentColor"></path></svg>
-
+                  <svg
+                    id="mobile__hamberger"
+                    class="hidden svg__mobile"
+                    aria-hidden="true"
+                    role="img"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="16"
+                    viewBox="0 0 24 16"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M2.00056 2.28571H16.8577C17.1608 2.28571 17.4515 2.16531 17.6658 1.95098C17.8802 1.73665 18.0006 1.44596 18.0006 1.14286C18.0006 0.839753 17.8802 0.549063 17.6658 0.334735C17.4515 0.120408 17.1608 0 16.8577 0H2.00056C1.69745 0 1.40676 0.120408 1.19244 0.334735C0.978109 0.549063 0.857702 0.839753 0.857702 1.14286C0.857702 1.44596 0.978109 1.73665 1.19244 1.95098C1.40676 2.16531 1.69745 2.28571 2.00056 2.28571ZM0.857702 8C0.857702 7.6969 0.978109 7.40621 1.19244 7.19188C1.40676 6.97755 1.69745 6.85714 2.00056 6.85714H22.572C22.8751 6.85714 23.1658 6.97755 23.3801 7.19188C23.5944 7.40621 23.7148 7.6969 23.7148 8C23.7148 8.30311 23.5944 8.59379 23.3801 8.80812C23.1658 9.02245 22.8751 9.14286 22.572 9.14286H2.00056C1.69745 9.14286 1.40676 9.02245 1.19244 8.80812C0.978109 8.59379 0.857702 8.30311 0.857702 8ZM0.857702 14.8571C0.857702 14.554 0.978109 14.2633 1.19244 14.049C1.40676 13.8347 1.69745 13.7143 2.00056 13.7143H12.2863C12.5894 13.7143 12.8801 13.8347 13.0944 14.049C13.3087 14.2633 13.4291 14.554 13.4291 14.8571C13.4291 15.1602 13.3087 15.4509 13.0944 15.6653C12.8801 15.8796 12.5894 16 12.2863 16H2.00056C1.69745 16 1.40676 15.8796 1.19244 15.6653C0.978109 15.4509 0.857702 15.1602 0.857702 14.8571Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
                 </div>
-                <img id="click" class="header__logo mobile__logo" src="images/logo-cosmetics.png" alt="" loading="lazy">
-        
+                <img
+                  id="click"
+                  class="header__logo mobile__logo"
+                  src="images/logo-cosmetics.png"
+                  alt=""
+                  loading="lazy"
+                />
               </div>
               <div class="main__menu">
                 <li><a class="hidden" href="#">درباره با ما</a></li>
@@ -58,758 +84,1129 @@
                 <li><a class="hidden" href="#">لوازم آرایشی</a></li>
               </div>
               <div class="left__side__icons">
-                <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M17.7241 16.1932L13.6436 12.1127C14.626 10.8049 15.1563 9.21299 15.1546 7.57728C15.1546 3.39919 11.7554 0 7.57728 0C3.39919 0 0 3.39919 0 7.57728C0 11.7554 3.39919 15.1546 7.57728 15.1546C9.21299 15.1563 10.8049 14.626 12.1127 13.6436L16.1932 17.7241C16.3998 17.9088 16.6692 18.0073 16.9461 17.9996C17.2231 17.9918 17.4865 17.8783 17.6824 17.6824C17.8783 17.4865 17.9918 17.2231 17.9996 16.9461C18.0073 16.6692 17.9088 16.3998 17.7241 16.1932ZM2.16494 7.57728C2.16494 6.50682 2.48237 5.4604 3.07708 4.57034C3.6718 3.68029 4.51709 2.98657 5.50607 2.57693C6.49504 2.16728 7.58328 2.0601 8.63318 2.26893C9.68307 2.47777 10.6475 2.99325 11.4044 3.75018C12.1613 4.5071 12.6768 5.47149 12.8856 6.52138C13.0945 7.57128 12.9873 8.65952 12.5776 9.64849C12.168 10.6375 11.4743 11.4828 10.5842 12.0775C9.69416 12.6722 8.64774 12.9896 7.57728 12.9896C6.14237 12.9879 4.76672 12.4171 3.75208 11.4025C2.73744 10.3878 2.16666 9.01219 2.16494 7.57728Z" fill="currentColor"></path></svg>
-                <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 64 64" fill="currentColor"><path d="M56,64V57.48A8.43,8.43,0,0,0,47.56,49H16.44A8.43,8.43,0,0,0,8,57.48V64H.9V57.48A15.53,15.53,0,0,1,16.44,41.94H47.56A15.53,15.53,0,0,1,63.1,57.48V64Zm-23.47-27a18.66,18.66,0,0,1-13.11-5.43,18.54,18.54,0,0,1,0-26.22A18.53,18.53,0,0,1,51.07,18.51,18.52,18.52,0,0,1,32.54,37.05Zm0-30a11.44,11.44,0,1,0,8.09,3.35A11.36,11.36,0,0,0,32.54,7.07Z"></path></svg>
-
+                <svg
+                  aria-hidden="true"
+                  role="img"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.7241 16.1932L13.6436 12.1127C14.626 10.8049 15.1563 9.21299 15.1546 7.57728C15.1546 3.39919 11.7554 0 7.57728 0C3.39919 0 0 3.39919 0 7.57728C0 11.7554 3.39919 15.1546 7.57728 15.1546C9.21299 15.1563 10.8049 14.626 12.1127 13.6436L16.1932 17.7241C16.3998 17.9088 16.6692 18.0073 16.9461 17.9996C17.2231 17.9918 17.4865 17.8783 17.6824 17.6824C17.8783 17.4865 17.9918 17.2231 17.9996 16.9461C18.0073 16.6692 17.9088 16.3998 17.7241 16.1932ZM2.16494 7.57728C2.16494 6.50682 2.48237 5.4604 3.07708 4.57034C3.6718 3.68029 4.51709 2.98657 5.50607 2.57693C6.49504 2.16728 7.58328 2.0601 8.63318 2.26893C9.68307 2.47777 10.6475 2.99325 11.4044 3.75018C12.1613 4.5071 12.6768 5.47149 12.8856 6.52138C13.0945 7.57128 12.9873 8.65952 12.5776 9.64849C12.168 10.6375 11.4743 11.4828 10.5842 12.0775C9.69416 12.6722 8.64774 12.9896 7.57728 12.9896C6.14237 12.9879 4.76672 12.4171 3.75208 11.4025C2.73744 10.3878 2.16666 9.01219 2.16494 7.57728Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  role="img"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 64 64"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M56,64V57.48A8.43,8.43,0,0,0,47.56,49H16.44A8.43,8.43,0,0,0,8,57.48V64H.9V57.48A15.53,15.53,0,0,1,16.44,41.94H47.56A15.53,15.53,0,0,1,63.1,57.48V64Zm-23.47-27a18.66,18.66,0,0,1-13.11-5.43,18.54,18.54,0,0,1,0-26.22A18.53,18.53,0,0,1,51.07,18.51,18.52,18.52,0,0,1,32.54,37.05Zm0-30a11.44,11.44,0,1,0,8.09,3.35A11.36,11.36,0,0,0,32.54,7.07Z"
+                  ></path>
+                </svg>
               </div>
             </ul>
-        </div>
-        <ul>
-           
-        </ul>
-    </nav>
-    <nav id="mobile__header" class="header__mobile">
-        <div class="wrapper__mobile">
+          </div>
+          <ul></ul>
+        </nav>
+        <nav id="mobile__header" class="header__mobile">
+          <div class="wrapper__mobile">
             <ul class="nav__mobile">
-                <li><a class="mobile__link" href="#">لوازم آرایشی</a></li>
-                <hr class="line">
-                <li><a class="mobile__link" href="#">مراقبت از پوست</a></li>
-                <hr class="line">
-                <li><a class="mobile__link" href="#">مراقبت از مو</a></li>
-                <hr class="line">
-                <li><a class="mobile__link" href="product.html">وبلاگ</a></li>
-                <hr class="line">
-                <li><a class="mobile__link" href="#">درباره با ما</a></li>
-                <hr class="line">
+              <li><a class="mobile__link" href="#">لوازم آرایشی</a></li>
+              <hr class="line" />
+              <li><a class="mobile__link" href="#">مراقبت از پوست</a></li>
+              <hr class="line" />
+              <li><a class="mobile__link" href="#">مراقبت از مو</a></li>
+              <hr class="line" />
+              <li><a class="mobile__link" href="product.html">وبلاگ</a></li>
+              <hr class="line" />
+              <li><a class="mobile__link" href="#">درباره با ما</a></li>
+              <hr class="line" />
 
-                <li><a class="mobile__link" href="#">تماس با ما</a></li>
+              <li><a class="mobile__link" href="#">تماس با ما</a></li>
             </ul>
-        </div>  
-    </nav>
-</header>
-<!-- instagram story slider -->
-<div class="ig-mobile-slider">
-  <div class="ig-story-container">
-      <div class="ig-story-circle" data-story="1">
-          <img src="images/article__image2.webp" alt="Story 1">
-      </div>
-      <div class="ig-story-circle" data-story="2">
-          <img src="images/story5.jpg" alt="Story 2">
-      </div>
-      <div class="ig-story-circle" data-story="3">
-          <img src="images/article__image2.webp" alt="Story 3">
-      </div>
-      <div class="ig-story-circle" data-story="4">
-          <img src="images/article__image1.webp" alt="Story 4">
-      </div>
-      <div class="ig-story-circle" data-story="5">
-          <img src="images/story6.webp" alt="Story 5">
-      </div>
-      <div class="ig-story-circle" data-story="6">
-          <img src="images/story4.webp" alt="Story 6">
-      </div>
-      <div class="ig-story-circle" data-story="7">
-          <img src="images/story4.webp" alt="Story 7">
-      </div>
-      <div class="ig-story-circle" data-story="8">
-          <img src="images/article__image3.webp" alt="Story 8">
-      </div>
-      <div class="ig-story-circle" data-story="9">
-          <img src="images/article__image1.webp" alt="Story 9">
-      </div>
-      <div class="ig-story-circle" data-story="10">
-          <img src="images/story4.webp" alt="Story 10">
-      </div>
-      <div class="ig-story-circle" data-story="10">
-        <img src="images/article__image3.webp" alt="Story 10">
-    </div>
-    <div class="ig-story-circle" data-story="10">
-      <img src="images/article__image2.webp" alt="Story 10">
-  </div>
-  <div class="ig-story-circle" data-story="10">
-    <img src="images/article__image3.webp" alt="Story 10">
-</div>
-
-  </div>
-</div>
-
-<div class="ig-desktop-grid">
-  <div class="ig-story-circle" data-story="1">
-      <img src="images/article__image2.webp" alt="Story 1">
-  </div>
-  <div class="ig-story-circle" data-story="1">
-    <img src="images/article__image4.webp" alt="Story 1">
-</div>
-<div class="ig-story-circle" data-story="1">
-  <img src="images/article__image3.webp" alt="Story 1">
-</div>
-<div class="ig-story-circle" data-story="1">
-  <img src="images/story4.jpg" alt="Story 1">
-</div>
-<div class="ig-story-circle" data-story="1">
-  <img src="images/article__image2.webp" alt="Story 1">
-</div>
-<div class="ig-story-circle" data-story="1">
-  <img src="images/story4.webp" alt="Story 1">
-</div>
-
-  <div class="ig-story-circle" data-story="2">
-      <img src="images/article__image2.webp" alt="Story 2">
-  </div>
-  <div class="ig-story-circle" data-story="3">
-      <img src="images/article__image3.webp" alt="Story 3">
-  </div>
-  <div class="ig-story-circle" data-story="4">
-      <img src="images/article__iamge3.webp" alt="Story 4">
-  </div>
-  <div class="ig-story-circle" data-story="5">
-      <img src="images/article__image3.webp" alt="Story 5">
-  </div>
-  <div class="ig-story-circle" data-story="6">
-      <img src="images/story5.jpg" alt="Story 6">
-  </div>
-  <div class="ig-story-circle" data-story="7">
-      <img src="images/story1.jpg" alt="Story 7">
-  </div>
-  <div class="ig-story-circle" data-story="8">
-      <img src="images/story6.webp" alt="Story 8">
-  </div>
-  <div class="ig-story-circle" data-story="9">
-      <img src="images/story3.jpg" alt="Story 9">
-  </div>
-  <div class="ig-story-circle" data-story="10">
-      <img src="images/story6.webp" alt="Story 10">
-  </div>
-</div>
-
-<div class="ig-story-viewer" id="storyViewer">
-  <div class="ig-story-content">
-      <img id="storyImage" src="" alt="Story">
-  </div>
-  <button class="close-btn" onclick="closeStory()">
-      <i class="fas fa-times"></i>
-  </button>
-</div>
-<!-- header finished -->
-<!-- اسلایدر -->
-<main>
-  <!-- chatbot wrapper -->
-
-<div class="swiper-container mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <!-- <img src="images/slider2.webp" alt="Slide 1" loading=""> -->
-      <picture>
-          <source media="(max-width: 768px)" srcset="images/mobike__slider3.webp">
-          <img src="images/slider2.webp" alt="Slide 1" loading="lazy">
-        </picture>
-    </div>
-    <div class="swiper-slide">
-      <!-- <img src="images/slider3.webp" alt="Slide 2" loading="lazy"> -->
-      <picture>
-          <source media="(max-width: 768px)" srcset="images/mobile2.webp">
-          <!-- <source media="(min-width: 769px)" srcset="images/slider-desktop.webp"> -->
-          <img src="images/arden__picture.webp" alt="Slide 2" loading="lazy">
-        </picture>
-  </div>
-    <div class="swiper-slide">
-      <picture>
-          <source media="(max-width: 768px)" srcset="images/mobile3.webp">
-          <!-- <source media="(min-width: 769px)" srcset="images/slider-desktop.webp"> -->
-          <img src="images/hidrom__picture.webp" alt="Slide 3" loading="lazy">
-        </picture>
-    </div>
-  </div>
-  
-  <!-- دکمه‌های ناوبری -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-
-  <!-- دایره‌های ناوبری -->
-  <div class="swiper-pagination"></div>
-</div>
-<div class="container__images__flex">
-  <img class="left__picture__flex" src="images/pic__cosmetic.webp" alt="">
-  <img  class="left__picture__flex" src="images/pic__cosmetic2.webp" alt="">
-</div>
-<!-- product slider -->
-<div class="container__product__slider">
-  
-<div class="main-container">
-<!-- اسلایدر -->
-<div class="custom-slider-container">
-  <div class="custom-swiper mySwiper2">
-      <div class="swiper-wrapper">
-          <div class="swiper-slide">
-              <div class="custom-card">
-                  <img src="images/product3.webp" alt="Card Image" loading="lazy">
-                  <h3>کارت اول</h3>
-                  <p>توضیحات کارت اول</p>
-              </div>
           </div>
-          <div class="swiper-slide">
-              <div class="custom-card">
-                  <img src="images/product1.webp" alt="Card Image" loading="lazy">
-                  <h3>کارت دوم</h3>
-                  <p>توضیحات کارت دوم</p>
-              </div>
+        </nav>
+      </header>
+      <!-- instagram story slider -->
+      <div class="ig-mobile-slider">
+        <div class="ig-story-container">
+          <div class="ig-story-circle" data-story="1">
+            <img src="images/article__image2.webp" alt="Story 1" />
           </div>
-          <div class="swiper-slide">
-            <div class="custom-card">
-                <img src="images/product4.webp" alt="Card Image" loading="lazy">
-                <h3>کارت دوم</h3>
-                <p>توضیحات کارت دوم</p>
+          <div class="ig-story-circle" data-story="2">
+            <img src="images/story5.jpg" alt="Story 2" />
+          </div>
+          <div class="ig-story-circle" data-story="3">
+            <img src="images/article__image2.webp" alt="Story 3" />
+          </div>
+          <div class="ig-story-circle" data-story="4">
+            <img src="images/article__image1.webp" alt="Story 4" />
+          </div>
+          <div class="ig-story-circle" data-story="5">
+            <img src="images/story6.webp" alt="Story 5" />
+          </div>
+          <div class="ig-story-circle" data-story="6">
+            <img src="images/story4.webp" alt="Story 6" />
+          </div>
+          <div class="ig-story-circle" data-story="7">
+            <img src="images/story4.webp" alt="Story 7" />
+          </div>
+          <div class="ig-story-circle" data-story="8">
+            <img src="images/article__image3.webp" alt="Story 8" />
+          </div>
+          <div class="ig-story-circle" data-story="9">
+            <img src="images/article__image1.webp" alt="Story 9" />
+          </div>
+          <div class="ig-story-circle" data-story="10">
+            <img src="images/story4.webp" alt="Story 10" />
+          </div>
+          <div class="ig-story-circle" data-story="10">
+            <img src="images/article__image3.webp" alt="Story 10" />
+          </div>
+          <div class="ig-story-circle" data-story="10">
+            <img src="images/article__image2.webp" alt="Story 10" />
+          </div>
+          <div class="ig-story-circle" data-story="10">
+            <img src="images/article__image3.webp" alt="Story 10" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ig-desktop-grid">
+        <div class="ig-story-circle" data-story="1">
+          <img src="images/article__image2.webp" alt="Story 1" />
+        </div>
+        <div class="ig-story-circle" data-story="1">
+          <img src="images/article__image4.webp" alt="Story 1" />
+        </div>
+        <div class="ig-story-circle" data-story="1">
+          <img src="images/article__image3.webp" alt="Story 1" />
+        </div>
+        <div class="ig-story-circle" data-story="1">
+          <img src="images/story4.jpg" alt="Story 1" />
+        </div>
+        <div class="ig-story-circle" data-story="1">
+          <img src="images/article__image2.webp" alt="Story 1" />
+        </div>
+        <div class="ig-story-circle" data-story="1">
+          <img src="images/story4.webp" alt="Story 1" />
+        </div>
+
+        <div class="ig-story-circle" data-story="2">
+          <img src="images/article__image2.webp" alt="Story 2" />
+        </div>
+        <div class="ig-story-circle" data-story="3">
+          <img src="images/article__image3.webp" alt="Story 3" />
+        </div>
+        <div class="ig-story-circle" data-story="4">
+          <img src="images/article__iamge3.webp" alt="Story 4" />
+        </div>
+        <div class="ig-story-circle" data-story="5">
+          <img src="images/article__image3.webp" alt="Story 5" />
+        </div>
+        <div class="ig-story-circle" data-story="6">
+          <img src="images/story5.jpg" alt="Story 6" />
+        </div>
+        <div class="ig-story-circle" data-story="7">
+          <img src="images/story1.jpg" alt="Story 7" />
+        </div>
+        <div class="ig-story-circle" data-story="8">
+          <img src="images/story6.webp" alt="Story 8" />
+        </div>
+        <div class="ig-story-circle" data-story="9">
+          <img src="images/story3.jpg" alt="Story 9" />
+        </div>
+        <div class="ig-story-circle" data-story="10">
+          <img src="images/story6.webp" alt="Story 10" />
+        </div>
+      </div>
+
+      <div class="ig-story-viewer" id="storyViewer">
+        <div class="ig-story-content">
+          <img id="storyImage" src="" alt="Story" />
+        </div>
+        <button class="close-btn" onclick="closeStory()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <!-- header finished -->
+      <!-- اسلایدر -->
+      <main>
+        <!-- chatbot wrapper -->
+
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- <img src="images/slider2.webp" alt="Slide 1" loading=""> -->
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="images/mobike__slider3.webp"
+                />
+                <img src="images/slider2.webp" alt="Slide 1" loading="lazy" />
+              </picture>
             </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="custom-card">
-              <img src="images/product2.jpg" alt="Card Image" loading="lazy">
-              <h3>کارت دوم</h3>
-              <p>توضیحات کارت دوم</p>
+            <div class="swiper-slide">
+              <!-- <img src="images/slider3.webp" alt="Slide 2" loading="lazy"> -->
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="images/mobile2.webp"
+                />
+                <!-- <source media="(min-width: 769px)" srcset="images/slider-desktop.webp"> -->
+                <img
+                  src="images/arden__picture.webp"
+                  alt="Slide 2"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="images/mobile3.webp"
+                />
+                <!-- <source media="(min-width: 769px)" srcset="images/slider-desktop.webp"> -->
+                <img
+                  src="images/hidrom__picture.webp"
+                  alt="Slide 3"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
-      </div>
-          <div class="swiper-slide">
-              <div class="custom-card">
-                  <img src="images/product3.webp" alt="Card Image" loading="lazy">
-                  <h3>کارت سوم</h3>
-                  <p>توضیحات کارت سوم</p>
+
+          <!-- دکمه‌های ناوبری -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- دایره‌های ناوبری -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="container__images__flex">
+          <img
+            class="left__picture__flex"
+            src="images/pic__cosmetic.webp"
+            alt=""
+          />
+          <img
+            class="left__picture__flex"
+            src="images/pic__cosmetic2.webp"
+            alt=""
+          />
+        </div>
+        <!-- product slider -->
+        <div class="container__product__slider">
+          <div class="main-container">
+            <!-- اسلایدر -->
+            <div class="custom-slider-container">
+              <div class="custom-swiper mySwiper2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="custom-card">
+                      <img
+                        src="images/product3.webp"
+                        alt="Card Image"
+                        loading="lazy"
+                      />
+                      <h3>کارت اول</h3>
+                      <p>توضیحات کارت اول</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="custom-card">
+                      <img
+                        src="images/product1.webp"
+                        alt="Card Image"
+                        loading="lazy"
+                      />
+                      <h3>کارت دوم</h3>
+                      <p>توضیحات کارت دوم</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="custom-card">
+                      <img
+                        src="images/product4.webp"
+                        alt="Card Image"
+                        loading="lazy"
+                      />
+                      <h3>کارت دوم</h3>
+                      <p>توضیحات کارت دوم</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="custom-card">
+                      <img
+                        src="images/product2.jpg"
+                        alt="Card Image"
+                        loading="lazy"
+                      />
+                      <h3>کارت دوم</h3>
+                      <p>توضیحات کارت دوم</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="custom-card">
+                      <img
+                        src="images/product3.webp"
+                        alt="Card Image"
+                        loading="lazy"
+                      />
+                      <h3>کارت سوم</h3>
+                      <p>توضیحات کارت سوم</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="custom-card">
+                      <img
+                        src="images/product3.webp"
+                        alt="Card Image"
+                        loading="lazy"
+                      />
+                      <h3>کارت چهارم</h3>
+                      <p>توضیحات کارت چهارم</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- دکمه‌های بعدی و قبلی -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
               </div>
+            </div>
+            <aside class="custom-sidebar">
+              <img src="images/sug.png" alt="icon__slider" loading="lazy" />
+            </aside>
           </div>
-          <div class="swiper-slide">
-              <div class="custom-card">
-                  <img src="images/product3.webp" alt="Card Image" loading="lazy">
-                  <h3>کارت چهارم</h3>
-                  <p>توضیحات کارت چهارم</p>
-              </div>
+        </div>
+
+        <!-- categorize section -->
+        <div class="wrapper__categorize">
+          <h2 class="txt__center">دسته‌بندی‌ها</h2>
+
+          <div class="flex__icon">
+            <div class="first__box">
+              <img
+                class="radios"
+                data-radous="active"
+                src="images/cat1.webp"
+                alt=""
+              />
+              <h4 data-center="active">لوازم آرایش</h4>
+            </div>
+            <div class="second__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat2.webp"
+                alt=""
+              />
+              <h4 data-center="active">مراقبت از مو</h4>
+            </div>
+            <div class="third__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat3.webp"
+                alt=""
+              />
+              <h4 data-center="active">مکمل های خوراکی</h4>
+            </div>
+            <div class="fourth__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat4.webp"
+                alt=""
+              />
+              <h4 data-center="active">ضد افتاب</h4>
+            </div>
+            <div class="fifth__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat5.webp"
+                alt=""
+              />
+              <h4 data-center="active">عطر و ادکلن</h4>
+            </div>
+            <div class="sixth__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat6.webp"
+                alt=""
+              />
+              <h4 data-center="active">مادر و کودک</h4>
+            </div>
+            <div class="seventh__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat7.webp"
+                alt=""
+              />
+              <h4 data-center="active">مراقبت از پوست</h4>
+            </div>
+            <div class="eighth__box">
+              <img
+                data-radous="active"
+                class="radios"
+                src="images/cat8.webp"
+                alt=""
+              />
+              <h4 data-center="active">لوازم بهداشتی</h4>
+            </div>
           </div>
-      </div>
-      <!-- دکمه‌های بعدی و قبلی -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-  </div>
-
-</div>
-<aside class="custom-sidebar">
-<img src="images/sug.png" alt="icon__slider" loading="lazy">
-</aside>
-</div>
-</div>
-
-
-  <!-- categorize section -->
-  <div class="wrapper__categorize">
-    <h2  class="txt__center">
-      دسته‌بندی‌ها
-      </h2>
-       
-      <div class="flex__icon">
-        <div class="first__box">
-          <img class="radios" data-radous="active" src="images/cat1.webp" alt="">
-          <h4 data-center="active">لوازم آرایش</h4>
         </div>
-        <div class="second__box">
-          <img data-radous="active"  class="radios" src="images/cat2.webp" alt="">
-          <h4  data-center="active">مراقبت از مو</h4>
-        </div>
-        <div class="third__box">
-          <img data-radous="active"  class="radios" src="images/cat3.webp" alt="">
-          <h4  data-center="active">
-            مکمل های خوراکی
-            </h4>
-        </div>
-        <div class="fourth__box">
-          <img data-radous="active"  class="radios" src="images/cat4.webp" alt="">
-          <h4  data-center="active">ضد افتاب</h4>
-        </div>
-        <div class="fifth__box">
-          <img data-radous="active"  class="radios" src="images/cat5.webp" alt="">
-          <h4  data-center="active">عطر و ادکلن</h4>
-        </div>
-        <div class="sixth__box">
-          <img data-radous="active"  class="radios" src="images/cat6.webp" alt="">
-          <h4  data-center="active">
-            مادر و کودک
-            </h4>
-        </div>
-        <div class="seventh__box">
-          <img data-radous="active"  class="radios" src="images/cat7.webp" alt="">
-          <h4  data-center="active">مراقبت از پوست</h4>
-        </div>
-        <div class="eighth__box">
-          <img data-radous="active"  class="radios" src="images/cat8.webp" alt="">
-          <h4  data-center="active">لوازم بهداشتی</h4>
-        </div>
-      </div>
-  </div>
-  <!-- cosmetic pictures section -->
-  <section class="cosmetic" data-aos="flip-up">
-    <div class="wrapper__cosmetic">
-      <img class="flex" src="images/home-cosmetics18.jpg" alt="picture" loading="lazy">
-      <img class="flex" src="images/home-cosmetics19.jpg" alt="picture" loading="lazy">
-    </div>
-  </section>
-  <div class="wrapper__slider">
-    <div class="container__toggle">
-      <div class="container__slider">
-        <!-- <h1>salam</h1> -->
-        <div class="container__toggle">
-          <div class="buttons__slider btn__toggle">
-              <button class="filter-btn active" data-category="category1">پودرها</button>
-              <button class="filter-btn" data-category="category2">لاک‌ها</button>
-              <button class="filter-btn" data-category="category3">برق لب‌ها</button>
-              <button class="filter-btn" data-category="category4">رژ لب‌ها</button>
+        <!-- cosmetic pictures section -->
+        <section class="cosmetic" data-aos="flip-up">
+          <div class="wrapper__cosmetic">
+            <img
+              class="flex"
+              src="images/home-cosmetics18.jpg"
+              alt="picture"
+              loading="lazy"
+            />
+            <img
+              class="flex"
+              src="images/home-cosmetics19.jpg"
+              alt="picture"
+              loading="lazy"
+            />
           </div>
-          <div class="cards-wrapper">
-              <div class="cards" id="cards">
-                  <!-- کارت‌های پیش‌فرض (دسته‌بندی 1) -->
-                  <div class="card" data-category="category1">
-                      <img src="images/product1.webp" alt="پودر فشرده" loading="lazy">
+        </section>
+        <div class="wrapper__slider">
+          <div class="container__toggle">
+            <div class="container__slider">
+              <!-- <h1>salam</h1> -->
+              <div class="container__toggle">
+                <div class="buttons__slider btn__toggle">
+                  <button class="filter-btn active" data-category="category1">
+                    پودرها
+                  </button>
+                  <button class="filter-btn" data-category="category2">
+                    لاک‌ها
+                  </button>
+                  <button class="filter-btn" data-category="category3">
+                    برق لب‌ها
+                  </button>
+                  <button class="filter-btn" data-category="category4">
+                    رژ لب‌ها
+                  </button>
+                </div>
+                <div class="cards-wrapper">
+                  <div class="cards" id="cards">
+                    <!-- کارت‌های پیش‌فرض (دسته‌بندی 1) -->
+                    <div class="card" data-category="category1">
+                      <img
+                        src="images/product1.webp"
+                        alt="پودر فشرده"
+                        loading="lazy"
+                      />
                       <h3>پودر فشرده NARS</h3>
                       <p class="price">۱,۰۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category1">
-                      <img src="images/product2.jpg" alt="پودر مات" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category1">
+                      <img
+                        src="images/product2.jpg"
+                        alt="پودر مات"
+                        loading="lazy"
+                      />
                       <h3>پودر مات MAC</h3>
                       <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category1">
-                      <img src="images/product4.webp" alt="پودر برنزه" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category1">
+                      <img
+                        src="images/product4.webp"
+                        alt="پودر برنزه"
+                        loading="lazy"
+                      />
                       <h3>پودر برنزه Fenty</h3>
                       <p class="price">۹۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category1">
-                      <img src="images/product3.webp" alt="پودر هایلایت" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category1">
+                      <img
+                        src="images/product3.webp"
+                        alt="پودر هایلایت"
+                        loading="lazy"
+                      />
                       <h3>پودر هایلایت Dior</h3>
                       <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-  
-                  <!-- کارت‌های دسته‌بندی 2 -->
-                  <div class="card" data-category="category2">
-                      <img src="images/product2.jpg" alt="لاک ناخن قرمز" loading="lazy">
+                    </div>
+
+                    <!-- کارت‌های دسته‌بندی 2 -->
+                    <div class="card" data-category="category2">
+                      <img
+                        src="images/product2.jpg"
+                        alt="لاک ناخن قرمز"
+                        loading="lazy"
+                      />
                       <h3>لاک ناخن قرمز OPI</h3>
                       <p class="price">۳۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category2">
-                      <img src="images/product3.webp" alt="لاک ناخن صورتی" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category2">
+                      <img
+                        src="images/product3.webp"
+                        alt="لاک ناخن صورتی"
+                        loading="lazy"
+                      />
                       <h3>لاک ناخن صورتی Essie</h3>
                       <p class="price">۳۵۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category2">
-                      <img src="images/product4.webp" alt="لاک ناخن مشکی" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category2">
+                      <img
+                        src="images/product4.webp"
+                        alt="لاک ناخن مشکی"
+                        loading="lazy"
+                      />
                       <h3>لاک ناخن مشکی Chanel</h3>
                       <p class="price">۴۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category2">
-                      <img src="images/product1.webp" alt="لاک ناخن براق" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category2">
+                      <img
+                        src="images/product1.webp"
+                        alt="لاک ناخن براق"
+                        loading="lazy"
+                      />
                       <h3>لاک ناخن براق Sally Hansen</h3>
                       <p class="price">۳۲۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-  
-                  <!-- کارت‌های دسته‌بندی 3 -->
-                  <div class="card" data-category="category3">
-                      <img src="images/product2.jpg" alt="برق لب صورتی" loading="lazy">
+                    </div>
+
+                    <!-- کارت‌های دسته‌بندی 3 -->
+                    <div class="card" data-category="category3">
+                      <img
+                        src="images/product2.jpg"
+                        alt="برق لب صورتی"
+                        loading="lazy"
+                      />
                       <h3>برق لب صورتی NARS</h3>
                       <p class="price">۵۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  
-                  <div class="card" data-category="category3">
-                      <img src="images/product2.jpg" alt="برق لب شفاف" loading="lazy">
+                    </div>
+
+                    <div class="card" data-category="category3">
+                      <img
+                        src="images/product2.jpg"
+                        alt="برق لب شفاف"
+                        loading="lazy"
+                      />
                       <h3>برق لب شفاف Fenty</h3>
                       <p class="price">۴۸۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category3">
-                      <img src="images/product1.webp" alt="برق لب قرمز">
+                    </div>
+                    <div class="card" data-category="category3">
+                      <img src="images/product1.webp" alt="برق لب قرمز" />
                       <h3>برق لب قرمز Dior</h3>
                       <p class="price">۵۵۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category3">
-                      <img src="images/product3.webp" alt="برق لب براق" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category3">
+                      <img
+                        src="images/product3.webp"
+                        alt="برق لب براق"
+                        loading="lazy"
+                      />
                       <h3>برق لب براق MAC</h3>
                       <p class="price">۴۹۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-  
-                  <!-- کارت‌های دسته‌بندی 4 -->
-                  <div class="card" data-category="category4">
-                      <img src="images/product3.webp" alt="رژ لب مات" loading="lazy">
+                    </div>
+
+                    <!-- کارت‌های دسته‌بندی 4 -->
+                    <div class="card" data-category="category4">
+                      <img
+                        src="images/product3.webp"
+                        alt="رژ لب مات"
+                        loading="lazy"
+                      />
                       <h3>رژ لب مات Sisley</h3>
                       <p class="price">۶۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category4">
-                      <img src="images/product2.jpg" alt="رژ لب صورتی" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category4">
+                      <img
+                        src="images/product2.jpg"
+                        alt="رژ لب صورتی"
+                        loading="lazy"
+                      />
                       <h3>رژ لب صورتی YSL</h3>
                       <p class="price">۶۵۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category4">
-                      <img src="images/product3.webp" alt="رژ لب قرمز" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category4">
+                      <img
+                        src="images/product3.webp"
+                        alt="رژ لب قرمز"
+                        loading="lazy"
+                      />
                       <h3>رژ لب قرمز Chanel</h3>
                       <p class="price">۷۰۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
-                  </div>
-                  <div class="card" data-category="category4">
-                      <img src="images/product2.jpg" alt="رژ لب براق" loading="lazy">
+                    </div>
+                    <div class="card" data-category="category4">
+                      <img
+                        src="images/product2.jpg"
+                        alt="رژ لب براق"
+                        loading="lazy"
+                      />
                       <h3>رژ لب براق Gucci</h3>
                       <p class="price">۶۸۰,۰۰۰ تومان</p>
                       <button class="add-to-cart">افزودن به سبد</button>
+                    </div>
                   </div>
+                </div>
               </div>
-          </div>
-      </div>
-      </div>
-    </div>
-  </div>
-  <!-- flex images -->
-  <div class="flex__images" data-aos="flip-up">
-    <img class="picture__one__flex image__border" src="images/cosmetic__picture__old.jpg" alt="picture" loading="lazy">
-    <img class="picture__two__flex image__border" src="images/cosmetic__picture__old2.jpg" alt="picture" loading="lazy">
-  </div>
-  <!-- logo slider  -->
-  <div class="logos">
-    <h3 class="brand">پر فروش ترین برند ها</h3>
-    <div class="logo_items">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="images/logo__slider__oine.png">
-    <img src="images/logo__slider__three.png">
-    <img src="images/logo__slider__two.png">
-    <img src="images/logo__slider__five.jpg">
-    <img src="images/logo__slider__six.png">
-    <img src="images/logo__slider__seven.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    
-    </div>
-      <div class="logo_items">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png">
-    
-    </div>
-    </div>
-    <!-- skin images section -->
-     <section class="skin__container" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
-      <img data-width="on" class="first__skin" src="images/skin1__image.webp" alt="پوست" loading="lazy" decoding="async">
-      <img data-width="on" class="second__skin" src="images/skin2__image.webp" alt="پوست" loading="lazy" decoding="async">
-      <img data-width="on" class="third__skin" src="images/skin3__image.webp" alt="پوست" loading="lazy" decoding="async">
-      <img data-width="on" class="fourth__skin" src="images/skin4__image.webp" alt="پوست" loading="lazy" decoding="async">
-     </section>
-     <!-- carousel slider -->
-     <div class="wrapper__carousel">
-      <div class="carousel-wrapper">
-        <h2 class="new__product">جدید ترین محصولات</h2>
-        <button class="btn__card left" onclick="scrollCarousel(-1)">←</button>
-        <div class="carousel" id="carousel">
-          <div class="card__child">کارت 1</div>
-          <div class="card__child">کارت 2</div>
-          <div class="card__child">کارت 3</div>
-          <div class="card__child">کارت 4</div>
-          <div class="card__child">کارت 5</div>
-          <div class="card__child">کارت 6</div>
-          <div class="card__child">کارت 7</div>
-          <div class="card__child">کارت 8</div>
-          <div class="card__child">کارت 9</div>
-          <div class="card__child">کارت 10</div>
-          <div class="card__child">کارت 8</div>
-          <div class="card__child">کارت 9</div>
-          <div class="card__child">کارت 10</div>
-          <div class="card__child">کارت 8</div>
-          <div class="card__child">کارت 9</div>
-          <div class="card__child">کارت 10</div>
-        </div>
-        <button class="btn__card right" onclick="scrollCarousel(1)">→</button>
-      </div>
-     </div>
-     <div class="image__card">
-      <img src="images/home-cosmetics___one.webp" alt="" class="photo__box__one photo__box" loading="lazy" decoding="async">
-      <img src="images/home-cosmetics__three.webp" alt="" class="photo__box__two photo__box" loading="lazy" decoding="async">
-      <img src="images/home-cosmetics__two.webp" alt="" class="photo__box__three photo__box" loading="lazy" decoding="async">
-      <img src="images/home__cosmetic__four.webp" alt="" class="photo__box__four photo__box" loading="lazy" decoding="async">
-     </div>
-    <!-- .wrapper__slider -->
-    <div class="wrapper__slider">
-      <div class="container__toggle">
-        <div class="container__slider">
-          <!-- <h1>salam</h1> -->
-          <div class="container__toggle">
-            <div class="buttons__slider btn__toggle">
-                <button class="filter-btn active" data-category="category1">پودرها</button>
-                <button class="filter-btn" data-category="category2">لاک‌ها</button>
-                <button class="filter-btn" data-category="category3">برق لب‌ها</button>
-                <button class="filter-btn" data-category="category4">رژ لب‌ها</button>
             </div>
-            <div class="cards-wrapper">
-                <div class="cards" id="cards">
+          </div>
+        </div>
+        <!-- flex images -->
+        <div class="flex__images" data-aos="flip-up">
+          <img
+            class="picture__one__flex image__border"
+            src="images/cosmetic__picture__old.jpg"
+            alt="picture"
+            loading="lazy"
+          />
+          <img
+            class="picture__two__flex image__border"
+            src="images/cosmetic__picture__old2.jpg"
+            alt="picture"
+            loading="lazy"
+          />
+        </div>
+        <!-- logo slider  -->
+        <div class="logos">
+          <h3 class="brand">پر فروش ترین برند ها</h3>
+          <div class="logo_items">
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="images/logo__slider__oine.png" />
+            <img src="images/logo__slider__three.png" />
+            <img src="images/logo__slider__two.png" />
+            <img src="images/logo__slider__five.jpg" />
+            <img src="images/logo__slider__six.png" />
+            <img src="images/logo__slider__seven.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+          </div>
+          <div class="logo_items">
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+          </div>
+        </div>
+        <!-- skin images section -->
+        <section
+          class="skin__container"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <img
+            data-width="on"
+            class="first__skin"
+            src="images/skin1__image.webp"
+            alt="پوست"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            data-width="on"
+            class="second__skin"
+            src="images/skin2__image.webp"
+            alt="پوست"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            data-width="on"
+            class="third__skin"
+            src="images/skin3__image.webp"
+            alt="پوست"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            data-width="on"
+            class="fourth__skin"
+            src="images/skin4__image.webp"
+            alt="پوست"
+            loading="lazy"
+            decoding="async"
+          />
+        </section>
+        <!-- carousel slider -->
+        <div class="wrapper__carousel">
+          <div class="carousel-wrapper">
+            <h2 class="new__product">جدید ترین محصولات</h2>
+            <button class="btn__card left" onclick="scrollCarousel(-1)">
+              ←
+            </button>
+            <div class="carousel" id="carousel">
+              <div class="card__child">کارت 1</div>
+              <div class="card__child">کارت 2</div>
+              <div class="card__child">کارت 3</div>
+              <div class="card__child">کارت 4</div>
+              <div class="card__child">کارت 5</div>
+              <div class="card__child">کارت 6</div>
+              <div class="card__child">کارت 7</div>
+              <div class="card__child">کارت 8</div>
+              <div class="card__child">کارت 9</div>
+              <div class="card__child">کارت 10</div>
+              <div class="card__child">کارت 8</div>
+              <div class="card__child">کارت 9</div>
+              <div class="card__child">کارت 10</div>
+              <div class="card__child">کارت 8</div>
+              <div class="card__child">کارت 9</div>
+              <div class="card__child">کارت 10</div>
+            </div>
+            <button class="btn__card right" onclick="scrollCarousel(1)">
+              →
+            </button>
+          </div>
+        </div>
+        <div class="image__card">
+          <img
+            src="images/home-cosmetics___one.webp"
+            alt=""
+            class="photo__box__one photo__box"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="images/home-cosmetics__three.webp"
+            alt=""
+            class="photo__box__two photo__box"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="images/home-cosmetics__two.webp"
+            alt=""
+            class="photo__box__three photo__box"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="images/home__cosmetic__four.webp"
+            alt=""
+            class="photo__box__four photo__box"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <!-- .wrapper__slider -->
+        <div class="wrapper__slider">
+          <div class="container__toggle">
+            <div class="container__slider">
+              <!-- <h1>salam</h1> -->
+              <div class="container__toggle">
+                <div class="buttons__slider btn__toggle">
+                  <button class="filter-btn active" data-category="category1">
+                    پودرها
+                  </button>
+                  <button class="filter-btn" data-category="category2">
+                    لاک‌ها
+                  </button>
+                  <button class="filter-btn" data-category="category3">
+                    برق لب‌ها
+                  </button>
+                  <button class="filter-btn" data-category="category4">
+                    رژ لب‌ها
+                  </button>
+                </div>
+                <div class="cards-wrapper">
+                  <div class="cards" id="cards">
                     <!-- کارت‌های پیش‌فرض (دسته‌بندی 1) -->
                     <div class="card" data-category="category1">
-                        <img src="images/product1.webp" alt="پودر فشرده">
-                        <h3>پودر فشرده NARS</h3>
-                        <p class="price">۱,۰۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product1.webp" alt="پودر فشرده" />
+                      <h3>پودر فشرده NARS</h3>
+                      <p class="price">۱,۰۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category1">
-                        <img src="images/product2.jpg" alt="پودر مات">
-                        <h3>پودر مات MAC</h3>
-                        <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product2.jpg" alt="پودر مات" />
+                      <h3>پودر مات MAC</h3>
+                      <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category1">
-                        <img src="images/product4.webp" alt="پودر برنزه">
-                        <h3>پودر برنزه Fenty</h3>
-                        <p class="price">۹۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product4.webp" alt="پودر برنزه" />
+                      <h3>پودر برنزه Fenty</h3>
+                      <p class="price">۹۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category1">
-                        <img src="images/product3.webp" alt="پودر هایلایت" loading="lazy">
-                        <h3>پودر هایلایت Dior</h3>
-                        <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img
+                        src="images/product3.webp"
+                        alt="پودر هایلایت"
+                        loading="lazy"
+                      />
+                      <h3>پودر هایلایت Dior</h3>
+                      <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
-    
+
                     <!-- کارت‌های دسته‌بندی 2 -->
                     <div class="card" data-category="category2">
-                        <img src="images/product2.jpg" alt="لاک ناخن قرمز" loading="lazy">
-                        <h3>لاک ناخن قرمز OPI</h3>
-                        <p class="price">۳۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img
+                        src="images/product2.jpg"
+                        alt="لاک ناخن قرمز"
+                        loading="lazy"
+                      />
+                      <h3>لاک ناخن قرمز OPI</h3>
+                      <p class="price">۳۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category2">
-                        <img src="images/product3.webp" alt="لاک ناخن صورتی" loading="lazy">
-                        <h3>لاک ناخن صورتی Essie</h3>
-                        <p class="price">۳۵۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img
+                        src="images/product3.webp"
+                        alt="لاک ناخن صورتی"
+                        loading="lazy"
+                      />
+                      <h3>لاک ناخن صورتی Essie</h3>
+                      <p class="price">۳۵۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category2">
-                        <img src="images/product4.webp" alt="لاک ناخن مشکی">
-                        <h3>لاک ناخن مشکی Chanel</h3>
-                        <p class="price">۴۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product4.webp" alt="لاک ناخن مشکی" />
+                      <h3>لاک ناخن مشکی Chanel</h3>
+                      <p class="price">۴۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category2">
-                        <img src="images/product1.webp" alt="لاک ناخن براق">
-                        <h3>لاک ناخن براق Sally Hansen</h3>
-                        <p class="price">۳۲۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product1.webp" alt="لاک ناخن براق" />
+                      <h3>لاک ناخن براق Sally Hansen</h3>
+                      <p class="price">۳۲۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
-    
+
                     <!-- کارت‌های دسته‌بندی 3 -->
                     <div class="card" data-category="category3">
-                        <img src="images/product2.jpg" alt="برق لب صورتی">
-                        <h3>برق لب صورتی NARS</h3>
-                        <p class="price">۵۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product2.jpg" alt="برق لب صورتی" />
+                      <h3>برق لب صورتی NARS</h3>
+                      <p class="price">۵۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
-                    
+
                     <div class="card" data-category="category3">
-                        <img src="images/product2.jpg" alt="برق لب شفاف">
-                        <h3>برق لب شفاف Fenty</h3>
-                        <p class="price">۴۸۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category3">
-                        <img src="images/product1.webp" alt="برق لب قرمز">
-                        <h3>برق لب قرمز Dior</h3>
-                        <p class="price">۵۵۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product2.jpg" alt="برق لب شفاف" />
+                      <h3>برق لب شفاف Fenty</h3>
+                      <p class="price">۴۸۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category3">
-                        <img src="images/product3.webp" alt="برق لب براق">
-                        <h3>برق لب براق MAC</h3>
-                        <p class="price">۴۹۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product1.webp" alt="برق لب قرمز" />
+                      <h3>برق لب قرمز Dior</h3>
+                      <p class="price">۵۵۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
-    
+                    <div class="card" data-category="category3">
+                      <img src="images/product3.webp" alt="برق لب براق" />
+                      <h3>برق لب براق MAC</h3>
+                      <p class="price">۴۹۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
+                    </div>
+
                     <!-- کارت‌های دسته‌بندی 4 -->
                     <div class="card" data-category="category4">
-                        <img src="images/product3.webp" alt="رژ لب مات">
-                        <h3>رژ لب مات Sisley</h3>
-                        <p class="price">۶۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product3.webp" alt="رژ لب مات" />
+                      <h3>رژ لب مات Sisley</h3>
+                      <p class="price">۶۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category4">
-                        <img src="images/product2.jpg" alt="رژ لب صورتی">
-                        <h3>رژ لب صورتی YSL</h3>
-                        <p class="price">۶۵۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product2.jpg" alt="رژ لب صورتی" />
+                      <h3>رژ لب صورتی YSL</h3>
+                      <p class="price">۶۵۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category4">
-                        <img src="images/product3.webp" alt="رژ لب قرمز">
-                        <h3>رژ لب قرمز Chanel</h3>
-                        <p class="price">۷۰۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product3.webp" alt="رژ لب قرمز" />
+                      <h3>رژ لب قرمز Chanel</h3>
+                      <p class="price">۷۰۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
                     <div class="card" data-category="category4">
-                        <img src="images/product2.jpg" alt="رژ لب براق">
-                        <h3>رژ لب براق Gucci</h3>
-                        <p class="price">۶۸۰,۰۰۰ تومان</p>
-                        <button class="add-to-cart">افزودن به سبد</button>
+                      <img src="images/product2.jpg" alt="رژ لب براق" />
+                      <h3>رژ لب براق Gucci</h3>
+                      <p class="price">۶۸۰,۰۰۰ تومان</p>
+                      <button class="add-to-cart">افزودن به سبد</button>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div class="image__fluid">
-      <img src="images/cosmetic__special1.webp" alt="" class="special1 auto__special" decoding="async" loading="lazy">
-      <img src="images/cosmetic__special2.webp" alt="" class="specia2 auto__special" decoding="async" loading="lazy">
-      <img src="images/cosmetic__special3.webp" alt="" class="special3 auto__special" decoding="async" loading="lazy">
-    </div>
-    <div class="article">
-      <div class="txt__article__wrapper">
-        <h1 class="txt__article">
-          پربازدیدترین مقالات
-          </h1>
-      </div>
-      <div class="article__images">
-        <img class="article__image" src="images/article__image1.webp" alt="مقاله" decoding="async" loading="lazy">
-        <img class="article__image" src="images/article__image2.webp" alt="مقاله" decoding="async" loading="lazy">
-        <img class="article__image" src="images/article__image3.webp" alt="مقاله" decoding="async" loading="lazy">
-        <img class="article__image" src="images/article__image4.webp" alt="مقاله" decoding="async" loading="lazy">
-      </div>
-    </div>
-    </main>
-    <footer class="footer__wrapper">
-      <div class="footer__logo">
-        <img class="footer__logo right__logo__footer" src="images/logo-cosmetics.png" alt="" width="200" height="100" loading="lazy">
-        <hr class="footer__line">
-      </div>
-      <nav class="footer">
-        <div class="right__side__footer">
-          <ul class="footer__first__list">
-            <h4>دسترسی سریع</h4>
-            <li><a href="#">لوازم آرایشی</a></li>
-            <li><a href="#"> مراقبت از پوست</a></li>
-            <li><a href="#">  مراقبت از مو </a></li>
-            <li><a href="#">   مادر و کودک  </a></li>
-            <li><a href="#">لوازم بهداشتی</a></li>
-          </ul>
-        </div>
-        <div class="middle__part__footer">
-          <ul class="footer__second__list">
-            <h4>دسترسی سریع</h4>
-            <li><a href="#">درباره با ما</a></li>
-            <li><a href="#">تماس با ما</a></li>
-            <li><a href="#">سوالات متداول</a></li>
-            <li><a href="#">فرصت های شغلی</a></li>
-            <li><a href="#">فروشنده شوید</a></li>
-          </ul>
-        </div>
-        <div class="left__side__footer">
-          <ul class="footer__second__list">
-            <h4> راهنمای خرید</h4>
-            <li><a href="#">نحوه ثبت نمایش</a></li>
-            <li><a href="#"> روش های پرداخت</a></li>
-            <li><a href="#"> شیوه های ارسال</a></li>
-            <li><a href="#">فرصت های شغلی</a></li>
-            <li><a href="#"> شرایط مرجوعی</a></li>
-          </ul>
-        </div>
-        <div class="footer__contact__us">
-          <div class="txt__contact">
-            <h3 class="contact__txt">
-              با ما در ارتباط باشید
-              </h3>
-              <div class="image__flex__footer">
-                  <div class="first__svg__icon">
-                    <svg id="small__svg" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-                  </div>
-                  <div class="second__svg__icon">
-                    <svg id="small__svg" class="e-font-icon-svg e-fab-telegram" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path></svg>
-                  </div>
-                  <div class="third__svg__icon">
-                    <svg id="small__svg" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-                  </div>
-                  <div class="fourth__Svg">
-                    <svg id="small__Svg" class="e-font-icon-svg e-fab-linkedin" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
-                  </div>
               </div>
-            
+            </div>
           </div>
         </div>
-       
-      </nav>
-      <div class="footer__flex__icon">
-        <div class="right__txt__footer">
-          <h3 class="footer__txt__small">پشتیبانی کازمتیک : 0211234567 و 09121234567 | شنبه تا چهارشنبه از ساعت ۹ الی ۲۴ و پنجشنبه ها از ۹ الی ۲۲.</h3>
-
+        <div class="image__fluid">
+          <img
+            src="images/cosmetic__special1.webp"
+            alt=""
+            class="special1 auto__special"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="images/cosmetic__special2.webp"
+            alt=""
+            class="specia2 auto__special"
+            decoding="async"
+            loading="lazy"
+          />
+          <img
+            src="images/cosmetic__special3.webp"
+            alt=""
+            class="special3 auto__special"
+            decoding="async"
+            loading="lazy"
+          />
         </div>
-        <div class="left__icon__footer">
-          <img class="footer__icon" src="images/footer__logo1.webp" alt="" loading="lazy" decoding="async">
-          <img class="footer__icon" src="images/footer__icon2.webp" alt="" loading="lazy" decoding="async">
-          <img class="footer__icon" src="images/footer__icon3.png" alt="" loading="lazy" decoding="async">
-          <img class="footer__icon" src="images/footer__logo4.png" alt="" loading="lazy" decoding="async">
+        <div class="article">
+          <div class="txt__article__wrapper">
+            <h1 class="txt__article">پربازدیدترین مقالات</h1>
+          </div>
+          <div class="article__images">
+            <img
+              class="article__image"
+              src="images/article__image1.webp"
+              alt="مقاله"
+              decoding="async"
+              loading="lazy"
+            />
+            <img
+              class="article__image"
+              src="images/article__image2.webp"
+              alt="مقاله"
+              decoding="async"
+              loading="lazy"
+            />
+            <img
+              class="article__image"
+              src="images/article__image3.webp"
+              alt="مقاله"
+              decoding="async"
+              loading="lazy"
+            />
+            <img
+              class="article__image"
+              src="images/article__image4.webp"
+              alt="مقاله"
+              decoding="async"
+              loading="lazy"
+            />
+          </div>
         </div>
-        
-      </div>
-    </footer>
- </div>
+      </main>
+      <footer class="footer__wrapper">
+        <div class="footer__logo">
+          <img
+            class="footer__logo right__logo__footer"
+            src="images/logo-cosmetics.png"
+            alt=""
+            width="200"
+            height="100"
+            loading="lazy"
+          />
+          <hr class="footer__line" />
+        </div>
+        <nav class="footer">
+          <div class="right__side__footer">
+            <ul class="footer__first__list">
+              <h4>دسترسی سریع</h4>
+              <li><a href="#">لوازم آرایشی</a></li>
+              <li><a href="#"> مراقبت از پوست</a></li>
+              <li><a href="#"> مراقبت از مو </a></li>
+              <li><a href="#"> مادر و کودک </a></li>
+              <li><a href="#">لوازم بهداشتی</a></li>
+            </ul>
+          </div>
+          <div class="middle__part__footer">
+            <ul class="footer__second__list">
+              <h4>دسترسی سریع</h4>
+              <li><a href="#">درباره با ما</a></li>
+              <li><a href="#">تماس با ما</a></li>
+              <li><a href="#">سوالات متداول</a></li>
+              <li><a href="#">فرصت های شغلی</a></li>
+              <li><a href="#">فروشنده شوید</a></li>
+            </ul>
+          </div>
+          <div class="left__side__footer">
+            <ul class="footer__second__list">
+              <h4>راهنمای خرید</h4>
+              <li><a href="#">نحوه ثبت نمایش</a></li>
+              <li><a href="#"> روش های پرداخت</a></li>
+              <li><a href="#"> شیوه های ارسال</a></li>
+              <li><a href="#">فرصت های شغلی</a></li>
+              <li><a href="#"> شرایط مرجوعی</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact__us">
+            <div class="txt__contact">
+              <h3 class="contact__txt">با ما در ارتباط باشید</h3>
+              <div class="image__flex__footer">
+                <div class="first__svg__icon">
+                  <svg
+                    id="small__svg"
+                    class="e-font-icon-svg e-fab-twitter"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="second__svg__icon">
+                  <svg
+                    id="small__svg"
+                    class="e-font-icon-svg e-fab-telegram"
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="third__svg__icon">
+                  <svg
+                    id="small__svg"
+                    class="e-font-icon-svg e-fab-instagram"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="fourth__Svg">
+                  <svg
+                    id="small__Svg"
+                    class="e-font-icon-svg e-fab-linkedin"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="footer__flex__icon">
+          <div class="right__txt__footer">
+            <h3 class="footer__txt__small">
+              پشتیبانی کازمتیک : 0211234567 و 09121234567 | شنبه تا چهارشنبه از
+              ساعت ۹ الی ۲۴ و پنجشنبه ها از ۹ الی ۲۲.
+            </h3>
+          </div>
+          <div class="left__icon__footer">
+            <img
+              class="footer__icon"
+              src="images/footer__logo1.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="footer__icon"
+              src="images/footer__icon2.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="footer__icon"
+              src="images/footer__icon3.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="footer__icon"
+              src="images/footer__logo4.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
 
-  <!-- scripts files -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="src/js/slider.js"></script>
-  <script src="src/js/product.js"></script>
-  <script src="src/js/main.js"></script>
-  <script src="src/js/newpro.js"></script>
-  <script src="src/js/chatbot.js"></script>
-  <script src="src/js/cosmetic.js"></script>
-  <!-- <script src="src/js/scrooltop.js"></script> -->
-  <script src="src/js/notification.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="src/js/aos.js"></script>
-  <script src="src/js/loader.js"></script>
-  <script src="src/js/instagram.js"></script>
-
-</body>
+    <!-- scripts files -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="src/js/slider.js"></script>
+    <script src="src/js/product.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/newpro.js"></script>
+    <script src="src/js/chatbot.js"></script>
+    <script src="src/js/cosmetic.js"></script>
+    <!-- <script src="src/js/scrooltop.js"></script> -->
+    <script src="src/js/notification.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="src/js/aos.js"></script>
+    <script src="src/js/loader.js"></script>
+    <script src="src/js/instagram.js"></script>
+  </body>
 </html>
