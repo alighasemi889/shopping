@@ -1,29 +1,29 @@
 #content {
-    padding: 20px;
-    text-align: center;
-    display: none; /* ابتدا مخفیه */
+  padding: 20px;
+  text-align: center;
+  display: none; /* ابتدا مخفیه */
 }
 
 /* نوتیفیکیشن */
 .notification {
-    position: fixed;
-    top: -100px; /* خارج از دید */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ff4d4d;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
-    transition: top 0.5s ease; /* انیمیشن نرم */
-    z-index: 1000;
+  position: fixed;
+  top: -100px; /* خارج از دید */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4d;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  transition: top 0.5s ease; /* انیمیشن نرم */
+  z-index: 1000;
 }
 
 .notification.show {
-    top: 20px; /* وقتی نشون داده می‌شه */
+  top: 20px; /* وقتی نشون داده می‌شه */
 }
 
 .notification.online {
-    background-color: #28a745; /* سبز برای آنلاین */
+  background-color: #28a745; /* سبز برای آنلاین */
 }

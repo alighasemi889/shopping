@@ -36,7 +36,8 @@
     justify-content: center;
     align-items: center;
   }
-  .image__card, .image__fluid {
+  .image__card,
+  .image__fluid {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -49,7 +50,7 @@
   .footer {
     flex-direction: column;
   }
-  img[data-width=on] {
+  img[data-width="on"] {
     width: 300px;
     height: auto;
     max-width: 100%;
@@ -78,4 +79,4 @@
     display: flex;
     gap: 1rem;
   }
-}/*# sourceMappingURL=reponsive.css.map */
+} /*# sourceMappingURL=reponsive.css.map */

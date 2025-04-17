@@ -7,7 +7,9 @@
   --cell-size: 52px;
   --cell-spacing: 1px;
   --cells: 3;
-  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  --total-size: calc(
+    var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing))
+  );
   display: flex;
   flex-wrap: wrap;
   width: var(--total-size);
@@ -44,39 +46,39 @@
 }
 
 .cell:nth-child(1) {
-  --cell-color: #00FF87;
+  --cell-color: #00ff87;
 }
 
 .cell:nth-child(2) {
-  --cell-color: #0CFD95;
+  --cell-color: #0cfd95;
 }
 
 .cell:nth-child(3) {
-  --cell-color: #17FBA2;
+  --cell-color: #17fba2;
 }
 
 .cell:nth-child(4) {
-  --cell-color: #23F9B2;
+  --cell-color: #23f9b2;
 }
 
 .cell:nth-child(5) {
-  --cell-color: #30F7C3;
+  --cell-color: #30f7c3;
 }
 
 .cell:nth-child(6) {
-  --cell-color: #3DF5D4;
+  --cell-color: #3df5d4;
 }
 
 .cell:nth-child(7) {
-  --cell-color: #45F4DE;
+  --cell-color: #45f4de;
 }
 
 .cell:nth-child(8) {
-  --cell-color: #53F1F0;
+  --cell-color: #53f1f0;
 }
 
 .cell:nth-child(9) {
-  --cell-color: #60EFFF;
+  --cell-color: #60efff;
 }
 
 @keyframes ripple {
@@ -92,4 +94,4 @@
   100% {
     background-color: transparent;
   }
-}/*# sourceMappingURL=loader.css.map */
+} /*# sourceMappingURL=loader.css.map */

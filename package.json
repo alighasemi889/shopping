@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "start index.html",
+    "format": "prettier --write .",
+    "start": "start index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/alighasemi889/shopping/issues"
   },
-  "homepage": "https://github.com/alighasemi889/shopping#readme"
+  "homepage": "https://github.com/alighasemi889/shopping#readme",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
 }

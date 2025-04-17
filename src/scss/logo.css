@@ -18,7 +18,8 @@
   overflow: hidden;
 }
 
-.logos:before, .logos:after {
+.logos:before,
+.logos:after {
   position: absolute;
   top: 0;
   content: "";
@@ -29,12 +30,20 @@
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
 }
 
 .logo_items {
@@ -54,8 +63,8 @@
 h3.brand {
   text-align: end;
   padding: 10px;
-  color: #3C3C3C;
+  color: #3c3c3c;
   margin-right: 130px;
   font-size: 1.6rem;
   padding: 10px;
-}/*# sourceMappingURL=logo.css.map */
+} /*# sourceMappingURL=logo.css.map */

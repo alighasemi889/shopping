@@ -1,42 +1,39 @@
-@mixin footer__line(){
-    background: red;
-    width: 100%;
-    height: 4px;
-    // background: red;
+@mixin footer__line() {
+  background: red;
+  width: 100%;
+  height: 4px;
+  // background: red;
 }
-.footer__line{
-    @include footer__line();
+.footer__line {
+  @include footer__line();
 }
 nav.footer {
-    max-width: 100%;
-    overflow: hidden;
-    display: flex
-;
-    justify-content: space-around;
-    padding: 30px;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
 }
 
 ul.footer__first__list {
-    display: flex
-;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 ul.footer__second__list {
-    display: flex
-;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 h4 {
-    color: #000000;
-    font-size: 2rem;
-    font-weight: 600;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 footer.footer__wrapper {
-    max-width: 100%;
-    overflow: hidden;
-    direction: rtl;
+  max-width: 100%;
+  overflow: hidden;
+  direction: rtl;
 }
