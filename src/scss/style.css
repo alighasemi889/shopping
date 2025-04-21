@@ -61,12 +61,12 @@ h2.txt__center {
   padding: 60px;
 }
 
-img[data-radous="active"] {
+img[data-radous=active] {
   border-radius: 5px;
   width: 120px;
 }
 
-h4[data-center="active"] {
+h4[data-center=active] {
   color: #3c3c3c;
   font-size: 1.2rem;
   text-align: center;
@@ -167,7 +167,7 @@ section.skin__container {
   padding: 5rem;
 }
 
-img[data-width="on"] {
+img[data-width=on] {
   width: 390px;
   height: auto;
   max-width: 450px;
@@ -272,4 +272,4 @@ h3.footer__txt__small {
   /* justify-content: center; */
   padding: 10px;
   gap: 1.5rem;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

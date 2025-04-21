@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="src/scss/loader__new.css" />
     <link rel="stylesheet" href="src/scss/instagram.css" />
     <link rel="stylesheet" href="src/scss/banner.css" />
+    <link rel="stylesheet" href="src/scss/sidebar.css">
   </head>
   <body>
     <!-- loader part -->
@@ -119,7 +120,8 @@
           </div>
           <ul></ul>
         </nav>
-        <nav id="mobile__header" class="header__mobile">
+        <!-- mobile navbar -->
+        <!-- <nav id="mobile__header" class="header__mobile">
           <div class="wrapper__mobile">
             <ul class="nav__mobile">
               <li><a class="mobile__link" href="#">لوازم آرایشی</a></li>
@@ -138,7 +140,26 @@
               <li><a class="mobile__link" href="#">تماس با ما</a></li>
             </ul>
           </div>
-        </nav>
+        </nav> -->
+        <div id="mobile__header" class="sidebar header__mobile">
+          <div class="logo">
+              <img src="images/logo-cosmetics.png" alt="لوگو فروشگاه" loading="lazy">
+          </div>
+          <ul>
+              <li><a href="#"><i class="fas fa-home"></i> خانه</a></li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i> محصولات</a></li>
+              <li><a href="#"><i class="fas fa-tags"></i> دسته‌بندی‌ها</a></li>
+              <li><a href="#"><i class="fas fa-user"></i> پروفایل</a></li>
+              <li><a href="#"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+          </ul>
+          <div class="discount-progress">
+              <p>تا تخفیف بعدی: 60%</p>
+              <div class="progress-bar">
+                  <div class="progress"></div>
+              </div>
+          </div>
+          <a href="#" class="signup-btn">ثبت‌نام</a>
+      </div>
       </header>
       <!-- instagram story slider -->
       <div class="ig-mobile-slider">
