@@ -1,18 +1,17 @@
 @mixin footer__line() {
   background: red;
   width: 100%;
-  height: 4px;
-  // background: red;
 }
 .footer__line {
   @include footer__line();
 }
 nav.footer {
   max-width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-around;
-  padding: 30px;
+    overflow: hidden;
+    display: flex
+;
+    justify-content: space-between;
+    padding: 83px;
 }
 
 ul.footer__first__list {
