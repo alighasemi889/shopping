@@ -26,9 +26,12 @@
     <link rel="stylesheet" href="src/scss/banner.css" />
   </head>
   <body>
+    <!-- loader part -->
     <div id="loader">
       <div class="spinner"></div>
     </div>
+    <!-- loader part -->
+    <!-- notification part -->
     <div id="notification" class="notification"></div>
     <div class="banner">
       <div class="banner-content">
@@ -37,8 +40,6 @@
         <a href="#shop" class="cta-button">خرید کن</a>
       </div>
     </div>
-    <!-- btn for scrool top to bottom -->
-    <!-- <button class="scroll-to-top">↑</button> -->
 
     <div
       class="wrapper__main__page container main-content hidden"
@@ -129,7 +130,9 @@
               <hr class="line" />
               <li><a class="mobile__link" href="product.html">وبلاگ</a></li>
               <hr class="line" />
-              <li><a class="mobile__link" href="contact.html">درباره با ما</a></li>
+              <li>
+                <a class="mobile__link" href="contact.html">درباره با ما</a>
+              </li>
               <hr class="line" />
 
               <li><a class="mobile__link" href="#">تماس با ما</a></li>
@@ -1065,7 +1068,7 @@
           />
           <hr class="footer__line" />
         </div>
-        <nav class="footer">
+        <nav id="footer__responsive" class="footer footer__flex__responsive">
           <div class="right__side__footer">
             <ul class="footer__first__list">
               <h4>دسترسی سریع</h4>

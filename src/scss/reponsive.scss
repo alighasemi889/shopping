@@ -82,3 +82,23 @@
     gap: 1rem;
   }
 }
+
+@media screen and (max-width: 1346px) {
+  .footer__flex__icon {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav.footer {
+    display: flex;
+    // grid-template-columns: 1fr 1fr ;
+    // gap: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  h3.footer__txt__small {
+    width: 67%;
+    margin: 0 auto;
+    // background: red;
+  }
+}
