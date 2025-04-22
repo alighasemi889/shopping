@@ -1,0 +1,123 @@
+  email sending code
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      // مقداردهی اولیه EmailJS
+      emailjs.init("EbINVIBxNELPW9CNc"); // جای YOUR_PUBLIC_KEY کلید عمومی خودت رو بذار
+
+      const form = document.getElementById("signupForm");
+      const emailInput = document.getElementById("email");
+      const otpInput = document.getElementById("otp");
+      const submitButton = document.getElementById("submitButton");
+      const verifyButton = document.getElementById("verifyButton");
+      const otpSection = document.getElementById("otpSection");
+      const emailError = document.getElementById("emailError");
+      const otpError = document.getElementById("otpError");
+
+      let generatedOTP = "";
+
+      // تابع اعتبارسنجی ایمیل
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      // تابع نمایش خطا
+      function showError(element, message) {
+        element.textContent = message;
+        element.style.display = "block";
+      }
+
+      // تابع مخفی کردن خطا
+      function hideError(element) {
+        element.textContent = "";
+        element.style.display = "none";
+      }
+
+      // تولید کد OTP رندوم
+      function generateOTP() {
+        return Math.floor(100000 + Math.random() * 900000).toString(); // کد 6 رقمی
+      }
+
+      // ارسال فرم برای دریافت ایمیل
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = emailInput.value;
+
+        if (!validateEmail(email)) {
+          showError(emailError, "لطفاً یک ایمیل معتبر وارد کنید.");
+          return;
+        }
+
+        hideError(emailError);
+        submitButton.disabled = true;
+        submitButton.textContent = "در حال ارسال...";
+
+        // تولید OTP
+        generatedOTP = generateOTP();
+
+        // ارسال ایمیل با EmailJS
+        emailjs
+          .send("service_8z9uecv", "template_8vqum7o", {
+            to_email: email,
+            otp: generatedOTP,
+          })
+          .then(() => {
+            alert("کد تأیید به ایمیل شما ارسال شد!");
+            otpSection.style.display = "block";
+            submitButton.disabled = false;
+            submitButton.textContent = "ارسال کد تأیید";
+            emailInput.disabled = true;
+          })
+          .catch((error) => {
+            showError(emailError, "خطا در ارسال ایمیل. دوباره امتحان کنید.");
+            submitButton.disabled = false;
+            submitButton.textContent = "ارسال کد تأیید";
+            console.error("EmailJS Error:", error);
+          });
+      });
+
+      // تأیید کد OTP
+      verifyButton.addEventListener("click", () => {
+        const enteredOTP = otpInput.value;
+
+        if (enteredOTP === "") {
+          showError(otpError, "لطفاً کد تأیید را وارد کنید.");
+          return;
+        }
+
+        if (enteredOTP === generatedOTP) {
+          hideError(otpError);
+
+          // ذخیره ایمیل در LocalStorage
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          if (users.some((user) => user.email === emailInput.value)) {
+            showError(emailError, "این ایمیل قبلاً ثبت شده است.");
+            return;
+          }
+
+          users.push({ email: emailInput.value });
+          localStorage.setItem("users", JSON.stringify(users));
+
+          alert("تأیید موفقیت‌آمیز! خوش اومدی!");
+          form.reset();
+          otpSection.style.display = "none";
+          emailInput.disabled = false;
+
+          // هدایت به صفحه دیگه (اختیاری)
+          // window.location.href = 'dashboard.html';
+        } else {
+          showError(otpError, "کد تأیید اشتباه است.");
+        }
+      });
+
+      // اعتبارسنجی زنده ایمیل
+      emailInput.addEventListener("input", () => {
+        if (emailInput.value === "") {
+          hideError(emailError);
+        } else if (!validateEmail(emailInput.value)) {
+          showError(emailError, "لطفاً یک ایمیل معتبر وارد کنید.");
+        } else {
+          hideError(emailError);
+        }
+      });
+    </script>
