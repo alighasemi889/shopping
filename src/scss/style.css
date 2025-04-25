@@ -273,3 +273,6 @@ h3.footer__txt__small {
   padding: 10px;
   gap: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
+h1.txt__article {
+  padding-right: 130px;
+}
