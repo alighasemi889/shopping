@@ -1,6 +1,7 @@
 .custom-slider-container {
   width: 70%;
-  background-color: red;
+  // background-color: red;
+  background-image: linear-gradient(180deg, #E367AA 0%, #E367AA 100%);
   padding: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -57,7 +58,8 @@
   margin-top: 80px;
 }
 aside.custom-sidebar {
-  background: red;
+  // background: red;
+  background-image: linear-gradient(180deg, #E367AA 0%, #E367AA 100%);
   position: relative;
   left: -10%;
   width: 300px;
