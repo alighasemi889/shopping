@@ -50,7 +50,10 @@ body {
     radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
   background-attachment: fixed;
 }
-
+#mobile-error {
+  position: absolute;
+  top: 50px;
+}
 .auth-container {
   min-height: 100vh;
   display: flex;
