@@ -43,6 +43,11 @@ body {
   background-attachment: fixed;
 }
 
+#mobile-error {
+  position: absolute;
+  top: 50px;
+}
+
 .auth-container {
   min-height: 100vh;
   display: flex;
