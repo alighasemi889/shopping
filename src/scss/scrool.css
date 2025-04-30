@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.scroll-to-top-btn {
+  position: fixed;
+  z-index: 9999;
+  bottom: 30px;
+  left: 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* در ابتدا مخفی است */
+  transition: opacity 0.3s ease; /* برای افکت نرم */
+}
+
+/* وقتی دکمه نمایش داده می‌شود */
+.scroll-to-top-btn.show {
+  display: block;
+}/*# sourceMappingURL=scrool.css.map */
