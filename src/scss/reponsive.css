@@ -50,7 +50,7 @@
   .footer {
     flex-direction: column;
   }
-  img[data-width=on] {
+  img[data-width="on"] {
     width: 300px;
     height: auto;
     max-width: 100%;
@@ -95,4 +95,4 @@
     width: 67%;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=reponsive.css.map */
+} /*# sourceMappingURL=reponsive.css.map */

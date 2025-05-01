@@ -1,4 +1,3 @@
-
 # Shopping App
 
 Welcome to the **Shopping App**! This project is a simple online shopping application built with HTML, CSS, and JavaScript. It's designed to provide a user-friendly interface for browsing products, adding them to the cart, and completing purchases.
@@ -23,15 +22,17 @@ This project is built using:
 - **HTML**: Markup language for creating web pages.
 - **CSS**: Styling language for designing the user interface.
 - **JavaScript**: Programming language for dynamic behavior and interaction.
-  
+
 ## Installation
 
 1. Clone the repository to your local machine:
+
    ```bash
    git clone https://github.com/alighasemi889/shopping.git
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd shopping
    ```

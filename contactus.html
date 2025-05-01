@@ -1,17 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تماس با ما</title>
-    <link rel="stylesheet" href="src/scss/menu.css">
-    <link rel="stylesheet" href="src/scss/sidebar.css">
-</head>
-<body>
-    <div id="header-container"></div>    <!-- <header-menu></header-menu> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="src/scss/menu.css" />
+    <link rel="stylesheet" href="src/scss/style.css">
+    <link rel="stylesheet" href="src/scss/sidebar.css" />
+    <link rel="stylesheet" href="src/scss/contactus.css" />
+    <link rel="stylesheet" href="src/scss/footer.css">
+
+  </head>
+  <body>
+    <header>
+      <div id="header-container"></div>
+      <!-- <header-menu></header-menu> -->
+    </header>
+    <!-- 
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125287.02124737768!2d59.533396883389274!3d36.26007872273457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8d978900000001%3A0x5555555555555555!2z2YXZhdmY!5e0!3m2!1sen!2sus!4v1612345678900"
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe> -->
+    <main>
+      <div class="flex__wrapper">
+        <div class="text__container">
+          <h2 class="call__us">تماس با کازمتیک</h2>
+          <h3 class="call__details">
+            لطفا پیش از ثبت تیکت، ابتدا بخش سوالات متداول را مطالعه نمایید.
+          </h3>
+        </div>
+        <div class="image__container">
+          <img
+            class="about__image"
+            src="images/about__us__question.jpg"
+            alt="question"
+            decoding="async"
+          />
+        </div>
+      </div>
+      <section class="contact-section">
+        <div class="contact-container">
+          <h2 class="main__title">راه های ارتباط با کازمتیک</h2>
+          <div class="contact-item">
+            <h1></h1>
+            <i class="fas fa-envelope"></i>
+
+            <span>alihj4223@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>905-900-87-12</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>تهران، خیابان نمونه، پلاک 123</span>
+          </div>
+          <div class="social-media">
+            <h3>شبکه‌های اجتماعی ما</h3>
+            <div class="social-icons">
+              <a href="https://instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://twitter.com" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://linkedin.com" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://telegram.org" target="_blank"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- mashhad map  section -->
+      <div class="map__container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125287.02124737768!2d59.533396883389274!3d36.26007872273457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8d978900000001%3A0x5555555555555555!2z2YXZhdmY!5e0!3m2!1sen!2sus!4v1612345678900"
+          width="80%"
+          height="450"
+          style="border: 0; margin-top: 100px"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </main>
 
 
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        // بارگذاری فایل فوتر.html
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('خطا در بارگذاری فوتر:', error);
+            });
+    </script>
     <script src="src/js/header.js"></script>
-    
-</body>
+  </body>
 </html>
