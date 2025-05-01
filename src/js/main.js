@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const hambergerIcon = document.getElementById("mobile__hamberger");
 
     if (!sidebar || !hambergerIcon) {
-      console.error("One or both elements (mobile__header, mobile__hamberger) not found");
+      console.error(
+        "One or both elements (mobile__header, mobile__hamberger) not found",
+      );
       return;
     }
 
@@ -45,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hambergerIcon.addEventListener("click", (event) => {
       event.stopPropagation();
-      sidebar.style.display = sidebar.style.display === "none" ? "flex" : "none";
+      sidebar.style.display =
+        sidebar.style.display === "none" ? "flex" : "none";
     });
     document.addEventListener("click", (event) => {
       if (!sidebar.contains(event.target) && event.target !== hambergerIcon) {

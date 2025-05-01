@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const hambergerIcon = document.getElementById("mobile__hamberger");
 
     if (!sidebar || !hambergerIcon) {
-      console.error("One or both elements (mobile__header, mobile__hamberger) not found");
+      console.error(
+        "One or both elements (mobile__header, mobile__hamberger) not found",
+      );
       return;
     }
 
@@ -17,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // رویداد کلیک برای همبرگر
     hambergerIcon.addEventListener("click", (event) => {
       event.stopPropagation();
-      sidebar.style.display = sidebar.style.display === "none" ? "flex" : "none";
+      sidebar.style.display =
+        sidebar.style.display === "none" ? "flex" : "none";
     });
 
     // بستن سایدبار با کلیک خارج
@@ -29,7 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // چک کردن اینکه صفحه index.html هست یا نه
-  if (window.location.pathname !== "/index.html" && window.location.pathname !== "/") {
+  if (
+    window.location.pathname !== "/index.html" &&
+    window.location.pathname !== "/"
+  ) {
     // برای صفحات غیر اصلی (مثل contact.html)
     fetch("header.html")
       .then((response) => response.text())

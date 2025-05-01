@@ -1,111 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ورود</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="src/scss/register.css">
+    <link rel="stylesheet" href="src/scss/register.css" />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            light: '#818CF8',
-                            DEFAULT: '#6366F1',
-                            dark: '#4F46E5',
-                        },
-                        secondary: {
-                            DEFAULT: '#10B981',
-                        },
-                        accent: {
-                            DEFAULT: '#F59E0B',
-                        }
-                    },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: "#818CF8",
+                DEFAULT: "#6366F1",
+                dark: "#4F46E5",
+              },
+              secondary: {
+                DEFAULT: "#10B981",
+              },
+              accent: {
+                DEFAULT: "#F59E0B",
+              },
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-gray-100">
+  </head>
+  <body class="bg-gray-100">
     <!-- Background Elements (Decorative) -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-light opacity-10 rounded-full filter blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary opacity-10 rounded-full filter blur-3xl transform -translate-x-1/3 translate-y-1/4"></div>
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-primary-light opacity-10 rounded-full filter blur-3xl transform translate-x-1/2 -translate-y-1/2"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-secondary opacity-10 rounded-full filter blur-3xl transform -translate-x-1/3 translate-y-1/4"
+      ></div>
     </div>
 
     <div class="auth-container py-10 px-4 sm:px-6 lg:px-8">
-        <div class="auth-card max-w-md mx-auto sm:max-w-lg lg:max-w-xl">
-            <div class="auth-header">
-                <div class="auth-logo">
-                    <img src="images/logo-cosmetics.png" alt="لوگو" class="rounded-lg" loading="lazy">
-                </div>
-                <h1>خوش آمدید</h1>
-                <p>لطفا برای ورود، اطلاعات خود را وارد کنید</p>
-            </div>
-            
-            <!-- Login Form -->
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="email">ایمیل یا نام کاربری</label>
-                    <div class="input-with-icon">
-                        <i class="input-icon fa-solid fa-user"></i>
-                        <input type="text" id="email" name="email" placeholder="ایمیل یا نام کاربری خود را وارد کنید" required dir="ltr" class="text-right">
-                        <p id="email-error" class="text-red-500 text-sm sm:text-xs mt-1 hidden"><i class="fa-solid fa-exclamation-circle mr-1"></i>لطفاً ایمیل یا نام کاربری معتبر وارد کنید.</p>
-                    </div>
-                </div>
-                
-                <div class="input-group">
-                    <label for="password">رمز عبور</label>
-                    <div class="input-with-icon">
-                        <i class="input-icon fa-solid fa-lock" id="login-password-toggle"></i>
-                        <input type="password" id="password" name="password" placeholder="رمز عبور خود را وارد کنید" required>
-                        <p id="password-error" class="text-red-500 text-sm sm:text-xs mt-1 hidden"><i class="fa-solid fa-exclamation-circle mr-1"></i>رمز عبور باید حداقل ۶ کاراکتر باشد.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-center justify-between mb-6">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="remember" name="remember">
-                        <label for="remember">مرا به خاطر بسپار</label>
-                    </div>
-                    <a href="forgot-password.html" class="text-primary-600 text-sm font-medium hover:underline transition">فراموشی رمز عبور؟</a>
-                </div>
-                
-                <button type="submit" class="btn btn-primary">
-                    <span class="flex items-center justify-center">
-                        <span>ورود</span>
-                        <i class="fa-solid fa-arrow-left mr-2"></i>
-                    </span>
-                </button>
-            </form>
-            
-            <div class="form-divider">
-                <span>یا</span>
-            </div>
-            
-            <div class="social-login">
-                <a href="#" class="social-btn google">
-                    <i class="fa-brands fa-google"></i>
-                </a>
-                <a href="#" class="social-btn facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-btn linkedin">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-            </div>
-            
-            <div class="form-footer">
-                <p>حساب کاربری ندارید؟ <a href="signup.html">ثبت نام</a></p>
-            </div>
+      <div class="auth-card max-w-md mx-auto sm:max-w-lg lg:max-w-xl">
+        <div class="auth-header">
+          <div class="auth-logo">
+            <img
+              src="images/logo-cosmetics.png"
+              alt="لوگو"
+              class="rounded-lg"
+              loading="lazy"
+            />
+          </div>
+          <h1>خوش آمدید</h1>
+          <p>لطفا برای ورود، اطلاعات خود را وارد کنید</p>
         </div>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="email">ایمیل یا نام کاربری</label>
+            <div class="input-with-icon">
+              <i class="input-icon fa-solid fa-user"></i>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="ایمیل یا نام کاربری خود را وارد کنید"
+                required
+                dir="ltr"
+                class="text-right"
+              />
+              <p
+                id="email-error"
+                class="text-red-500 text-sm sm:text-xs mt-1 hidden"
+              >
+                <i class="fa-solid fa-exclamation-circle mr-1"></i>لطفاً ایمیل
+                یا نام کاربری معتبر وارد کنید.
+              </p>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">رمز عبور</label>
+            <div class="input-with-icon">
+              <i
+                class="input-icon fa-solid fa-lock"
+                id="login-password-toggle"
+              ></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="رمز عبور خود را وارد کنید"
+                required
+              />
+              <p
+                id="password-error"
+                class="text-red-500 text-sm sm:text-xs mt-1 hidden"
+              >
+                <i class="fa-solid fa-exclamation-circle mr-1"></i>رمز عبور باید
+                حداقل ۶ کاراکتر باشد.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="checkbox-group">
+              <input type="checkbox" id="remember" name="remember" />
+              <label for="remember">مرا به خاطر بسپار</label>
+            </div>
+            <a
+              href="forgot-password.html"
+              class="text-primary-600 text-sm font-medium hover:underline transition"
+              >فراموشی رمز عبور؟</a
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <span class="flex items-center justify-center">
+              <span>ورود</span>
+              <i class="fa-solid fa-arrow-left mr-2"></i>
+            </span>
+          </button>
+        </form>
+
+        <div class="form-divider">
+          <span>یا</span>
+        </div>
+
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <i class="fa-brands fa-google"></i>
+          </a>
+          <a href="#" class="social-btn facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn linkedin">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <div class="form-footer">
+          <p>حساب کاربری ندارید؟ <a href="signup.html">ثبت نام</a></p>
+        </div>
+      </div>
     </div>
     <script src="src/js/login.js"></script>
-</body>
+  </body>
 </html>

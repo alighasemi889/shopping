@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .custom-slider-container {
   width: 70%;
-  background-image: linear-gradient(180deg, #E367AA 0%, #E367AA 100%);
+  background-image: linear-gradient(180deg, #e367aa 0%, #e367aa 100%);
   padding: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -58,11 +58,11 @@
 }
 
 aside.custom-sidebar {
-  background-image: linear-gradient(180deg, #E367AA 0%, #E367AA 100%);
+  background-image: linear-gradient(180deg, #e367aa 0%, #e367aa 100%);
   position: relative;
   left: -10%;
   width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=custom.css.map */
+} /*# sourceMappingURL=custom.css.map */

@@ -1,0 +1,142 @@
+.flex__wrapper {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px; */
+  gap: 1rem;
+  margin: 10px 0 0 0;
+  overflow: hidden;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: -22px 14px 50px -3px rgba(0, 0, 0, 0.1);
+}
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 65px;
+}
+
+.contact-section {
+  width: 80%;
+  background-color: #fff;
+  box-shadow: -22px 14px 50px -3px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 90px;
+  border-radius: 100px;
+}
+
+.contact-container {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.call__details {
+  color: #7a7a7a;
+  font-size: 1.5rem;
+}
+
+span {
+  color: #7a7a7a;
+}
+
+.main__title {
+  text-align: right;
+  color: #7a7a7a;
+  font-size: 2.3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  flex-direction: row-reverse;
+  font-size: 29px;
+  padding-right: 43px;
+}
+
+.contact-item i {
+  font-size: 24px;
+  color: #007bff;
+  margin-left: 15px;
+  width: 30px;
+  text-align: center;
+}
+
+.contact-item span {
+  flex: 1;
+  text-align: right;
+}
+
+.social-media {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.social-media h3 {
+  font-size: 36px;
+  color: #7a7a7a;
+  margin-bottom: 15px;
+  padding-right: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  padding-right: 30px;
+  justify-content: flex-end;
+}
+
+.call__us {
+  color: #424242;
+  font-size: 1.9rem;
+}
+
+img.about__image {
+  width: 130px;
+  /* aspect-ratio: 16 / 9; */
+  height: auto;
+  max-width: 140px;
+}
+
+.social-icons a {
+  color: #007bff;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .contact-item {
+    font-size: 16px;
+  }
+  .contact-item i {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .social-media h3 {
+    font-size: 18px;
+  }
+  .social-icons a {
+    font-size: 24px;
+  }
+}
+.map__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} /*# sourceMappingURL=contactus.css.map */
