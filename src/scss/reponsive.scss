@@ -97,7 +97,8 @@
   h3.footer__txt__small {
     width: 67%;
     margin: 0 auto;
-    // background: red;
+    text-align: center;
+    
   }
 }
 
@@ -118,5 +119,27 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+}
+@media screen and (max-width:1118px){
+  .flex__icon{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width:718px){
+  .flex__icon{
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+}
+@media screen and (max-width:600px){
+  .flex__icon{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:300px) and (max-width:400px){
+  .btn__toggle{
+    display: flex;
+    flex-direction: column;
   }
 }
