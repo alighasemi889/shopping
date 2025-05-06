@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/alighasemi889/shopping#readme",
   "devDependencies": {
+    "husky": "^9.1.7",
     "prettier": "^3.5.3"
   }
 }
