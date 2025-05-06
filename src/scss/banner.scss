@@ -1,60 +1,74 @@
-/* ریست اولیه */
+@charset "UTF-8";
+
+// Variables
+$banner-gradient: linear-gradient(90deg, #2c3e50, #3498db);
+$cta-bg: #2ecc71;
+$white: #ffffff;
+$dark-shadow: rgba(0, 0, 0, 0.4);
+$border-radius: 20px;
+$padding: 20px;
+$font-family: "Vazir", sans-serif;
+$transition: all 0.2s ease;
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* استایل بنر */
+// Banner Styles
 .banner {
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    #2c3e50,
-    #3498db
-  ); /* گرادیانت آبی تیره به روشن */
-  color: #ffffff;
+  background: $banner-gradient;
+  color: $white;
   text-align: center;
   padding: 12px 10px;
   position: relative;
-  font-family: "Vazir", sans-serif;
+  font-family: $font-family;
   line-height: 1.5;
+
+  .banner-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $padding;
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px $dark-shadow;
+    }
+  }
 }
 
-/* محتوای بنر */
-.banner-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-/* تیتر بنر */
-.banner-content h1 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* سایه برای خوانایی */
-}
-
-/* دکمه CTA */
+// CTA Button
 .cta-button {
   display: inline-block;
-  padding: 8px 20px;
-  background-color: #2ecc71; /* سبز ملایم */
-  color: #ffffff;
+  padding: 8px $padding;
+  background-color: $cta-bg;
+  color: $white;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: $border-radius;
   font-size: 1rem;
   font-weight: 500;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-  animation: pulse 3s infinite; /* پالس ملایم‌تر */
+  @include transition(transform, box-shadow);
+  animation: pulse 3s infinite;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
 }
 
-/* افکت پالس برای دکمه */
+// Pulse Animation
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -70,42 +84,43 @@
   }
 }
 
-.cta-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* ریسپانسیو برای تبلت */
+// Responsive: Tablet
 @media (max-width: 768px) {
   .banner-content {
     flex-direction: column;
     gap: 10px;
+
+    h1 {
+      font-size: 1.5rem;
+    }
   }
-  .banner-content h1 {
-    font-size: 1.5rem;
-  }
+
   .cta-button {
     padding: 7px 16px;
     font-size: 0.9rem;
   }
 }
 
-/* ریسپانسیو برای موبایل */
+// Responsive: Mobile
 @media (max-width: 480px) {
   .banner {
     padding: 10px 5px;
   }
-  .banner-content h1 {
-    font-size: 1.3rem;
+
+  .banner-content {
+    h1 {
+      font-size: 1.3rem;
+    }
   }
+
   .cta-button {
     padding: 6px 12px;
     font-size: 0.8rem;
   }
 }
 
-/* محتوای اصلی سایت (برای تست) */
+// Content (for testing)
 .content {
-  padding: 20px;
+  padding: $padding;
   text-align: center;
 }
