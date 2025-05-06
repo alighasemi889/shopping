@@ -120,8 +120,7 @@ $transition: all 0.3s ease;
   @include transition(all 0.3s ease);
   margin-top: 140px;
   position: relative;
-  top: -60px;
-
+  top: -150px;
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
