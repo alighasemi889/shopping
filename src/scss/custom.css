@@ -68,9 +68,6 @@ aside.custom-sidebar {
 }
 
 @media screen and (max-width: 500px) {
-  .main-container {
-    flex-direction: column;
-  }
   .custom-slider-container {
     flex-basis: 1;
   }
