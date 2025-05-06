@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلایدر محصولات واکنش‌گرا</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Vazir', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            direction: rtl;
+        }
+
+        .container__product__slider {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-container {
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+            gap: 20px;
+        }
+
+        .custom-slider-container {
+            flex: 3;
+            background-image: linear-gradient(180deg, #e367aa 0%, #e367aa 100%);
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .custom-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .custom-card img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .custom-card h3 {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .custom-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        .custom-sidebar {
+            flex: 1;
+            background-image: linear-gradient(180deg, #e367aa 0%, #e367aa 100%);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        .custom-sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px;
+        }
+
+        /* واکنش‌گرایی */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .custom-slider-container {
+                flex: none;
+                min-height: 350px;
+            }
+
+            .custom-card {
+                max-width: 200px;
+                height: auto;
+            }
+
+            .custom-card img {
+                height: 55%;
+            }
+
+            .custom-sidebar {
+                flex: none;
+                min-height: 200px;
+                margin-top: 20px;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 30px;
+                height: 30px;
+            }
+
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .custom-slider-container {
+                min-height: 300px;
+                padding: 10px;
+            }
+
+            .custom-card {
+                max-width: 90%;
+                width: 90%;
+                margin: 0 auto;
+                height: auto;
+            }
+
+            .custom-card img {
+                height: 50%;
+            }
+
+            .custom-card h3 {
+                font-size: 1rem;
+            }
+
+            .custom-card p {
+                font-size: 0.8rem;
+            }
+
+            .custom-sidebar {
+                min-height: 150px;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 25px;
+                height: 25px;
+            }
+
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container__product__slider">
+        <div class="main-container">
+            <!-- اسلایدر -->
+            <div class="custom-slider-container">
+                <div class="custom-swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="custom-card">
+                                <img src="images/product3.webp" alt="Card Image" loading="lazy" />
+                                <h3>کارت اول</h3>
+                                <p>توضیحات کارت اول با متن طولانی‌تر برای تست شکستن خط</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-card">
+                                <img src="images/product1.webp" alt="Card Image" loading="lazy" />
+                                <h3>کارت دوم</h3>
+                                <p>توضیحات کارت دوم با متن طولانی‌تر برای تست شکستن خط</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-card">
+                                <img src="images/product4.webp" alt="Card Image" loading="lazy" />
+                                <h3>کارت سوم</h3>
+                                <p>توضیحات کارت سوم با متن طولانی‌تر برای تست شکستن خط</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-card">
+                                <img src="images/product2.jpg" alt="Card Image" loading="lazy" />
+                                <h3>کارت چهارم</h3>
+                                <p>توضیحات کارت چهارم با متن طولانی‌تر برای تست شکستن خط</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-card">
+                                <img src="images/product3.webp" alt="Card Image" loading="lazy" />
+                                <h3>کارت پنجم</h3>
+                                <p>توضیحات کارت پنجم با متن طولانی‌تر برای تست شکستن خط</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-card">
+                                <img src="images/product3.webp" alt="Card Image" loading="lazy" />
+                                <h3>کارت ششم</h3>
+                                <p>توضیحات کارت ششم با متن طولانی‌تر برای تست شکستن خط</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- دکمه‌های بعدی و قبلی -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <aside class="custom-sidebar">
+                <img src="images/sug.png" alt="icon__slider" loading="lazy" />
+            </aside>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper2', {
+            slidesPerView: 3,
+            spaceBetween: 20, // فاصله 20px در دسکتاپ
+            loop: true,
+            centeredSlides: true,
+            touchRatio: 1,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                500: {
+                    slidesPerView: 1,
+                    spaceBetween: 10, // فاصله 10px در موبایل
+                    centeredSlides: true,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

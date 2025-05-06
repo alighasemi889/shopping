@@ -39,7 +39,7 @@
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   background: red;
   /* margin-right: 400px; */
-  margin: 0 au;
+  margin: 0 auto;
   position: relative;
   left: -11%;
   display: flex;
@@ -65,4 +65,13 @@ aside.custom-sidebar {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .custom-slider-container {
+    flex-basis: 1;
+  }
 }/*# sourceMappingURL=custom.css.map */
