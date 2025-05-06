@@ -50,7 +50,7 @@
   .footer {
     flex-direction: column;
   }
-  img[data-width="on"] {
+  img[data-width=on] {
     width: 300px;
     height: auto;
     max-width: 100%;
@@ -95,4 +95,22 @@
     width: 67%;
     margin: 0 auto;
   }
-} /*# sourceMappingURL=reponsive.css.map */
+}
+@media screen and (max-width: 1100px) {
+  div.flex__wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-top: 90px;
+    position: relative;
+  }
+  .about__image {
+    display: none;
+  }
+  .text__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}/*# sourceMappingURL=reponsive.css.map */

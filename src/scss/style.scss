@@ -218,8 +218,9 @@ img[data-width="on"] {
 }
 
 .txt__article__wrapper {
-  text-align: right;
-  color: $dark-gray;
+    text-align: right;  
+    color: $dark-gray;
+    padding-right: 90px;
 }
 
 .article__images {
