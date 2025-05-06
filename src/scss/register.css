@@ -42,17 +42,7 @@ body {
   direction: rtl;
   background-color: var(--background-light);
   color: var(--text-dark);
-  background-image:
-    radial-gradient(
-      circle at 80% 10%,
-      rgba(99, 102, 241, 0.08) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 10% 90%,
-      rgba(16, 185, 129, 0.08) 0%,
-      transparent 60%
-    );
+  background-image: radial-gradient(circle at 80% 10%, rgba(99, 102, 241, 0.08) 0%, transparent 60%), radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
   background-attachment: fixed;
 }
 
@@ -72,7 +62,7 @@ body {
 .auth-card {
   background-color: var(--background-card);
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-radius: 1.25rem;
   box-shadow: var(--card-shadow);
   width: 100%;
@@ -85,9 +75,7 @@ body {
 }
 
 .auth-card:hover {
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   transform: translateY(-2px);
 }
 
@@ -226,9 +214,7 @@ body {
 
 .btn-primary:hover {
   background-image: linear-gradient(135deg, #4f46e5, #4338ca);
-  box-shadow:
-    0 6px 10px -1px rgba(79, 70, 229, 0.3),
-    0 2px 4px -2px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 6px 10px -1px rgba(79, 70, 229, 0.3), 0 2px 4px -2px rgba(79, 70, 229, 0.2);
   transform: translateY(-1px);
 }
 
@@ -277,12 +263,7 @@ body {
   content: "";
   flex: 1;
   height: 1px;
-  background-image: linear-gradient(
-    90deg,
-    transparent,
-    rgba(99, 102, 241, 0.2),
-    transparent
-  );
+  background-image: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
 }
 
 .form-divider span {
@@ -315,9 +296,7 @@ body {
 .social-btn:hover {
   background-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
 .social-btn i {
@@ -463,10 +442,10 @@ body {
   margin-bottom: 1.25rem;
 }
 
-.checkbox-group input[type="checkbox"] {
+.checkbox-group input[type=checkbox] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 1.1rem;
   height: 1.1rem;
   border: 1px solid var(--border-color);
@@ -478,12 +457,12 @@ body {
   background-color: white;
 }
 
-.checkbox-group input[type="checkbox"]:checked {
+.checkbox-group input[type=checkbox]:checked {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
-.checkbox-group input[type="checkbox"]:checked::after {
+.checkbox-group input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -540,4 +519,4 @@ body {
 /* Remove old icon styling that doesn't work well with RTL */
 .input-group .icon {
   display: none; /* Hide old icon style, but keep for backward compatibility */
-} /*# sourceMappingURL=register.css.map */
+}/*# sourceMappingURL=register.css.map */

@@ -43,10 +43,7 @@
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
-  transition:
-    transform 0.2s,
-    background 0.3s,
-    box-shadow 0.3s;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background: #d72685;
   border-width: 1px 1px 1px 1px;
@@ -82,9 +79,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(20px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   display: none; /* به صورت پیش‌فرض مخفی */
 }
 
@@ -100,7 +95,7 @@
   width: 100%;
   height: 100px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -137,4 +132,4 @@
 .filter-btn {
   padding: 10px 15px;
   font-size: 1.76em;
-} /*# sourceMappingURL=product__slider.css.map */
+}/*# sourceMappingURL=product__slider.css.map */
