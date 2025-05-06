@@ -1,29 +1,53 @@
-#content {
-  padding: 20px;
-  text-align: center;
-  display: none; /* ابتدا مخفیه */
+// ----------------------
+// 🎨 Variables
+// ----------------------
+$padding-base: 20px;
+$notif-padding: 15px 30px;
+$notif-radius: 10px;
+$notif-font-size: 18px;
+$notif-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+$notif-transition: 0.5s ease;
+
+$color-danger: #ff4d4d;
+$color-success: #28a745;
+$color-text-light: white;
+
+// ----------------------
+// 🛠 Utility Functions
+// ----------------------
+@function centerX() {
+  @return translateX(-50%);
 }
 
-/* نوتیفیکیشن */
+// ----------------------
+// 📦 Components
+// ----------------------
+
+#content {
+  padding: $padding-base;
+  text-align: center;
+  display: none; // ابتدا مخفیه
+}
+
 .notification {
   position: fixed;
-  top: -100px; /* خارج از دید */
+  top: -100px; // خارج از دید
   left: 50%;
-  transform: translateX(-50%);
-  background-color: #ff4d4d;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-  transition: top 0.5s ease; /* انیمیشن نرم */
+  transform: centerX();
+  background-color: $color-danger;
+  color: $color-text-light;
+  padding: $notif-padding;
+  border-radius: $notif-radius;
+  box-shadow: $notif-box-shadow;
+  font-size: $notif-font-size;
+  transition: top $notif-transition;
   z-index: 1000;
-}
 
-.notification.show {
-  top: 20px; /* وقتی نشون داده می‌شه */
-}
+  &.show {
+    top: 20px;
+  }
 
-.notification.online {
-  background-color: #28a745; /* سبز برای آنلاین */
+  &.online {
+    background-color: $color-success;
+  }
 }

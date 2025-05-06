@@ -1,20 +1,30 @@
+// تعریف متغیرها
+$btn-bg-color: #007bff;
+$btn-color: white;
+$btn-padding: 15px;
+$btn-font-size: 20px;
+$btn-radius: 50%;
+$btn-position-bottom: 30px;
+$btn-position-left: 30px;
+$btn-z-index: 9999;
+$btn-transition: opacity 0.3s ease;
+
 .scroll-to-top-btn {
   position: fixed;
-  z-index: 9999;
-  bottom: 30px;
-  left: 30px;
-  background-color: #007bff;
-  color: white;
+  z-index: $btn-z-index;
+  bottom: $btn-position-bottom;
+  left: $btn-position-left;
+  background-color: $btn-bg-color;
+  color: $btn-color;
   border: none;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 20px;
+  border-radius: $btn-radius;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
   cursor: pointer;
-  display: none; /* در ابتدا مخفی است */
-  transition: opacity 0.3s ease; /* برای افکت نرم */
-}
+  display: none; // در ابتدا مخفی است
+  transition: $btn-transition; // افکت نرم
 
-/* وقتی دکمه نمایش داده می‌شود */
-.scroll-to-top-btn.show {
-  display: block;
+  &.show {
+    display: block;
+  }
 }

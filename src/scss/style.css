@@ -1,26 +1,24 @@
-/* import styles */
 @import url("menu.css");
 @import url("../scss/scroolbar.css");
 @import url("../scss/chatbot.css");
 @import url("../scss/banner.css");
 @import url("../scss/product.css");
 @import url("../scss/scrooltop.css");
+@font-face {
+  font-family: "yekan";
+  src: url("../../public/Yekan.woff");
+  font-weight: 600;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "yekan";
-  src: url("../../public/Yekan.woff");
-  font-weight: 600;
-}
 body {
   font-family: "yekan";
   box-sizing: border-box;
   overflow-x: hidden;
-  background: #f9f6f6;
   background: linear-gradient(0deg, #f9f6f6 0%, #ffffff 100%);
 }
 
@@ -31,23 +29,20 @@ html {
 
 .info__section {
   width: 200px;
-  height: 200px;
+  height: 333px;
   max-width: 100%;
   overflow: hidden;
   background-image: linear-gradient(180deg, #e367aa 0%, #e367aa 100%);
   position: relative;
   top: -144px;
-  height: 333px;
 }
 
-/* grid section categorize */
 h2.txt__center {
   text-align: center;
   padding: 40px;
   font-size: 2.4rem;
-  font-weight: 500;
-  color: #3c3c3c;
   font-weight: 700;
+  color: #3c3c3c;
 }
 
 .flex__icon {
@@ -55,7 +50,7 @@ h2.txt__center {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
   justify-content: center;
   justify-items: center;
   padding: 60px;
@@ -108,7 +103,6 @@ h4[data-center="active"] {
   text-align: center;
   padding-top: 20px;
 }
-
 .card::before {
   content: "";
   position: absolute;
@@ -133,7 +127,6 @@ img.left__picture__flex {
   width: 600px;
   height: 300px;
   border-radius: 20px;
-  /* padding-block: 10px; */
   padding-right: 37px;
   padding-left: 32px;
 }
@@ -145,7 +138,6 @@ img.left__picture__flex {
   padding: 10px;
   gap: 2rem;
   overflow: hidden;
-  max-width: 100%;
   max-width: 100%;
 }
 
@@ -252,14 +244,12 @@ h3.footer__txt__small {
 #small__svg {
   width: 60px;
   height: auto;
-  border: 2px thick;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.8117647059);
 }
 
 .image__flex__footer {
   width: 180px;
-  /* background: red; */
   display: flex;
   gap: 1rem;
 }
@@ -269,7 +259,6 @@ h3.footer__txt__small {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   padding: 10px;
   gap: 1.5rem;
 } /*# sourceMappingURL=style.css.map */

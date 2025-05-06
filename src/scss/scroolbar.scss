@@ -1,26 +1,28 @@
+// تعریف متغیرها
+$scrollbar-track-color: #cdefff;
+$scrollbar-thumb-color: #f90ce8;
+$scrollbar-size: 11px;
+$scrollbar-thumb-border: 2px solid #c2c6c7;
+$scrollbar-radius: 8px;
+
 body {
-  --sb-track-color: #cdefff;
-  --sb-thumb-color: #f90ce8;
-  --sb-size: 11px;
-}
+  // برای مرورگرهایی که از CSS Custom Properties پشتیبانی نمی‌کنن
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+  }
 
-body::-webkit-scrollbar {
-  width: var(--sb-size);
-}
+  &::-webkit-scrollbar {
+    width: $scrollbar-size;
+  }
 
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 8px;
-}
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-track-color;
+    border-radius: $scrollbar-radius;
+  }
 
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 8px;
-  border: 2px solid #c2c6c7;
-}
-
-@supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+    border-radius: $scrollbar-radius;
+    border: $scrollbar-thumb-border;
   }
 }

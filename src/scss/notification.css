@@ -1,14 +1,12 @@
-@charset "UTF-8";
 #content {
   padding: 20px;
   text-align: center;
-  display: none; /* ابتدا مخفیه */
+  display: none;
 }
 
-/* نوتیفیکیشن */
 .notification {
   position: fixed;
-  top: -100px; /* خارج از دید */
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #ff4d4d;
@@ -17,14 +15,12 @@
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   font-size: 18px;
-  transition: top 0.5s ease; /* انیمیشن نرم */
+  transition: top 0.5s ease;
   z-index: 1000;
 }
-
 .notification.show {
-  top: 20px; /* وقتی نشون داده می‌شه */
+  top: 20px;
 }
-
 .notification.online {
-  background-color: #28a745; /* سبز برای آنلاین */
+  background-color: #28a745;
 } /*# sourceMappingURL=notification.css.map */

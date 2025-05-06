@@ -12,11 +12,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="src/scss/menu.css" />
-    <link rel="stylesheet" href="src/scss/style.css">
+    <link rel="stylesheet" href="src/scss/style.css" />
     <link rel="stylesheet" href="src/scss/sidebar.css" />
     <link rel="stylesheet" href="src/scss/contactus.css" />
-    <link rel="stylesheet" href="src/scss/footer.css">
-
+    <link rel="stylesheet" href="src/scss/footer.css" />
   </head>
   <body>
     <header>
@@ -96,20 +95,19 @@
       </div>
     </main>
 
-
     <footer>
-        <div id="footer-placeholder"></div>
+      <div id="footer-placeholder"></div>
     </footer>
     <script>
-        // بارگذاری فایل فوتر.html
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('خطا در بارگذاری فوتر:', error);
-            });
+      // بارگذاری فایل فوتر.html
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch((error) => {
+          console.error("خطا در بارگذاری فوتر:", error);
+        });
     </script>
     <script src="src/js/header.js"></script>
   </body>
