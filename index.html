@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cosmetic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.css"
@@ -26,6 +28,8 @@
     <link rel="stylesheet" href="src/scss/banner.css" />
     <link rel="stylesheet" href="src/scss/sidebar.css" />
     <link rel="stylesheet" href="src/scss/scrool.css" />
+    <link rel="stylesheet" href="src/scss/swiper.css">
+    <link rel="stylesheet" href="src/scss/banner-module.css">
   </head>
   <body>
     <!-- loader part -->
@@ -208,91 +212,111 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <!-- product slider -->
-        <div class="container__product__slider">
-          <div class="main-container">
-            <!-- اسلایدر -->
-            <div class="custom-slider-container">
-              <div class="custom-swiper mySwiper2">
+        <!-- product slider swiper -->
+         <div class="flex__fluid">
+          <div class="unique-product-slider-container">
+            <div class="unique-product-slider">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product3.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت اول</h3>
-                      <p>توضیحات کارت اول</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat2.webp" alt="محصول ۱">
+                            <h3>محصول ۱</h3>
+                            <p>توضیحات مختصر درباره محصول ۱</p>
+                            <div class="price">۱۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product1.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت دوم</h3>
-                      <p>توضیحات کارت دوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat3.webp" alt="محصول ۲">
+                            <h3>محصول ۲</h3>
+                            <p>توضیحات مختصر درباره محصول ۲</p>
+                            <div class="price">۲۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product4.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت دوم</h3>
-                      <p>توضیحات کارت دوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat2.webp" alt="محصول ۳">
+                            <h3>محصول ۳</h3>
+                            <p>توضیحات مختصر درباره محصول ۳</p>
+                            <div class="price">۲۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product2.jpg"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت دوم</h3>
-                      <p>توضیحات کارت دوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat5.webp" alt="محصول ۴">
+                            <h3>محصول ۴</h3>
+                            <p>توضیحات مختصر درباره محصول ۴</p>
+                            <div class="price">۳۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product3.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت سوم</h3>
-                      <p>توضیحات کارت سوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat6.webp" alt="محصول ۵">
+                            <h3>محصول ۵</h3>
+                            <p>توضیحات مختصر درباره محصول ۵</p>
+                            <div class="price">۳۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product3.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت چهارم</h3>
-                      <p>توضیحات کارت چهارم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat5.webp" alt="محصول ۶">
+                            <h3>محصول ۶</h3>
+                            <p>توضیحات مختصر درباره محصول ۶</p>
+                            <div class="price">۴۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat6.webp" alt="محصول ۷">
+                            <h3>محصول ۷</h3>
+                            <p>توضیحات مختصر درباره محصول ۷</p>
+                            <div class="price">۴۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat3.webp" alt="محصول ۸">
+                            <h3>محصول ۸</h3>
+                            <p>توضیحات مختصر درباره محصول ۸</p>
+                            <div class="price">۵۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat5.webp" alt="محصول ۹">
+                            <h3>محصول ۹</h3>
+                            <p>توضیحات مختصر درباره محصول ۹</p>
+                            <div class="price">۵۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat3.webp" alt="محصول ۱۰">
+                            <h3>محصول ۱۰</h3>
+                            <p>توضیحات مختصر درباره محصول ۱۰</p>
+                            <div class="price">۶۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
                 </div>
-                <!-- دکمه‌های بعدی و قبلی -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
+                <!-- <div class="custom-nav-prev"></div>
+                <div class="custom-nav-next"></div> -->
             </div>
-            <aside class="custom-sidebar">
-              <img src="images/sug.png" alt="icon__slider" loading="lazy" />
-            </aside>
-          </div>
         </div>
-
+        <section class="right__section">
+          <img src="images/sug.png" alt="تخفیف" loading="lazy">
+        </section>
+         </div>
+       
         <!-- categorize section -->
         <div class="wrapper__categorize">
           <h2 class="txt__center">دسته‌بندی‌ها</h2>
@@ -595,64 +619,76 @@
             loading="lazy"
           />
         </div>
-        <!-- logo slider  -->
-        <div class="logos">
-          <h3 class="brand">پر فروش ترین برند ها</h3>
-          <div class="logo_items">
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="images/logo__slider__oine.png" />
-            <img src="images/logo__slider__three.png" />
-            <img src="images/logo__slider__two.png" />
-            <img src="images/logo__slider__five.jpg" />
-            <img src="images/logo__slider__six.png" />
-            <img src="images/logo__slider__seven.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-          </div>
-          <div class="logo_items">
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
+        <!-- logo slider swiper  -->
+        <div class="brand-showcase-container">
+          <h2 class="brand-showcase-title">برندهای همکار ما</h2>
+          <div class="swiper swiper--brandContainer">
+            <div class="swiper-wrapper">
+              <!-- 20 برند مختلف -->
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/berand-cosmetics2.jpg" alt="Brand 1">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/berand-cosmetics1.jpg" alt="Brand 2">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__four.jpg" alt="Brand 3">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 4">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 5">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__two.png" alt="Brand 6">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__three.png" alt="Brand 7">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__three.png" alt="Brand 8">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 9">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 10">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 11">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 12">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__four.jpg" alt="Brand 13">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__three.png" alt="Brand 14">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 15">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 16">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__four.jpg" alt="Brand 17">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 18">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__six.png" alt="Brand 19">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/berand-cosmetics2.jpg" alt="Brand 20">
+              </div>
+            </div>
           </div>
         </div>
+        
         <!-- skin images section -->
         <section
           class="skin__container"
@@ -1128,7 +1164,8 @@
       </footer>
     </div>
 
-    <!-- scripts files -->
+    <!-- script files -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="src/js/slider.js"></script>
     <script src="src/js/product.js"></script>
@@ -1136,12 +1173,14 @@
     <script src="src/js/newpro.js"></script>
     <script src="src/js/chatbot.js"></script>
     <script src="src/js/cosmetic.js"></script>
-    <!-- <script src="src/js/scrooltop.js"></script> -->
     <script src="src/js/notification.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/aos.js"></script>
     <script src="src/js/loader.js"></script>
     <script src="src/js/instagram.js"></script>
     <script src="src/js/scrool.js"></script>
+    <script src="src/js/product-swiper.js"></script>
+    <script src="src/js/banner-module.js"></script>
+    
   </body>
 </html>
