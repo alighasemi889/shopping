@@ -25,20 +25,22 @@ $transition: all 0.2s ease;
 // Banner Styles
 .banner {
   width: 100%;
-  background: $banner-gradient;
+  // background: $banner-gradient;
   color: $white;
   text-align: center;
-  padding: 12px 10px;
+  // padding: 12px 10px;
   position: relative;
   font-family: $font-family;
   line-height: 1.5;
 
   .banner-content {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    overflow: hidden;
     gap: $padding;
 
     h1 {
@@ -48,7 +50,12 @@ $transition: all 0.2s ease;
     }
   }
 }
-
+img.banner__auto{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  max-width: 100%;
+}
 // CTA Button
 .cta-button {
   display: inline-block;
