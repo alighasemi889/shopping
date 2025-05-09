@@ -1,0 +1,117 @@
+@charset "UTF-8";
+.blog-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100%;
+  padding: 50px 20px;
+  /* background: #f4f4f4; */
+}
+
+/* عنوان */
+.blog-slider-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* خود اسلایدر */
+.blog-swiper {
+  width: 100%;
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+
+.blog-swiper-wrapper {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* هر کارت */
+.blog-slide {
+  flex-shrink: 0;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 0.9375rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: column;
+}
+
+.blog-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-slide img {
+  width: 100%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.625rem;
+}
+
+.blog-slide h3 {
+  margin-top: 0.9375rem;
+  font-size: 1.125rem;
+  color: #333;
+}
+
+.blog-slide p {
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* دکمه‌ها */
+.blog-button-next,
+.blog-button-prev {
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  z-index: 10;
+}
+
+.blog-button-next {
+  right: 0.625rem;
+}
+
+.blog-button-prev {
+  left: 0.625rem;
+}
+
+/* Pagination */
+.blog-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.blog-pagination .swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #999;
+  opacity: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.blog-pagination .swiper-pagination-bullet-active {
+  background: #333;
+}/*# sourceMappingURL=blog-container.css.map */
