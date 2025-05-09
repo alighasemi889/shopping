@@ -12,7 +12,7 @@ const uniqueProductSwiper = new Swiper('.unique-product-slider', {
   spaceBetween: 20,
   breakpoints: {
       480: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
       },
       768: {
