@@ -2,6 +2,7 @@ const blogSwiper = new Swiper('.blog-swiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     loop: true,
+    centeredSlides: false,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -15,9 +16,20 @@ const blogSwiper = new Swiper('.blog-swiper', {
       clickable: true,
     },
     breakpoints: {
-      320:  { slidesPerView: 1, spaceBetween: 10 },
-      640:  { slidesPerView: 1, spaceBetween: 15 },
-      1024: { slidesPerView: 3, spaceBetween: 20 }
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: false
+      },
+      500: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: false
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
     },
     lazy: { loadPrevNext: true },
   });

@@ -1,7 +1,8 @@
 new Swiper('.newest-products-swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 20,
+    spaceBetween: 10,
     loop: true,
+    centeredSlides: false,
     autoplay: { delay: 3000, disableOnInteraction: false },
     navigation: {
       nextEl: '.newest-products-button-next',
@@ -12,11 +13,12 @@ new Swiper('.newest-products-swiper', {
       clickable: true,
     },
     breakpoints: {
-      320:  { slidesPerView: 1, spaceBetween: 10 },
+      320:  { slidesPerView: 1, spaceBetween: 0 },
       // 640:  { slidesPerView: 1, spaceBetween: 10 },
-      1024: { slidesPerView: 3, spaceBetween: 20 },
+      1024: { slidesPerView: 4, spaceBetween: 10 },
       500: {
         slidesPerView: 1,  // فقط یک اسلاید نمایش داده شود
+        spaceBetween:0
       }
     },
     on: {
