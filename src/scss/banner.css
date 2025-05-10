@@ -80,9 +80,6 @@ img.banner__auto {
   }
 }
 @media (max-width: 480px) {
-  .banner {
-    padding: 10px 5px;
-  }
   .banner-content h1 {
     font-size: 1.3rem;
   }
