@@ -2,8 +2,8 @@
   "name": "shoppingmall",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "build": "parcel build index.html",
     "format": "prettier --write .",
     "start": "start index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
