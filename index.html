@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cosmetic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.css"
@@ -26,6 +28,10 @@
     <link rel="stylesheet" href="src/scss/banner.css" />
     <link rel="stylesheet" href="src/scss/sidebar.css" />
     <link rel="stylesheet" href="src/scss/scrool.css" />
+    <link rel="stylesheet" href="src/scss/swiper.css">
+    <link rel="stylesheet" href="src/scss/banner-module.css">
+    <link rel="stylesheet" href="src/scss/blog-container.css">
+    <link rel="stylesheet" href="src/scss/product-slider.css">
   </head>
   <body>
     <!-- loader part -->
@@ -37,9 +43,16 @@
     <div id="notification" class="notification"></div>
     <div class="banner">
       <div class="banner-content">
-        <h1>تخفیف ویژه ۳۰٪!</h1>
-        <p>فقط تا پایان هفته! همین حالا خرید کنید.</p>
-        <a href="#shop" class="cta-button">خرید کن</a>
+        <!-- <img class="banner__auto" src="images/banner__automatic.gif" alt="بنر سایت " loading="lazy"> -->
+        <picture>
+          <!-- عکس مخصوص موبایل (عرض حداکثر 767px) -->
+          <source media="(max-width: 767px)" srcset="images/mobile__banner.gif" loading="lazy">
+          <!-- عکس پیش‌فرض (دسکتاپ) -->
+          <img class="mobile__banner" src="images/banner__automatic.gif" alt="محصول" loading="lazy">
+        </picture>
+        <!-- <h1>تخفیف ویژه ۳۰٪!</h1> -->
+        <!-- <p>فقط تا پایان هفته! همین حالا خرید کنید.</p> -->
+        <!-- <a href="#shop" class="cta-button">خرید کن</a> -->
       </div>
     </div>
     <!-- btn top to bottom -->
@@ -155,8 +168,7 @@
       </div>
       <!-- header finished -->
       <main>
-        <!-- chatbot wrapper -->
-
+        <!-- swiper slider wrapper -->
         <div class="swiper-container mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -208,91 +220,117 @@
           <div class="swiper-pagination"></div>
         </div>
 
-        <!-- product slider -->
-        <div class="container__product__slider">
-          <div class="main-container">
-            <!-- اسلایدر -->
-            <div class="custom-slider-container">
-              <div class="custom-swiper mySwiper2">
+        <!-- product slider swiper -->
+         <div class="flex__fluid">
+          <div class="unique-product-slider-container">
+            <div class="unique-product-slider">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product3.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت اول</h3>
-                      <p>توضیحات کارت اول</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat2.webp" alt="محصول ۱">
+                            <h3>محصول ۱</h3>
+                            <p>توضیحات مختصر درباره محصول ۱</p>
+                            <div class="price">۱۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product1.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت دوم</h3>
-                      <p>توضیحات کارت دوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat3.webp" alt="محصول ۲">
+                            <h3>محصول ۲</h3>
+                            <p>توضیحات مختصر درباره محصول ۲</p>
+                            <div class="price">۲۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product4.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت دوم</h3>
-                      <p>توضیحات کارت دوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat2.webp" alt="محصول ۳">
+                            <h3>محصول ۳</h3>
+                            <p>توضیحات مختصر درباره محصول ۳</p>
+                            <div class="price">۲۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product2.jpg"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت دوم</h3>
-                      <p>توضیحات کارت دوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat5.webp" alt="محصول ۴">
+                            <h3>محصول ۴</h3>
+                            <p>توضیحات مختصر درباره محصول ۴</p>
+                            <div class="price">۳۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product3.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت سوم</h3>
-                      <p>توضیحات کارت سوم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat6.webp" alt="محصول ۵">
+                            <h3>محصول ۵</h3>
+                            <p>توضیحات مختصر درباره محصول ۵</p>
+                            <div class="price">۳۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="custom-card">
-                      <img
-                        src="images/product3.webp"
-                        alt="Card Image"
-                        loading="lazy"
-                      />
-                      <h3>کارت چهارم</h3>
-                      <p>توضیحات کارت چهارم</p>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat5.webp" alt="محصول ۶">
+                            <h3>محصول ۶</h3>
+                            <p>توضیحات مختصر درباره محصول ۶</p>
+                            <div class="price">۴۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
                     </div>
-                  </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat6.webp" alt="محصول ۷">
+                            <h3>محصول ۷</h3>
+                            <p>توضیحات مختصر درباره محصول ۷</p>
+                            <div class="price">۴۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat3.webp" alt="محصول ۸">
+                            <h3>محصول ۸</h3>
+                            <p>توضیحات مختصر درباره محصول ۸</p>
+                            <div class="price">۵۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat5.webp" alt="محصول ۹">
+                            <h3>محصول ۹</h3>
+                            <p>توضیحات مختصر درباره محصول ۹</p>
+                            <div class="price">۵۵۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="images/cat3.webp" alt="محصول ۱۰">
+                            <h3>محصول ۱۰</h3>
+                            <p>توضیحات مختصر درباره محصول ۱۰</p>
+                            <div class="price">۶۰۰,۰۰۰ تومان</div>
+                            <button>افزودن به سبد خرید</button>
+                        </div>
+                    </div>
                 </div>
-                <!-- دکمه‌های بعدی و قبلی -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
+                <!-- <div class="custom-nav-prev"></div>
+                <div class="custom-nav-next"></div> -->
             </div>
-            <aside class="custom-sidebar">
-              <img src="images/sug.png" alt="icon__slider" loading="lazy" />
-            </aside>
-          </div>
         </div>
-
+        <section class="right__section">
+          <img src="images/sug.png" alt="تخفیف" loading="lazy">
+        </section>
+         </div>
+         <!-- routin post section -->
+         <section class="routin__wrapper">
+          <div class="routin__images">
+            <img class="routin__one" src="images/routin__post1.jpg" alt="روتین پوست" loading="lazy">
+            <img class="routin__two" src="images/routin__post2.jpg" alt="روتین پوست" loading="lazy">
+          </div>
+         </section>
         <!-- categorize section -->
         <div class="wrapper__categorize">
           <h2 class="txt__center">دسته‌بندی‌ها</h2>
@@ -389,270 +427,145 @@
             />
           </div>
         </section>
-        <div class="wrapper__slider">
-          <div class="container__toggle">
-            <div class="container__slider">
-              <!-- <h1>salam</h1> -->
-              <div class="container__toggle">
-                <div class="buttons__slider btn__toggle">
-                  <button class="filter-btn active" data-category="category1">
-                    پودرها
-                  </button>
-                  <button class="filter-btn" data-category="category2">
-                    لاک‌ها
-                  </button>
-                  <button class="filter-btn" data-category="category3">
-                    برق لب‌ها
-                  </button>
-                  <button class="filter-btn" data-category="category4">
-                    رژ لب‌ها
-                  </button>
-                </div>
-                <div class="cards-wrapper">
-                  <div class="cards" id="cards">
-                    <!-- کارت‌های پیش‌فرض (دسته‌بندی 1) -->
-                    <div class="card" data-category="category1">
-                      <img
-                        src="images/product1.webp"
-                        alt="پودر فشرده"
-                        loading="lazy"
-                      />
-                      <h3>پودر فشرده NARS</h3>
-                      <p class="price">۱,۰۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category1">
-                      <img
-                        src="images/product2.jpg"
-                        alt="پودر مات"
-                        loading="lazy"
-                      />
-                      <h3>پودر مات MAC</h3>
-                      <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category1">
-                      <img
-                        src="images/product4.webp"
-                        alt="پودر برنزه"
-                        loading="lazy"
-                      />
-                      <h3>پودر برنزه Fenty</h3>
-                      <p class="price">۹۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category1">
-                      <img
-                        src="images/product3.webp"
-                        alt="پودر هایلایت"
-                        loading="lazy"
-                      />
-                      <h3>پودر هایلایت Dior</h3>
-                      <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <!-- کارت‌های دسته‌بندی 2 -->
-                    <div class="card" data-category="category2">
-                      <img
-                        src="images/product2.jpg"
-                        alt="لاک ناخن قرمز"
-                        loading="lazy"
-                      />
-                      <h3>لاک ناخن قرمز OPI</h3>
-                      <p class="price">۳۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category2">
-                      <img
-                        src="images/product3.webp"
-                        alt="لاک ناخن صورتی"
-                        loading="lazy"
-                      />
-                      <h3>لاک ناخن صورتی Essie</h3>
-                      <p class="price">۳۵۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category2">
-                      <img
-                        src="images/product4.webp"
-                        alt="لاک ناخن مشکی"
-                        loading="lazy"
-                      />
-                      <h3>لاک ناخن مشکی Chanel</h3>
-                      <p class="price">۴۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category2">
-                      <img
-                        src="images/product1.webp"
-                        alt="لاک ناخن براق"
-                        loading="lazy"
-                      />
-                      <h3>لاک ناخن براق Sally Hansen</h3>
-                      <p class="price">۳۲۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <!-- کارت‌های دسته‌بندی 3 -->
-                    <div class="card" data-category="category3">
-                      <img
-                        src="images/product2.jpg"
-                        alt="برق لب صورتی"
-                        loading="lazy"
-                      />
-                      <h3>برق لب صورتی NARS</h3>
-                      <p class="price">۵۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <div class="card" data-category="category3">
-                      <img
-                        src="images/product2.jpg"
-                        alt="برق لب شفاف"
-                        loading="lazy"
-                      />
-                      <h3>برق لب شفاف Fenty</h3>
-                      <p class="price">۴۸۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category3">
-                      <img src="images/product1.webp" alt="برق لب قرمز" />
-                      <h3>برق لب قرمز Dior</h3>
-                      <p class="price">۵۵۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category3">
-                      <img
-                        src="images/product3.webp"
-                        alt="برق لب براق"
-                        loading="lazy"
-                      />
-                      <h3>برق لب براق MAC</h3>
-                      <p class="price">۴۹۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <!-- کارت‌های دسته‌بندی 4 -->
-                    <div class="card" data-category="category4">
-                      <img
-                        src="images/product3.webp"
-                        alt="رژ لب مات"
-                        loading="lazy"
-                      />
-                      <h3>رژ لب مات Sisley</h3>
-                      <p class="price">۶۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category4">
-                      <img
-                        src="images/product2.jpg"
-                        alt="رژ لب صورتی"
-                        loading="lazy"
-                      />
-                      <h3>رژ لب صورتی YSL</h3>
-                      <p class="price">۶۵۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category4">
-                      <img
-                        src="images/product3.webp"
-                        alt="رژ لب قرمز"
-                        loading="lazy"
-                      />
-                      <h3>رژ لب قرمز Chanel</h3>
-                      <p class="price">۷۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category4">
-                      <img
-                        src="images/product2.jpg"
-                        alt="رژ لب براق"
-                        loading="lazy"
-                      />
-                      <h3>رژ لب براق Gucci</h3>
-                      <p class="price">۶۸۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                  </div>
-                </div>
+        <!-- slider product -->
+        <h2 class="custom-title">محصولات ما</h2>
+        <div class="custom-swiper-container swiper">
+          <div class="swiper-wrapper">
+            <!-- نمونه کارت محصول -->
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream2.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream3.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream5.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream6.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            
+            <!--  more cards will be in here  -->
+          </div>
+          <div class="swiper-button-prev custom-swiper-button-prev"></div>
+          <div class="swiper-button-next custom-swiper-button-next"></div>
+          <div class="swiper-pagination custom-swiper-pagination"></div>
+        </div>
+      
+        <!-- banner  slider section  -->
+        <div class="brand-showcase-container">
+          <h2 class="brand-showcase-title">برندهای همکار ما</h2>
+          <div class="swiper swiper--brandContainer">
+            <div class="swiper-wrapper">
+              <!-- 20 برند مختلف -->
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/berand-cosmetics2.jpg" alt="Brand 1">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/berand-cosmetics1.jpg" alt="Brand 2">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__four.jpg" alt="Brand 3">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 4">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 5">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__two.png" alt="Brand 6">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__three.png" alt="Brand 7">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__three.png" alt="Brand 8">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 9">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 10">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 11">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 12">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__four.jpg" alt="Brand 13">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__three.png" alt="Brand 14">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 15">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__oine.png" alt="Brand 16">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__four.jpg" alt="Brand 17">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__seven.png" alt="Brand 18">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/logo__slider__six.png" alt="Brand 19">
+              </div>
+              <div class="swiper-slide">
+                <img class="brand-logo" src="images/berand-cosmetics2.jpg" alt="Brand 20">
               </div>
             </div>
           </div>
         </div>
-        <!-- flex images -->
-        <div class="flex__images" data-aos="flip-up">
-          <img
-            class="picture__one__flex image__border"
-            src="images/cosmetic__picture__old.jpg"
-            alt="picture"
-            loading="lazy"
-          />
-          <img
-            class="picture__two__flex image__border"
-            src="images/cosmetic__picture__old2.jpg"
-            alt="picture"
-            loading="lazy"
-          />
-        </div>
-        <!-- logo slider  -->
-        <div class="logos">
-          <h3 class="brand">پر فروش ترین برند ها</h3>
-          <div class="logo_items">
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="images/logo__slider__oine.png" />
-            <img src="images/logo__slider__three.png" />
-            <img src="images/logo__slider__two.png" />
-            <img src="images/logo__slider__five.jpg" />
-            <img src="images/logo__slider__six.png" />
-            <img src="images/logo__slider__seven.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-          </div>
-          <div class="logo_items">
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-            <img src="https://navneetdwivedi.github.io/Logo_Slider/logo.png" />
-          </div>
-        </div>
+        
         <!-- skin images section -->
         <section
           class="skin__container"
@@ -693,8 +606,9 @@
             decoding="async"
           />
         </section>
-        <!-- carousel slider -->
-        <div class="wrapper__carousel">
+        <!-- carousel slider   product -->
+     
+        <!-- <div class="wrapper__carousel">
           <div class="carousel-wrapper">
             <h2 class="new__product">جدید ترین محصولات</h2>
             <button class="btn__card left" onclick="scrollCarousel(-1)">
@@ -784,7 +698,7 @@
             loading="lazy"
             decoding="async"
           />
-        </div>
+        </div> -->
         <!-- .wrapper__slider -->
         <div class="wrapper__slider">
           <div class="container__toggle">
@@ -952,42 +866,53 @@
             loading="lazy"
           />
         </div>
-        <div class="article">
-          <div class="txt__article__wrapper">
-            <h1 class="txt__article">پربازدیدترین مقالات</h1>
-          </div>
-          <div class="article__images">
-            <img
-              class="article__image"
-              src="images/article__image1.webp"
-              alt="مقاله"
-              decoding="async"
-              loading="lazy"
-            />
-            <img
-              class="article__image"
-              src="images/article__image2.webp"
-              alt="مقاله"
-              decoding="async"
-              loading="lazy"
-            />
-            <img
-              class="article__image"
-              src="images/article__image3.webp"
-              alt="مقاله"
-              decoding="async"
-              loading="lazy"
-            />
-            <img
-              class="article__image"
-              src="images/article__image4.webp"
-              alt="مقاله"
-              decoding="async"
-              loading="lazy"
-            />
-          </div>
+      <!-- weblog section slider -->
+      <div class="blog-container">
+        <div class="blog-slider-title">آرایش به سبک تو
         </div>
+        <div class="blog-swiper swiper">
+          <div class="blog-swiper-wrapper swiper-wrapper">
+            <!-- ۱۰ کارت نمونه -->
+            <div class="blog-slide swiper-slide">
+              <img src="images/weblog__picture.webp" alt="Product 1">
+              <h3>محصول ۱</h3>
+              <p>توضیحات محصول ۱</p>
+            </div>
+            <div class="blog-slide swiper-slide">
+                <img src="images/weblog__picture2.jpg" alt="Product 1">
+                <h3>محصول ۱</h3>
+                <p>توضیحات محصول ۱</p>
+              </div>
+              <div class="blog-slide swiper-slide">
+                <img src="images/weblog__picture3.jpg" alt="Product 1">
+                <h3>محصول ۱</h3>
+                <p>توضیحات محصول ۱</p>
+              </div>
+              <div class="blog-slide swiper-slide">
+                <img src="images/weblog__picture4.jpg" alt="Product 1">
+                <h3>محصول ۱</h3>
+                <p>توضیحات محصول ۱</p>
+              </div>
+              <div class="blog-slide swiper-slide">
+                <img src="images/weblog__picture2.jpg" alt="Product 1">
+                <h3>محصول ۱</h3>
+                <p>توضیحات محصول ۱</p>
+              </div>
+              <div class="blog-slide swiper-slide">
+                <img src="images/weblog__picture3.jpg" alt="Product 1">
+                <h3>محصول ۱</h3>
+                <p>توضیحات محصول ۱</p>
+              </div>
+            <!-- … تا کارت دهم -->
+          </div>
+          <div class="blog-button-next swiper-button-next">›</div>
+          <div class="blog-button-prev swiper-button-prev">‹</div>
+          <div class="blog-pagination swiper-pagination"></div>
+        </div>
+      </div>
+    
       </main>
+      <!-- footer section -->
       <footer class="footer__wrapper">
         <div class="footer__logo">
           <img
@@ -1128,7 +1053,8 @@
       </footer>
     </div>
 
-    <!-- scripts files -->
+    <!-- script files -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="src/js/slider.js"></script>
     <script src="src/js/product.js"></script>
@@ -1136,12 +1062,16 @@
     <script src="src/js/newpro.js"></script>
     <script src="src/js/chatbot.js"></script>
     <script src="src/js/cosmetic.js"></script>
-    <!-- <script src="src/js/scrooltop.js"></script> -->
     <script src="src/js/notification.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/aos.js"></script>
     <script src="src/js/loader.js"></script>
     <script src="src/js/instagram.js"></script>
     <script src="src/js/scrool.js"></script>
+    <script src="src/js/product-swiper.js"></script>
+    <script src="src/js/banner-module.js"></script>
+    <script src="src/js/blog-container.js"></script>
+    <script src="src/js/product-slider.js"></script>
+    
   </body>
 </html>

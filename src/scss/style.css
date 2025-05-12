@@ -262,4 +262,19 @@ h3.footer__txt__small {
   flex-direction: column;
   padding: 10px;
   gap: 1.5rem;
+}
+
+section.routin__wrapper {
+  padding: 10px;
+}
+
+.routin__images {
+  display: flex;
+  gap: 1rem;
+}
+
+:is(img.routin__one, img.routin__two) {
+  width: 70vw;
+  height: auto;
+  border-radius: 1em;
 }/*# sourceMappingURL=style.css.map */

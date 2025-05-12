@@ -129,6 +129,13 @@
   .flex__icon {
     grid-template-columns: 1fr 1fr;
   }
+  .routin__images {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .routin__images img {
+    width: 800px;
+  }
 }
 @media screen and (min-width: 300px) and (max-width: 400px) {
   .btn__toggle {

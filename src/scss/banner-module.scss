@@ -1,0 +1,37 @@
+.brand-showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50px;
+    border: 2px solid dimgray;
+  }
+
+  .brand-showcase-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .swiper--brandContainer .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .swiper--brandContainer .brand-logo {
+    max-width: 120px;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .swiper--brandContainer .brand-logo:hover {
+    filter: grayscale(0%);
+  }
