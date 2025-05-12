@@ -606,242 +606,74 @@
             decoding="async"
           />
         </section>
-        <!-- carousel slider   product -->
-     
-        <!-- <div class="wrapper__carousel">
-          <div class="carousel-wrapper">
-            <h2 class="new__product">جدید ترین محصولات</h2>
-            <button class="btn__card left" onclick="scrollCarousel(-1)">
-              ←
-            </button>
-            <div class="carousel" id="carousel">
-              <div class="card__child"> 
-                <img src="images/cat1.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat4.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat6.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat7.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat3.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat2.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat4.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat6.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat6.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat3.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat4.webp" alt="">
-              </div>
-              <div class="card__child"> 
-                <img src="images/cat8.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat6.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat5.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat3.webp" alt="">
-              </div>
-              <div class="card__child">
-                <img src="images/cat3.webp" alt="">
+          <!-- product slider -->
+        <h2 class="custom-title">محصولات ما</h2>
+
+        <div class="custom-swiper-container swiper">
+          <div class="swiper-wrapper">
+            <!-- نمونه کارت محصول -->
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
-            <button class="btn__card right" onclick="scrollCarousel(1)">
-              →
-            </button>
-          </div>
-        </div>
-        <div class="image__card">
-          <img
-            src="images/home-cosmetics___one.webp"
-            alt=""
-            class="photo__box__one photo__box"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="images/home-cosmetics__three.webp"
-            alt=""
-            class="photo__box__two photo__box"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="images/home-cosmetics__two.webp"
-            alt=""
-            class="photo__box__three photo__box"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="images/home__cosmetic__four.webp"
-            alt=""
-            class="photo__box__four photo__box"
-            loading="lazy"
-            decoding="async"
-          />
-        </div> -->
-        <!-- .wrapper__slider -->
-        <div class="wrapper__slider">
-          <div class="container__toggle">
-            <div class="container__slider">
-              <!-- <h1>salam</h1> -->
-              <div class="container__toggle">
-                <div class="buttons__slider btn__toggle">
-                  <button class="filter-btn active" data-category="category1">
-                    پودرها
-                  </button>
-                  <button class="filter-btn" data-category="category2">
-                    لاک‌ها
-                  </button>
-                  <button class="filter-btn" data-category="category3">
-                    برق لب‌ها
-                  </button>
-                  <button class="filter-btn" data-category="category4">
-                    رژ لب‌ها
-                  </button>
-                </div>
-                <div class="cards-wrapper">
-                  <div class="cards" id="cards">
-                    <!-- کارت‌های پیش‌فرض (دسته‌بندی 1) -->
-                    <div class="card" data-category="category1">
-                      <img src="images/product1.webp" alt="پودر فشرده" />
-                      <h3>پودر فشرده NARS</h3>
-                      <p class="price">۱,۰۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category1">
-                      <img src="images/product2.jpg" alt="پودر مات" />
-                      <h3>پودر مات MAC</h3>
-                      <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category1">
-                      <img src="images/product4.webp" alt="پودر برنزه" />
-                      <h3>پودر برنزه Fenty</h3>
-                      <p class="price">۹۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category1">
-                      <img
-                        src="images/product3.webp"
-                        alt="پودر هایلایت"
-                        loading="lazy"
-                      />
-                      <h3>پودر هایلایت Dior</h3>
-                      <p class="price">۱,۳۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <!-- کارت‌های دسته‌بندی 2 -->
-                    <div class="card" data-category="category2">
-                      <img
-                        src="images/product2.jpg"
-                        alt="لاک ناخن قرمز"
-                        loading="lazy"
-                      />
-                      <h3>لاک ناخن قرمز OPI</h3>
-                      <p class="price">۳۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category2">
-                      <img
-                        src="images/product3.webp"
-                        alt="لاک ناخن صورتی"
-                        loading="lazy"
-                      />
-                      <h3>لاک ناخن صورتی Essie</h3>
-                      <p class="price">۳۵۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category2">
-                      <img src="images/product4.webp" alt="لاک ناخن مشکی" />
-                      <h3>لاک ناخن مشکی Chanel</h3>
-                      <p class="price">۴۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category2">
-                      <img src="images/product1.webp" alt="لاک ناخن براق" />
-                      <h3>لاک ناخن براق Sally Hansen</h3>
-                      <p class="price">۳۲۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <!-- کارت‌های دسته‌بندی 3 -->
-                    <div class="card" data-category="category3">
-                      <img src="images/product2.jpg" alt="برق لب صورتی" />
-                      <h3>برق لب صورتی NARS</h3>
-                      <p class="price">۵۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <div class="card" data-category="category3">
-                      <img src="images/product2.jpg" alt="برق لب شفاف" />
-                      <h3>برق لب شفاف Fenty</h3>
-                      <p class="price">۴۸۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category3">
-                      <img src="images/product1.webp" alt="برق لب قرمز" />
-                      <h3>برق لب قرمز Dior</h3>
-                      <p class="price">۵۵۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category3">
-                      <img src="images/product3.webp" alt="برق لب براق" />
-                      <h3>برق لب براق MAC</h3>
-                      <p class="price">۴۹۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-
-                    <!-- کارت‌های دسته‌بندی 4 -->
-                    <div class="card" data-category="category4">
-                      <img src="images/product3.webp" alt="رژ لب مات" />
-                      <h3>رژ لب مات Sisley</h3>
-                      <p class="price">۶۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category4">
-                      <img src="images/product2.jpg" alt="رژ لب صورتی" />
-                      <h3>رژ لب صورتی YSL</h3>
-                      <p class="price">۶۵۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category4">
-                      <img src="images/product3.webp" alt="رژ لب قرمز" />
-                      <h3>رژ لب قرمز Chanel</h3>
-                      <p class="price">۷۰۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                    <div class="card" data-category="category4">
-                      <img src="images/product2.jpg" alt="رژ لب براق" />
-                      <h3>رژ لب براق Gucci</h3>
-                      <p class="price">۶۸۰,۰۰۰ تومان</p>
-                      <button class="add-to-cart">افزودن به سبد</button>
-                    </div>
-                  </div>
-                </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream2.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream3.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream5.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream6.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            <div class="custom-swiper-slide swiper-slide">
+              <div class="custom-product-card">
+                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <h3>ساعت هوشمند</h3>
+                <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
+              </div>
+            </div>
+            
+            <!--  more cards will be in here  -->
           </div>
+          <div class="swiper-button-prev custom-swiper-button-prev"></div>
+          <div class="swiper-button-next custom-swiper-button-next"></div>
+          <div class="swiper-pagination custom-swiper-pagination"></div>
         </div>
         <div class="image__fluid">
           <img
