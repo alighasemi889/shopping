@@ -1,5 +1,12 @@
+// متغیرهای رنگی برای راحتی تغییرات در آینده
+$primary-color: #007bff;
+$secondary-color: #7a7a7a;
+$dark-color: #424242;
+$light-bg: #fff;
+$box-shadow: -22px 14px 50px -3px rgba(0, 0, 0, 0.1);
+
 .flex__wrapper {
-  width: 100%;
+  width: 80%;
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -7,13 +14,12 @@
   gap: 1rem;
   margin: 10px 0 0 0;
   overflow: hidden;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
   border-radius: 100px;
   margin: 0 auto;
-  box-shadow: -22px 14px 50px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: $box-shadow;
+  margin-top: 50px;
 }
+
 .text__container {
   display: flex;
   flex-direction: column;
@@ -21,12 +27,12 @@
   align-items: end;
   padding: 65px;
 }
-// contact us  section
 
+// Contact Us Section
 .contact-section {
   width: 80%;
-  background-color: #fff;
-  box-shadow: -22px 14px 50px -3px rgba(0, 0, 0, 0.1);
+  background-color: $light-bg;
+  box-shadow: $box-shadow;
   margin: 0 auto;
   margin-top: 90px;
   border-radius: 100px;
@@ -37,16 +43,19 @@
   max-width: 100%;
   padding: 10px;
 }
+
 .call__details {
-  color: #7a7a7a;
+  color: $secondary-color;
   font-size: 1.5rem;
 }
+
 span {
-  color: #7a7a7a;
+  color: $secondary-color;
 }
+
 .main__title {
   text-align: right;
-  color: #7a7a7a;
+  color: $secondary-color;
   font-size: 2.3rem;
   padding-right: 43px;
 }
@@ -55,55 +64,67 @@ span {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 29px;
   color: #333;
   flex-direction: row-reverse;
-  font-size: 29px;
   padding-right: 43px;
-}
 
-.contact-item i {
-  font-size: 24px;
-  color: #007bff;
-  margin-left: 15px;
-  width: 30px;
-  text-align: center;
-}
+  i {
+    font-size: 24px;
+    color: $primary-color;
+    margin-left: 15px;
+    width: 30px;
+    text-align: center;
+  }
 
-.contact-item span {
-  flex: 1;
-  text-align: right;
+  span {
+    flex: 1;
+    text-align: right;
+  }
 }
 
 .social-media {
   margin-top: 40px;
   text-align: right;
+
+  h3 {
+    font-size: 36px;
+    color: $secondary-color;
+    margin-bottom: 15px;
+    padding-right: 30px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    padding-right: 30px;
+    justify-content: flex-end;
+
+    a {
+      color: $primary-color;
+      font-size: 28px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
 }
 
-.social-media h3 {
-  font-size: 36px;
-  color: #7a7a7a;
-  margin-bottom: 15px;
-  padding-right: 30px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 15px;
-  padding-right: 30px;
-  justify-content: flex-end;
-}
 .call__us {
-  color: #424242;
+  color: $dark-color;
   font-size: 1.9rem;
 }
+
 img.about__image {
   width: 130px;
   height: auto;
   max-width: 140px;
 }
+
 .social-icons a {
-  color: #007bff;
+  color: $primary-color;
   font-size: 28px;
   transition: color 0.3s ease;
 }
@@ -112,6 +133,14 @@ img.about__image {
   color: #0056b3;
 }
 
+// Map Section
+.map__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Media Queries
 @media (max-width: 600px) {
   .contact-item {
     font-size: 16px;
@@ -129,12 +158,4 @@ img.about__image {
   .social-icons a {
     font-size: 24px;
   }
-}
-
-// map section
-
-.map__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
