@@ -6,9 +6,9 @@ const stories = {
   5: "images/product1.webp",
   6: "images/product1.webp",
   7: "images/product1.webp",
-  8: "https://via.placeholder.com/1080x1920/800080/FFFFFF?text=Full+Story+8",
-  9: "https://via.placeholder.com/1080x1920/008000/FFFFFF?text=Full+Story+9",
-  10: "https://via.placeholder.com/1080x1920/FFC0CB/FFFFFF?text=Full+Story+10",
+  8: "images/product1.webp",
+  9: "images/product1.webp",
+  10: "images/product.webp",
 };
 
 document.querySelectorAll(".ig-story-circle").forEach((circle) => {
