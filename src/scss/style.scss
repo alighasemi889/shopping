@@ -271,9 +271,12 @@ h3.footer__txt__small {
 }
 
 .image__flex__footer {
-  width: 180px;
-  display: flex;
-  gap: 1rem;
+     width: 180px;
+    display: flex;
+    gap: 1rem;
+    align-items: normal;
+    justify-content: center;
+    max-width: 200px;
 }
 
 .txt__contact {
