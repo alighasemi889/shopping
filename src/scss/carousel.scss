@@ -1,30 +1,53 @@
+/***************** Carousel Styles ************** */
+
+/* متغیرها */
+$carousel-max-width: 100%;
+$carousel-width: 75%;
+$card-width: 270px;
+$card-height: 340px;
+$card-bg-color: white;
+$card-border-radius: 12px;
+$card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$btn-bg-color: #222;
+$btn-hover-opacity: 1;
+$btn-opacity: 0.8;
+$btn-border-radius: 8px;
+$btn-font-size: 18px;
+$wrapper-padding: 10px;
+$h2-color: #3c3c3c;
+$h2-font-size: 22px;
+$image-card-padding: 80px;
+$photo-box-width: 450px;
+$photo-box-border-radius: 10px;
+
+/* carousel-wrapper */
 .carousel-wrapper {
   position: relative;
-  /* width: 90%; */
-  /* max-width: 1000px; */
-  max-width: 100%;
-  width: 75%;
+  max-width: $carousel-max-width;
+  width: $carousel-width;
 }
 
+/* carousel */
 .carousel {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 16px;
-  padding: 10px;
+  padding: $wrapper-padding;
 }
 
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
+/* card__child */
 .card__child {
   flex: 0 0 auto;
-  width: 270px;
-  height: 340px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: $card-width;
+  height: $card-height;
+  background: $card-bg-color;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,55 +55,64 @@
   user-select: none;
 }
 
+/* btn__card */
 .btn__card {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #222;
+  background: $btn-bg-color;
   color: white;
   border: none;
   padding: 10px 12px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: $btn-border-radius;
   z-index: 2;
-  font-size: 18px;
-  opacity: 0.8;
+  font-size: $btn-font-size;
+  opacity: $btn-opacity;
+  
+  &:hover {
+    opacity: $btn-hover-opacity;
+  }
+
+  &.left {
+    left: -10px;
+  }
+
+  &.right {
+    right: -10px;
+  }
 }
 
-.btn__card:hover {
-  opacity: 1;
-}
-
-.btn__card.left {
-  left: -10px;
-}
-
-.btn__card.right {
-  right: -10px;
-}
+/* wrapper__carousel */
 .wrapper__carousel {
   display: flex;
   justify-content: end;
-  padding: 10px;
+  padding: $wrapper-padding;
   align-items: center;
   justify-content: center;
 }
+
+/* new__product */
 h2.new__product {
   text-align: right;
-  color: #3c3c3c;
-  font-size: 22px;
+  color: $h2-color;
+  font-size: $h2-font-size;
 }
+
+/* image__card */
 .image__card {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   margin: 60px 0 0 0;
-  padding: 80px;
+  padding: $image-card-padding;
 }
+
+/* photo__box */
 .photo__box {
-  width: 450px;
+  width: $photo-box-width;
   height: auto;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: $photo-box-border-radius;
 }

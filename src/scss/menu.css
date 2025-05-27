@@ -1,9 +1,8 @@
-/***************** header styles************** */
+/***************** Header Styles ************** */
 header {
   box-sizing: border-box;
   max-width: 100%;
   width: 100%;
-  /* background: #ccc; */
 }
 
 nav {
@@ -55,7 +54,7 @@ img {
   display: none;
 }
 
-/* mobile wrapper style menu */
+/* Mobile Wrapper Style Menu */
 .header__mobile {
   background: #fff;
   height: 100vh;
@@ -82,11 +81,9 @@ ul.nav__mobile {
 }
 
 hr.line {
-  width: 10px;
-  height: 10px;
-  background: #d7c7c7;
   width: 100%;
   height: 1px;
+  background: #d7c7c7;
 }
 
 a.hidden {
@@ -102,7 +99,7 @@ a.mobile__link {
   display: none;
 }
 
-/* resposnive codes */
+/* Responsive Codes */
 @media screen and (max-width: 1200px) {
   .hidden:not(svg) {
     display: none;

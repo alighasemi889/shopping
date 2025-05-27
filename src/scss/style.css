@@ -1,6 +1,6 @@
 @import url("menu.css");
 @import url("../scss/scroolbar.css");
-/* @import url("../scss/chatbot.css"); */
+@import url("../scss/chatbot.css");
 @import url("../scss/banner.css");
 @import url("../scss/product.css");
 @import url("../scss/scrooltop.css");
@@ -253,6 +253,9 @@ h3.footer__txt__small {
   width: 180px;
   display: flex;
   gap: 1rem;
+  align-items: normal;
+  justify-content: center;
+  max-width: 200px;
 }
 
 .txt__contact {

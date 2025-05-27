@@ -144,7 +144,15 @@
     width: 800px;
   }
 }
-
+@media screen and (max-width:396px) {
+  .flex__icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+  }
+}
 @media screen and (min-width:300px) and (max-width:400px){
   .btn__toggle{
     display: flex;
