@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta title="viewport" content="صفحه محصولات لوازم آرایشی"></meta>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    }
+    .product-card.hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    #cart-panel {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    #cart-panel:not(.hidden) {
+      transform: translateX(0);
+    }
+    #cart-items .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .cart-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .cart-item .details {
+      flex-grow: 1;
+    }
+    .cart-item .controls button {
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    .empty-cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      color: #9ca3af;
+      padding: 2rem 0;
+    }
+    .empty-cart svg {
+      width: 48px;
+      height: 48px;
+      fill: #d1d5db;
+    }
+    .timeline-bar {
+      transition: width 1s linear;
+    }
+    .pulse {
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    .dual-range-container {
+      position: relative;
+      height: 20px;
+    }
+    .dual-range {
+      position: absolute;
+      width: 100%;
+    }
+    .dual-range::-webkit-slider-thumb {
+      background: #ec4899;
+    }
+    .dual-range::-moz-range-thumb {
+      background: #ec4899;
+    }
+    #quick-view-modal {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    #quick-view-modal.hidden {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .filter-section {
+      background: #fff5f8;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .filter-section select,
+    .filter-section input[type="checkbox"] {
+      transition: all 0.2s ease;
+    }
+    .filter-section select:focus,
+    .filter-section input[type="checkbox"]:focus {
+      outline: none;
+      border-color: #ec4899;
+      box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-pink-50 to-white">
+  <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-6">
+    <!-- Sidebar: Filters -->
+    <div class="w-full md:w-1/4 bg-white rounded-xl shadow-lg p-6 md:sticky md:top-4">
+      <h2 class="text-2xl font-bold mb-4 text-pink-600">فیلترها</h2>
+      <!-- Filter by New Products -->
+      <div class="filter-section">
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">محصولات جدید</h3>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" id="new-products" class="form-checkbox h-5 w-5 text-pink-600 rounded">
+          <span class="text-gray-600">نمایش محصولات جدید</span>
+        </label>
+      </div>
+      <!-- Filter by Price Range -->
+      <div class="filter-section">
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">محدوده قیمت (تومان)</h3>
+        <div class="dual-range-container">
+          <input type="range" id="minPrice" min="0" max="500000" step="10000" value="0" class="dual-range">
+          <input type="range" id="maxPrice" min="0" max="500000" step="10000" value="500000" class="dual-range">
+        </div>
+        <div class="flex justify-between text-sm text-gray-600 mt-2">
+          <span>حداقل: <span id="minPriceValue">0</span> تومان</span>
+          <span>حداکثر: <span id="maxPriceValue">500000</span> تومان</span>
+        </div>
+      </div>
+      <!-- Filter by Brand -->
+      <div class="filter-section">
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">برند</h3>
+        <select id="brandFilter" class="w-full p-2 border border-pink-200 rounded-lg text-gray-600 focus:ring-2 focus:ring-pink-300 bg-white">
+          <option value="all">همه</option>
+          <option value="لورآل">لورآل</option>
+          <option value="میبلین">میبلین</option>
+          <option value="دیور">دیور</option>
+          <option value="استی لودر">استی لودر</option>
+        </select>
+      </div>
+      <!-- Filter by Category -->
+      <div class="filter-section">
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">دسته‌بندی</h3>
+        <div class="space-y-2">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600 rounded" data-category="رژ لب">
+            <span class="text-gray-600">رژ لب</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600 rounded" data-category="کرم پودر">
+            <span class="text-gray-600">کرم پودر</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600 rounded" data-category="ریمل">
+            <span class="text-gray-600">ریمل</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600 rounded" data-category="سایه چشم">
+            <span class="text-gray-600">سایه چشم</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content: Product Grid -->
+    <div class="w-full md:w-3/4">
+      <h1 class="text-3xl font-bold mb-6 text-gray-800">لوازم آرایشی</h1>
+      <div class="mb-4 text-gray-700">تعداد محصولات: <span id="productCount">0</span></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid"></div>
+    </div>
+  </div>
+
+  <!-- Cart Panel -->
+  <div id="cart-panel" class="fixed top-20 left-4 w-80 bg-white shadow-2xl rounded-2xl p-6 z-50 max-h-[80vh] overflow-y-auto hidden">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-800">سبد خرید شما</h3>
+      <button id="close-cart" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+    </div>
+    <ul id="cart-items" class="divide-y divide-gray-200 mb-6"></ul>
+    <p id="cart-total" class="text-right font-bold text-pink-600 text-lg mb-4">جمع کل: 0 تومان</p>
+    <button id="checkout-btn" class="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition-transform transform hover:scale-105">تسویه حساب</button>
+  </div>
+
+  <!-- Cart Toggle Button -->
+  <button id="cart-toggle" class="fixed top-5 left-5 bg-pink-600 text-white rounded-full w-14 h-14 shadow-lg flex items-center justify-center text-lg font-bold z-50 hover:bg-pink-700 transition-transform transform hover:scale-105">
+    🛒<span id="cart-count" class="absolute -top-2 -right-2 bg-white text-pink-600 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">0</span>
+  </button>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-6 max-w-lg w-full mx-4">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-gray-800" id="quick-view-title"></h3>
+        <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+      </div>
+      <img id="quick-view-image" src="" alt="" class="w-full h-64 object-cover rounded-lg mb-4">
+      <p id="quick-view-description" class="text-gray-500 text-sm mb-4"></p>
+      <p id="quick-view-price" class="text-pink-600 font-bold text-lg"></p>
+      <button id="quick-view-add-to-cart" class="btn w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 mt-4">افزودن به سبد خرید</button>
+    </div>
+  </div>
+
+  <script>
+    // Product Data
+    const products = [
+      {
+        id: 1, category: 'رژ لب', brand: 'لورآل', price: 250000, originalPrice: 300000, isNew: false,
+        name: 'رژ لب مات', image: 'https://via.placeholder.com/150?text=رژ+لب',
+        description: 'رژ لب با ماندگاری بالا، رنگ قرمز کلاسیک',
+        discountEnd: new Date(Date.now() + 6 * 60 * 60 * 1000), totalDiscountTime: 24 * 60 * 60 * 1000
+      },
+      {
+        id: 2, category: 'کرم پودر', brand: 'دیور', price: 350000, originalPrice: 400000, isNew: true,
+        name: 'کرم پودر', image: 'https://via.placeholder.com/150?text=کرم+پودر',
+        description: 'پوشش کامل، مناسب انواع پوست',
+        discountEnd: new Date(Date.now() + 48 * 60 * 60 * 1000), totalDiscountTime: 48 * 60 * 60 * 1000
+      },
+      {
+        id: 3, category: 'ریمل', brand: 'میبلین', price: 180000, originalPrice: 220000, isNew: false,
+        name: 'ریمل حجم‌دهنده', image: 'https://via.placeholder.com/150?text=ریمل',
+        description: 'ریمل ضدآب با برس حرفه‌ای',
+        discountEnd: new Date(Date.now() + 10 * 60 * 60 * 1000), totalDiscountTime: 12 * 60 * 60 * 1000
+      },
+      {
+        id: 4, category: 'سایه چشم', brand: 'استی لودر', price: 400000, originalPrice: 450000, isNew: true,
+        name: 'پالت سایه چشم', image: 'https://via.placeholder.com/150?text=سایه+چشم',
+        description: 'رنگ‌های متنوع با پیگمنت بالا',
+        discountEnd: new Date(Date.now() + 36 * 60 * 60 * 1000), totalDiscountTime: 36 * 60 * 60 * 1000
+      }
+    ];
+
+    // Selectors
+    const productGrid = document.getElementById('product-grid');
+    const newProductsCheckbox = document.getElementById('new-products');
+    const categoryCheckboxes = document.querySelectorAll('input[data-category]');
+    const brandFilter = document.getElementById('brandFilter');
+    const minPriceInput = document.getElementById('minPrice');
+    const maxPriceInput = document.getElementById('maxPrice');
+    const minPriceValue = document.getElementById('minPriceValue');
+    const maxPriceValue = document.getElementById('maxPriceValue');
+    const productCount = document.getElementById('productCount');
+    const cartToggleBtn = document.getElementById('cart-toggle');
+    const cartPanel = document.getElementById('cart-panel');
+    const cartItemsList = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const cartCount = document.getElementById('cart-count');
+    const closeCartBtn = document.getElementById('close-cart');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const quickViewModal = document.getElementById('quick-view-modal');
+    const quickViewTitle = document.getElementById('quick-view-title');
+    const quickViewImage = document.getElementById('quick-view-image');
+    const quickViewDescription = document.getElementById('quick-view-description');
+    const quickViewPrice = document.getElementById('quick-view-price');
+    const quickViewAddToCart = document.getElementById('quick-view-add-to-cart');
+    const closeModalBtn = document.getElementById('close-modal');
+
+    // Cart State
+    let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+    // Render Products
+    function renderProducts(filteredProducts) {
+      productGrid.innerHTML = '';
+      productCount.textContent = filteredProducts.length;
+
+      filteredProducts.forEach(product => {
+        const isUrgent = product.discountEnd && (product.discountEnd - new Date()) / (1000 * 60 * 60) < 12;
+        const card = document.createElement('div');
+        card.className = 'product-card bg-white rounded-xl shadow-lg p-5 hidden';
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h2 class="text-xl font-semibold text-gray-800">${product.name}</h2>
+          <p class="text-gray-500 text-sm">${product.description}</p>
+          <div class="flex items-center gap-2 mt-2">
+            <p class="text-pink-600 font-bold text-lg">${product.price.toLocaleString('fa-IR')} تومان</p>
+            ${product.originalPrice ? `<p class="text-gray-500 line-through text-sm">${product.originalPrice.toLocaleString('fa-IR')} تومان</p>` : ''}
+          </div>
+          ${product.discountEnd ? `
+            <div class="mt-2">
+              <p id="timer-${product.id}" class="text-pink-500 font-medium ${isUrgent ? 'pulse' : ''}"></p>
+              <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                <div id="progress-${product.id}" class="timeline-bar bg-pink-500 h-2.5 rounded-full"></div>
+              </div>
+            </div>
+            ${isUrgent ? '<span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">پیشنهاد ویژه!</span>' : ''}
+          ` : ''}
+          <div class="flex gap-2 mt-4">
+            <button class="btn flex-1 bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 add-to-cart" data-id="${product.id}">افزودن به سبد خرید</button>
+            <button class="btn flex-1 bg-gray-200 text-gray-800 py-2 rounded-lg hover:bg-gray-300 quick-view" data-id="${product.id}">مشاهده سریع</button>
+          </div>
+          <p class="add-message mt-2 text-green-600 font-semibold"></p>
+        `;
+        productGrid.appendChild(card);
+        if (product.discountEnd) {
+          startTimer(product.id, product.discountEnd, product.totalDiscountTime);
+        }
+        setTimeout(() => card.classList.replace('hidden', 'visible'), 50);
+      });
+    }
+
+    // Timer and Progress Bar
+    function startTimer(productId, endTime, totalDiscountTime) {
+      const timerElement = document.getElementById(`timer-${productId}`);
+      const progressElement = document.getElementById(`progress-${productId}`);
+      function updateTimer() {
+        const now = new Date();
+        const timeLeft = endTime - now;
+        if (timeLeft <= 0) {
+          timerElement.textContent = 'تخفیف پایان یافت!';
+          progressElement.style.width = '0%';
+          return;
+        }
+        const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        timerElement.textContent = `زمان باقی‌مانده: ${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        const progress = (timeLeft / totalDiscountTime) * 100;
+        progressElement.style.width = `${progress}%`;
+      }
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+
+    // Render Cart
+    function renderCart() {
+      cartItemsList.innerHTML = '';
+      let totalPrice = 0;
+      let totalCount = 0;
+
+      for (const id in cart) {
+        const quantity = cart[id];
+        if (quantity <= 0) continue;
+
+        const product = products.find(p => p.id == id);
+        if (!product) continue;
+
+        totalPrice += product.price * quantity;
+        totalCount += quantity;
+
+        const li = document.createElement('li');
+        li.className = 'cart-item';
+        li.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <div class="details">
+            <p class="font-semibold text-gray-800">${product.name}</p>
+            <p class="text-sm text-gray-500">${product.price.toLocaleString('fa-IR')} تومان</p>
+          </div>
+          <div class="controls flex items-center gap-2">
+            <button data-id="${id}" class="decrease-btn bg-gray-200 hover:bg-gray-300">-</button>
+            <span class="min-w-[20px] text-center">${quantity}</span>
+            <button data-id="${id}" class="increase-btn bg-gray-200 hover:bg-gray-300">+</button>
+            <button data-id="${id}" class="remove-btn text-red-500 hover:text-red-700 font-bold">×</button>
+          </div>
+        `;
+        cartItemsList.appendChild(li);
+      }
+
+      cartTotal.textContent = `جمع کل: ${totalPrice.toLocaleString('fa-IR')} تومان`;
+      cartCount.textContent = totalCount;
+
+      if (totalCount === 0) {
+        cartItemsList.innerHTML = `
+          <div class="empty-cart">
+            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-3.42l-1.01 2H8.21l-1.01-2H3.1l3.86 7.01c.34.62 1 .03 1.75 1.03zm3.9-9l-1.01 2H8.21l-1.01-2H3.1l3.86 7.01c.34.62 1 .03 1.75 1.03h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-3.42z"/></svg>
+            <p>سبد خرید خالی است</p>
+          </div>
+        `;
+        cartTotal.textContent = 'جمع کل: 0 تومان';
+      }
+    }
+
+    // Save Cart to localStorage
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Add to Cart
+    function addToCart(id) {
+      if (!cart[id]) cart[id] = 0;
+      cart[id]++;
+      saveCart();
+      renderCart();
+      cartPanel.classList.remove('hidden');
+    }
+
+    // Remove from Cart
+    function removeFromCart(id) {
+      delete cart[id];
+      saveCart();
+      renderCart();
+    }
+
+    // Change Quantity
+    function changeQuantity(id, delta) {
+      if (!cart[id]) return;
+      cart[id] += delta;
+      if (cart[id] <= 0) {
+        removeFromCart(id);
+      } else {
+        saveCart();
+        renderCart();
+      }
+    }
+
+    // Filter Products
+    function filterProducts() {
+      const showNew = newProductsCheckbox.checked;
+      const categories = Array.from(categoryCheckboxes).filter(cb => cb.checked).map(cb => cb.dataset.category);
+      const brand = brandFilter.value;
+      const minPrice = parseInt(minPriceInput.value) || 0;
+      const maxPrice = parseInt(maxPriceInput.value) || Infinity;
+
+      const filteredProducts = products.filter(product => {
+        const newMatch = !showNew || product.isNew;
+        const categoryMatch = categories.length === 0 || categories.includes(product.category);
+        const brandMatch = brand === 'all' || product.brand === brand;
+        const priceMatch = product.price >= minPrice && product.price <= maxPrice;
+        return newMatch && categoryMatch && brandMatch && priceMatch;
+      });
+
+      renderProducts(filteredProducts);
+    }
+
+    // Price Slider Handlers
+    minPriceInput.addEventListener('input', () => {
+      minPriceValue.textContent = minPriceInput.value.toLocaleString('fa-IR');
+      if (parseInt(minPriceInput.value) > parseInt(maxPriceInput.value)) {
+        maxPriceInput.value = minPriceInput.value;
+        maxPriceValue.textContent = minPriceInput.value.toLocaleString('fa-IR');
+      }
+      filterProducts();
+    });
+
+    maxPriceInput.addEventListener('input', () => {
+      maxPriceValue.textContent = maxPriceInput.value.toLocaleString('fa-IR');
+      if (parseInt(maxPriceInput.value) < parseInt(minPriceInput.value)) {
+        minPriceInput.value = maxPriceInput.value;
+        minPriceValue.textContent = maxPriceInput.value.toLocaleString('fa-IR');
+      }
+      filterProducts();
+    });
+
+    // Quick View Handler
+    function showQuickView(product) {
+      quickViewTitle.textContent = product.name;
+      quickViewImage.src = product.image;
+      quickViewDescription.textContent = product.description;
+      quickViewPrice.innerHTML = `${product.price.toLocaleString('fa-IR')} تومان ${product.originalPrice ? `<span class="line-through text-gray-500 text-sm">${product.originalPrice.toLocaleString('fa-IR')} تومان</span>` : ''}`;
+      quickViewAddToCart.dataset.id = product.id;
+      quickViewModal.classList.remove('hidden');
+    }
+
+    // Event Listeners
+    newProductsCheckbox.addEventListener('change', filterProducts);
+    categoryCheckboxes.forEach(cb => cb.addEventListener('change', filterProducts));
+    brandFilter.addEventListener('change', filterProducts);
+
+    productGrid.addEventListener('click', e => {
+      const id = e.target.dataset.id;
+      if (!id) return;
+      if (e.target.classList.contains('add-to-cart')) {
+        addToCart(id);
+        const card = e.target.closest('.product-card');
+        let msg = card.querySelector('.add-message');
+        if (!msg) {
+          msg = document.createElement('p');
+          msg.className = 'add-message mt-2 text-green-600 font-semibold';
+          card.appendChild(msg);
+        }
+        msg.textContent = 'به سبد خرید اضافه شد ✅';
+        setTimeout(() => { msg.textContent = ''; }, 3000);
+      } else if (e.target.classList.contains('quick-view')) {
+        const product = products.find(p => p.id == id);
+        showQuickView(product);
+      }
+    });
+
+    cartToggleBtn.addEventListener('click', () => {
+      cartPanel.classList.toggle('hidden');
+    });
+
+    closeCartBtn.addEventListener('click', () => {
+      cartPanel.classList.add('hidden');
+    });
+
+    cartItemsList.addEventListener('click', e => {
+      const id = e.target.dataset.id;
+      if (!id) return;
+      if (e.target.classList.contains('increase-btn')) {
+        changeQuantity(id, +1);
+      } else if (e.target.classList.contains('decrease-btn')) {
+        changeQuantity(id, -1);
+      } else if (e.target.classList.contains('remove-btn')) {
+        removeFromCart(id);
+      }
+    });
+
+    checkoutBtn.addEventListener('click', () => {
+      if (Object.keys(cart).length === 0) {
+        alert('سبد خرید خالی است!');
+      } else {
+        alert('در حال انتقال به صفحه تسویه حساب...');
+      }
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      quickViewModal.classList.add('hidden');
+    });
+
+    quickViewAddToCart.addEventListener('click', () => {
+      addToCart(quickViewAddToCart.dataset.id);
+      quickViewModal.classList.add('hidden');
+      cartPanel.classList.remove('hidden');
+    });
+
+    // Initial Render
+    renderProducts(products);
+    renderCart();
+  </script>
+</body>
+</html>
