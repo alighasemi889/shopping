@@ -42,6 +42,11 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+.fake__price{
+   color: #e44d26;
+  font-weight: bold;
+  text-decoration: line-through;
+}
 @media (max-width: 767px) {
   .custom-product-card {
     width: 90vw;
