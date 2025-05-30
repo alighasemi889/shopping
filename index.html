@@ -31,14 +31,38 @@
     <link rel="stylesheet" href="src/scss/banner-module.css">
     <link rel="stylesheet" href="src/scss/blog-container.css">
     <link rel="stylesheet" href="src/scss/product-slider.css">
+    <link rel="stylesheet" href="src/scss/chatbot.css">
   </head>
   <body>
+    <!-- chatbot user section -->
+         <div class="chat-icon" onclick="toggleChat()">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat Icon" loading="lazy">
+    </div>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <span id="headerText">چت‌بات فروشگاهی</span>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="fa">فارسی</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="quick-questions" id="quickQuestions">
+            <div class="quick-question" onclick="sendQuickQuestion('محصول موجوده؟')">محصول موجوده؟</div>
+            <div class="quick-question" onclick="sendQuickQuestion('هزینه ارسال چقدره؟')">هزینه ارسال چقدره؟</div>
+            <div class="quick-question" onclick="sendQuickQuestion('زمان تحویل چطوره؟')">زمان تحویل چطوره؟</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="سؤالت رو بپرس...">
+            <button class="btn__chat" onclick="sendMessage()">ارسال</button>
+        </div>
+    </div>
     <!-- loader part -->
     <div id="loader">
       <div class="spinner"></div>
     </div>
     <!-- loader part -->
-    <!-- notification part -->
+    <!-- notification section -->
     <div id="notification" class="notification"></div>
     <div class="banner">
       <div class="banner-content">
@@ -655,69 +679,69 @@
     
 
       <!-- weblog section slider -->
-        <h2  class="custom-title">پیشنهاد کازمتیک</h2>
+        <h2  class="custom-title">جدید ترین ها</h2>
         <div class="custom-swiper-container swiper">
           <div class="swiper-wrapper">
             <!-- نمونه کارت محصول -->
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-001.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream2.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-002.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream3.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-003.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-004.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-005.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream5.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-006.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream6.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-007.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
               </div>
             </div>
             <div class="custom-swiper-slide swiper-slide">
               <div class="custom-product-card">
-                <img src="images/cream4.jpg" alt="محصول 1" / loading="lazy">
+                <img src="images/lipstick-red-008.jpg" alt="محصول 1" / loading="lazy">
                 <h3>ساعت هوشمند</h3>
                 <div class="custom-price">۱,۲۵۰,۰۰۰ تومان</div>
                 <span class="fake__price custom-price">400000</span>
               </div>
             </div>
             
-            <!--  more cards will be in here  -->
+            <!--  btns swiper section -->
           </div>
           <div class="swiper-button-prev custom-swiper-button-prev"></div>
           <div class="swiper-button-next custom-swiper-button-next"></div>
@@ -885,6 +909,7 @@
     <script src="src/js/banner-module.js"></script>
     <script src="src/js/blog-container.js"></script>
     <script src="src/js/product-slider.js"></script>
+    <script defer src="src/js/chatbot.js"></script>
     
   </body>
 </html>
