@@ -1,0 +1,110 @@
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #28a745;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.chat-icon img {
+  width: 30px;
+  height: 30px;
+}
+.chat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.chat-container.open {
+  display: flex;
+}
+.chat-container .chat-header {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-container .chat-header select {
+  padding: 5px;
+  border-radius: 5px;
+}
+.chat-container .chat-box {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+.chat-container .chat-box .chat-message {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+.chat-container .chat-box .chat-message.user-message {
+  background-color: #e1ffc7;
+  text-align: right;
+}
+.chat-container .chat-box .chat-message.bot-message {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+.chat-container .quick-questions {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+.chat-container .quick-questions .quick-question {
+  display: block;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.chat-container .quick-questions .quick-question:hover {
+  background-color: #e9ecef;
+}
+.chat-container .input-container {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+.chat-container .input-container input[type=text] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.chat-container .input-container .btn__chat {
+  padding: 8px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.chat-container .input-container .btn__chat:hover {
+  background-color: #218838;
+}/*# sourceMappingURL=chatbot.css.map */
