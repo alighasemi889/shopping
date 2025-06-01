@@ -4,26 +4,64 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = 'https://cetwcfmdxhsywevrfbbk.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNldHdjZm1keGhzeXdldnJmYmJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY5NzQxOTgsImV4cCI6MjA2MjU1MDE5OH0.Z8XaXTtqXfzuuKWnKfvQkuNM7-Z7hvb6JwBjfoe3HjA';
 const supabase = createClient(supabaseUrl, supabaseKey);
+// validation section part
+const form = document.getElementById("myForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const nameError = document.getElementById("name-error");
+const emailError = document.getElementById("email-error");
 
-// گرفتن فرم و مدیریت ارسال
-const form = document.getElementById('myForm');
 form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // جلوگیری از رفرش صفحه
+  e.preventDefault();
 
-    // گرفتن داده‌های فرم
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+  // پاک کردن پیام‌های قبلی
+  nameError.textContent = '';
+  emailError.textContent = '';
 
-    // ذخیره داده‌ها در جدول users
-    const { data, error } = await supabase
-        .from('users')
-        .insert([{ name, email }]);
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  let hasError = false;
 
-    if (error) {
-        console.error('خطا در ذخیره داده‌ها: ', error);
-        alert('خطایی رخ داد. لطفاً دوباره امتحان کنید.');
-    } else {
-        alert('داده‌ها با موفقیت ذخیره شدند!');
-        form.reset(); // پاک کردن فرم
+  // اعتبارسنجی نام
+  if (!name) {
+    nameError.textContent = 'لطفاً نام خود را وارد کنید.';
+    hasError = true;
+  }
+
+  // اعتبارسنجی ایمیل
+  if (!email) {
+    emailError.textContent = 'لطفاً ایمیل خود را وارد کنید.';
+    hasError = true;
+  } else {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      emailError.textContent = 'ایمیل وارد شده معتبر نیست.';
+      hasError = true;
     }
+  }
+
+  if (hasError) return;
+
+  // ارسال به Supabase
+  const { data, error } = await supabase
+    .from('users')
+    .insert([{ name, email }]);
+
+if (error) {
+  if (error.code === '23505') {
+    emailError.textContent = 'این ایمیل قبلاً ثبت شده است.';
+    emailError.style.color = 'red';
+  } else {
+    emailError.textContent = 'خطا در ذخیره داده‌ها. لطفاً دوباره تلاش کنید.';
+    emailError.style.color = 'red';
+    console.error(error);
+  }
+} else {
+  // موفقیت
+  nameInput.value = '';
+  emailInput.value = '';
+  nameError.textContent = '';
+  emailError.textContent = 'با موفقیت ثبت شد.';
+  emailError.style.color = 'green';
+}
 });
