@@ -19,9 +19,8 @@
 
 .swiper-slide img {
   width: 100vw;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover; /* به این معنا که تصویر بدون تغییر نسبت ابعاد، تمام عرض و ارتفاع اسلاید را پر می‌کند */
+  -o-object-fit: contain;
+     object-fit: contain; /* به این معنا که تصویر بدون تغییر نسبت ابعاد، تمام عرض و ارتفاع اسلاید را پر می‌کند */
 }
 
 /* دکمه‌های ناوبری */
