@@ -1,5 +1,8 @@
 # Shopping App
 
+![image](https://github.com/user-attachments/assets/540d02f0-5958-44b6-8e5e-62a416e6e5c0)
+
+
 Welcome to the **Shopping App**! This project is a simple online shopping application built with HTML, CSS, and JavaScript. It's designed to provide a user-friendly interface for browsing products, adding them to the cart, and completing purchases.
 
 ## Features
