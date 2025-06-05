@@ -71,8 +71,11 @@ This project is open-source and available under the [MIT License](LICENSE).
 This project was developed by:
 
 - **Ali Ghasemi** – Frontend Developer & Project Lead
+- 
 - **Mahdi hashemi** – Frontend developer
+
+- 
 -**Pezhman Zare** – Supabase Integration & Data Modeling
 
   
-  **MOhsen mohammadi** – Frontend developer
+ - **MOhsen mohammadi** – Frontend developer
