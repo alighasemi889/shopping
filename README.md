@@ -25,6 +25,7 @@ This project is built using:
 - **HTML**: Markup language for creating web pages.
 - **Scss**: Styling language for designing the user interface.
 - **JavaScript**: Programming language for dynamic behavior and interaction.
+ - **Supabase**: Backend-as-a-Service platform used for managing product data and user interactions.
 
 ## Installation
 
@@ -63,5 +64,13 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- Special thanks to [Name/Resource] for helping with the project.
-- Inspiration: [Resource or website that inspired the project]
+- Special thanks to the **Supabase Documentation** and community for their helpful resources.
+-Appreciation to the Swiper.js library for powering the product slider functionality.
+- ## Team Members
+
+This project was developed by:
+
+- **Ali Ghasemi** – Frontend Developer & Project Lead
+- **Mahdi hashemi** – Frontend developer
+-**Pezhman Zare** – Supabase Integration & Data Modeling
+  **MOhsen mohammadi** – Frontend developer
