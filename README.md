@@ -74,6 +74,4 @@ This project was developed by:
  
  **Mahdi hashemi** – Frontend developer 
 **Pezhman Zare** – Supabase Integration & Data Modeling
-
-  
- - **MOhsen mohammadi** – Frontend developer
+  **MOhsen mohammadi** – Frontend developer
