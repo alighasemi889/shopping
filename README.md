@@ -16,7 +16,7 @@ Welcome to the **Shopping App**! This project is a simple online shopping applic
 
 ## Demo
 
-You can see a live demo of the project [here](https://github.com/alighasemi889/shopping) (If you deploy it somewhere).
+You can see a live demo of the project [here](https://alighasemi889.github.io/shopping/) (If you deploy it somewhere).
 
 ## Tech Stack
 
@@ -73,4 +73,6 @@ This project was developed by:
 - **Ali Ghasemi** – Frontend Developer & Project Lead
 - **Mahdi hashemi** – Frontend developer
 -**Pezhman Zare** – Supabase Integration & Data Modeling
+
+  
   **MOhsen mohammadi** – Frontend developer
