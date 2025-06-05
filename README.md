@@ -23,7 +23,7 @@ You can see a live demo of the project [here](https://github.com/alighasemi889/s
 This project is built using:
 
 - **HTML**: Markup language for creating web pages.
-- **CSS**: Styling language for designing the user interface.
+- **Scss**: Styling language for designing the user interface.
 - **JavaScript**: Programming language for dynamic behavior and interaction.
 
 ## Installation
