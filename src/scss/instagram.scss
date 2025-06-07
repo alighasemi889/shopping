@@ -1,4 +1,9 @@
- .story-slider .swiper-wrapper {
+.story-slider {
+    width: 100%;
+    overflow: visible; /* اجازه میده اسلایدها بیرون نریزن */
+  }
+  /* وسط چین کردن اسلایدها */
+  .story-slider .swiper-wrapper {
     display: flex !important;
     justify-content: center;
     gap: 10px;
