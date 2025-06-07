@@ -1,140 +1,87 @@
-@charset "UTF-8";
-
-// Variables
-$story-gradient: linear-gradient(
-  45deg,
-  #f09433,
-  #e6683c,
-  #dc2743,
-  #cc2366,
-  #bc1888
-);
-$circle-size: 80px;
-$border-radius: 50%;
-$white: #fff;
-$black-overlay: rgba(0, 0, 0, 0.9);
-$max-width: 1200px;
-$gap: 10px;
-$padding: 32px;
-
-// Mixins
-@mixin hide-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
+ .story-slider .swiper-wrapper {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
   }
-}
 
-// Story Circle
-.ig-story-circle {
-  width: $circle-size;
-  height: $circle-size;
-  border-radius: $border-radius;
-  overflow: hidden;
-  cursor: pointer;
-  border: 3px solid transparent;
-  background: $story-gradient;
-  padding: 2px;
+  /* هر اسلاید */
+  .story-slider .swiper-slide {
+    width: 70px !important;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0; /* جلوگیری از کوچک شدن */
+  }
+  .story-slider img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff004f;
+    box-sizing: border-box;
+  }
+  .story-slider p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-  img {
+  /* مدال گالری */
+  .gallery-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .gallery-modal .swiper {
+    width: 90%;
+    max-width: 600px;
+    height: 80%;
+    border-radius: 15px;
+    background: #222;
+  }
+  .gallery-modal img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: $border-radius;
-    border: 2px solid $white;
+    object-fit: contain;
+    border-radius: 10px;
+    user-select: none;
+    pointer-events: none;
   }
-}
-
-// Story Viewer
-.ig-story-viewer {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: $black-overlay;
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-
-  .ig-story-content {
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
+  .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1010;
+    user-select: none;
   }
-}
-
-// Mobile Slider
-.ig-mobile-slider {
-  padding: $padding 0;
-  max-width: $max-width;
-  margin: 0 auto;
-  overflow-x: auto;
-  white-space: nowrap;
-  @include hide-scrollbar;
-
-  .ig-story-container {
-    display: inline-flex;
-    gap: $gap;
-    padding: 0 $gap;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white !important;
   }
-}
-
-// Desktop Grid
-.ig-desktop-grid {
-  display: none;
-  padding: $padding 0;
-  max-width: $max-width;
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    gap: $gap;
+  .swiper-pagination-fraction {
+    color: white !important;
+    font-size: 16px;
+    font-weight: bold;
+    bottom: 10px !important;
   }
-}
-
-// Mobile Slider Responsive
-@media (min-width: 768px) {
-  .ig-mobile-slider {
-    display: none;
-  }
-}
-
-// Close Button
-.close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  color: $white;
-  font-size: 24px;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    background-color: $white;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-}

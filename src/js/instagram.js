@@ -1,69 +1,52 @@
-const stories = {
-  1: "images/product1.webp",
-  2: "images/product1.webp",
-  3: "images/product1.webp",
-  4: "images/product1.webp",
-  5: "images/product1.webp",
-  6: "images/product1.webp",
-  7: "images/product1.webp",
-  8: "images/product1.webp",
-  9: "images/product1.webp",
-  10: "images/product.webp",
-};
-
-document.querySelectorAll(".ig-story-circle").forEach((circle) => {
-  circle.addEventListener("click", () => {
-    const storyId = circle.getAttribute("data-story");
-    const storyImage = document.getElementById("storyImage");
-    storyImage.src = stories[storyId];
-    document.getElementById("storyViewer").style.display = "flex";
+  // اسلایدر استوری
+  const storySwiper = new Swiper(".story-slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    freeMode: true,
   });
-});
 
-function closeStory() {
-  document.getElementById("storyViewer").style.display = "none";
-}
+  // گالری
+  const galleryModal = document.getElementById("gallery-modal");
+  const galleryWrapper = galleryModal.querySelector(".swiper-wrapper");
+  let gallerySwiper = null;
 
-const slider = document.querySelector(".ig-mobile-slider");
-let isDragging = false;
-let startX;
-let scrollLeft;
+  document.querySelectorAll(".story-slider .swiper-slide").forEach((slide) => {
+    slide.addEventListener("click", () => {
+      const images = JSON.parse(slide.getAttribute("data-gallery"));
+      galleryWrapper.innerHTML = "";
+      images.forEach((img) => {
+        const slideEl = document.createElement("div");
+        slideEl.classList.add("swiper-slide");
+        slideEl.innerHTML = `<img src="${img}" alt="" />`;
+        galleryWrapper.appendChild(slideEl);
+      });
+      galleryModal.style.display = "flex";
 
-slider.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
+      if (gallerySwiper) {
+        gallerySwiper.update();
+        gallerySwiper.slideTo(0);
+      } else {
+        gallerySwiper = new Swiper(".gallery-swiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          loop: true,
+        });
+      }
+    });
+  });
 
-slider.addEventListener("mouseleave", () => {
-  isDragging = false;
-});
+  document.getElementById("close-gallery").addEventListener("click", () => {
+    galleryModal.style.display = "none";
+  });
 
-slider.addEventListener("mouseup", () => {
-  isDragging = false;
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2;
-  slider.scrollLeft = scrollLeft - walk;
-});
-
-slider.addEventListener("touchstart", (e) => {
-  isDragging = true;
-  startX = e.touches[0].pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("touchend", () => {
-  isDragging = false;
-});
-
-slider.addEventListener("touchmove", (e) => {
-  if (!isDragging) return;
-  const x = e.touches[0].pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2;
-  slider.scrollLeft = scrollLeft - walk;
-});
+  galleryModal.addEventListener("click", (e) => {
+    if (e.target === galleryModal) {
+      galleryModal.style.display = "none";
+    }
+  });
