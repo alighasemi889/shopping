@@ -1,51 +1,33 @@
-const storySwiper = new Swiper(".story-slider", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    freeMode: true,
-  });
+  const swiper = new Swiper('.swiper-container-unique', {
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next-unique',
+        prevEl: '.swiper-button-prev-unique',
+      },
+      pagination: {
+        el: '.swiper-pagination-unique',
+        clickable: true,
+      },
+    });
 
-  // گالری
-  const galleryModal = document.getElementById("gallery-modal");
-  const galleryWrapper = galleryModal.querySelector(".swiper-wrapper");
-  let gallerySwiper = null;
+    const stories = document.querySelectorAll('.story');
+    const swiperContainer = document.querySelector('.swiper-container-unique');
+    const closeBtn = document.querySelector('.close-btn');
 
-  document.querySelectorAll(".story-slider .swiper-slide").forEach((slide) => {
-    slide.addEventListener("click", () => {
-      const images = JSON.parse(slide.getAttribute("data-gallery"));
-      galleryWrapper.innerHTML = "";
-      images.forEach((img) => {
-        const slideEl = document.createElement("div");
-        slideEl.classList.add("swiper-slide");
-        slideEl.innerHTML = `<img src="${img}" alt="" />`;
-        galleryWrapper.appendChild(slideEl);
+    stories.forEach(story => {
+      story.addEventListener('click', () => {
+        const storyIndex = parseInt(story.getAttribute('data-story')) - 1;
+        swiper.slideTo(storyIndex);
+        swiperContainer.classList.add('active');
       });
-      galleryModal.style.display = "flex";
+    });
 
-      if (gallerySwiper) {
-        gallerySwiper.update();
-        gallerySwiper.slideTo(0);
-      } else {
-        gallerySwiper = new Swiper(".gallery-swiper", {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-          },
-          loop: true,
-        });
+    closeBtn.addEventListener('click', () => {
+      swiperContainer.classList.remove('active');
+    });
+
+    swiperContainer.addEventListener('click', (e) => {
+      if (e.target === swiperContainer) {
+        swiperContainer.classList.remove('active');
       }
     });
-  });
-
-  // بستن گالری
-  document.getElementById("close-gallery").addEventListener("click", () => {
-    galleryModal.style.display = "none";
-  });
-  galleryModal.addEventListener("click", (e) => {
-    if (e.target === galleryModal) {
-      galleryModal.style.display = "none";
-    }
-  });
