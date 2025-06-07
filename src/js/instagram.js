@@ -1,5 +1,4 @@
-  // اسلایدر استوری
-  const storySwiper = new Swiper(".story-slider", {
+const storySwiper = new Swiper(".story-slider", {
     slidesPerView: 'auto',
     spaceBetween: 10,
     freeMode: true,
@@ -41,10 +40,10 @@
     });
   });
 
+  // بستن گالری
   document.getElementById("close-gallery").addEventListener("click", () => {
     galleryModal.style.display = "none";
   });
-
   galleryModal.addEventListener("click", (e) => {
     if (e.target === galleryModal) {
       galleryModal.style.display = "none";
