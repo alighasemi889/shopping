@@ -1,0 +1,29 @@
+  .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .category {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1rem;
+      color: #333;
+      cursor: pointer;
+      min-width: 80px;
+    }
+    .category i {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      color: #e91e63;
+      transition: transform 0.2s ease;
+    }
+    .category:hover i {
+      transform: scale(1.2);
+    }
+    .category span {
+      font-size: 0.95rem;
+    }
