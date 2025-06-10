@@ -1,67 +1,162 @@
- .stories-container {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .story {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      cursor: pointer;
-      border: 3px solid #e1306c;
-      transition: transform 0.3s;
-    }
-    .story img {
+  .stories-container {
       width: 100%;
-      height: 100%;
+      max-width: 100%;
+      // max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 8px;
+      box-sizing: border-box;
+    }
+
+    .stories-swiper {
+      width: 100%;
+    }
+
+    .stories-swiper .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .story {
+      text-align: center;
+      width: 80px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .story img {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      background: linear-gradient(#fff, #fff) padding-box, 
+                  linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) border-box;
       object-fit: cover;
+      margin: 0 auto 6px;
+      transition: transform 0.2s ease;
     }
-    .story:hover {
-      transform: scale(1.1);
+
+    .story:hover img {
+      transform: scale(1.08);
     }
-    .swiper-container-unique {
+
+    .story-caption {
+      font-size: 12px;
+      color: #262626;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 74px;
+    }
+
+    /* Fullscreen Swiper */
+    .fullscreen-swiper {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      inset: 0;
+      background-color: #000;
       z-index: 1000;
+    }
+
+    .fullscreen-swiper.active {
+      display: block;
+    }
+
+    .fullscreen-slide {
+      display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      width: 100%;
     }
-    .swiper-container-unique.active {
-      display: flex;
-    }
-    .swiper-slide-unique {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .swiper-slide-unique img {
-      max-width: 90%;
-      max-height: 90vh;
+
+    .fullscreen-slide img {
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
+      border-radius: 8px;
     }
+
     .close-btn {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      color: white;
-      font-size: 30px;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
       cursor: pointer;
-      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      transition: background 0.2s;
     }
-    .swiper-button-next-unique, .swiper-button-prev-unique {
-      color: white;
+
+    .close-btn:hover {
+      background: rgba(0, 0, 0, 0.7);
     }
-    .swiper-pagination-unique {
-      bottom: 20px;
+
+    .fullscreen-swiper .swiper-pagination {
+      bottom: 16px;
     }
-    .swiper-pagination-unique .swiper-pagination-bullet {
-      background: white;
+
+    .fullscreen-swiper .swiper-pagination-bullet {
+      background: #fff;
+      opacity: 0.5;
+    }
+
+    .fullscreen-swiper .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    body.noscroll {
+      overflow: hidden;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .stories-container {
+        padding: 12px 4px;
+      }
+
+      .story {
+        width: 70px;
+      }
+
+      .story img {
+        width: 58px;
+        height: 58px;
+      }
+
+      .story-caption {
+        font-size: 11px;
+        max-width: 66px;
+      }
+
+      .close-btn {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .story {
+        width: 64px;
+      }
+
+      .story img {
+        width: 54px;
+        height: 54px;
+      }
+
+      .story-caption {
+        font-size: 10px;
+        max-width: 60px;
+      }
     }
