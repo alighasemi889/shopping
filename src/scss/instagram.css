@@ -1,103 +1,157 @@
-.ig-story-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-  border: 3px solid transparent;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  padding: 2px;
-}
-.ig-story-circle img {
+.story-wrapper {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 8px;
+  box-sizing: border-box;
 }
 
-.ig-story-viewer {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+.story-slider {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  justify-content: center;
+}
+
+.story-slider .swiper-wrapper {
+  display: flex;
   align-items: center;
 }
-.ig-story-viewer .ig-story-content img {
+
+.story-item {
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.story-item img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) border-box;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto 6px;
+  transition: transform 0.2s ease;
+}
+
+.story-item:hover img {
+  transform: scale(1.08);
+}
+
+.story-label {
+  font-size: 12px;
+  color: #262626;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 74px;
+}
+
+/* Fullscreen Slider */
+.fullview-slider {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  z-index: 1000;
+}
+
+.fullview-slider.active {
+  display: block;
+}
+
+.fullview-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.fullview-slide video {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 8px;
 }
 
-.ig-mobile-slider {
-  padding: 32px 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.ig-mobile-slider::-webkit-scrollbar {
-  display: none;
-}
-.ig-mobile-slider .ig-story-container {
-  display: inline-flex;
-  gap: 10px;
-  padding: 0 10px;
-}
-
-.ig-desktop-grid {
-  display: none;
-  padding: 32px 0;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .ig-desktop-grid {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .ig-mobile-slider {
-    display: none;
-  }
-}
-.close-btn {
+.exit-btn {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: none;
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   color: #fff;
   font-size: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1001;
+  transition: background 0.2s;
 }
-.close-btn::before, .close-btn::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 3px;
-  background-color: #fff;
+
+.exit-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
-.close-btn::before {
-  transform: rotate(45deg);
+
+.fullview-slider .swiper-pagination {
+  bottom: 16px;
 }
-.close-btn::after {
-  transform: rotate(-45deg);
+
+.fullview-slider .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.fullview-slider .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-wrapper {
+    padding: 12px 4px;
+  }
+  .story-item {
+    width: 70px;
+  }
+  .story-item img {
+    width: 58px;
+    height: 58px;
+  }
+  .story-label {
+    font-size: 11px;
+    max-width: 66px;
+  }
+  .exit-btn {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .story-item {
+    width: 64px;
+  }
+  .story-item img {
+    width: 54px;
+    height: 54px;
+  }
+  .story-label {
+    font-size: 10px;
+    max-width: 60px;
+  }
 }/*# sourceMappingURL=instagram.css.map */
