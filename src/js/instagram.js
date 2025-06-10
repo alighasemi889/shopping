@@ -1,4 +1,4 @@
-  const storiesSwiper = new Swiper('.stories-swiper', {
+ const storySlider = new Swiper('.story-slider', {
       slidesPerView: 'auto',
       spaceBetween: 12,
       freeMode: true,
@@ -11,8 +11,8 @@
       }
     });
 
-    // Fullscreen Swiper
-    const fullscreenSwiper = new Swiper('.fullscreen-swiper', {
+    // Fullview Slider
+    const fullviewSlider = new Swiper('.fullview-slider', {
       slidesPerView: 1,
       spaceBetween: 10,
       pagination: {
@@ -20,30 +20,59 @@
         clickable: true
       },
       speed: 400,
-      effect: 'slide'
+      effect: 'slide',
+      on: {
+        slideChange: function () {
+          // Stop all videos
+          document.querySelectorAll('.fullview-slide video').forEach(video => {
+            video.pause();
+            video.currentTime = 0;
+          });
+          // Play the current video
+          const activeSlide = document.querySelector('.swiper-slide-active video');
+          if (activeSlide) {
+            activeSlide.play();
+          }
+        }
+      }
     });
 
-    const stories = document.querySelectorAll('.story');
-    const fullscreenSwiperContainer = document.querySelector('.fullscreen-swiper');
-    const closeBtn = document.querySelector('.close-btn');
+    const storyItems = document.querySelectorAll('.story-item');
+    const fullviewSliderContainer = document.querySelector('.fullview-slider');
+    const exitBtn = document.querySelector('.exit-btn');
 
-    stories.forEach(story => {
+    storyItems.forEach(story => {
       story.addEventListener('click', () => {
         const index = parseInt(story.getAttribute('data-story')) - 1;
-        fullscreenSwiper.slideTo(index);
-        fullscreenSwiperContainer.classList.add('active');
+        fullviewSlider.slideTo(index);
+        fullviewSliderContainer.classList.add('active');
         document.body.classList.add('noscroll');
+        // Play the video of the active slide
+        const activeVideo = fullviewSliderContainer.querySelector('.swiper-slide-active video');
+        if (activeVideo) {
+          activeVideo.play();
+        }
       });
     });
 
-    closeBtn.addEventListener('click', () => {
-      fullscreenSwiperContainer.classList.remove('active');
+    exitBtn.addEventListener('click', () => {
+      fullviewSliderContainer.classList.remove('active');
       document.body.classList.remove('noscroll');
+      // Stop all videos when closing
+      document.querySelectorAll('.fullview-slide video').forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+      });
     });
 
-    fullscreenSwiperContainer.addEventListener('click', (e) => {
-      if (e.target === fullscreenSwiperContainer) {
-        fullscreenSwiperContainer.classList.remove('active');
+    fullviewSliderContainer.addEventListener('click', (e) => {
+      if (e.target === fullviewSliderContainer) {
+        fullviewSliderContainer.classList.remove('active');
         document.body.classList.remove('noscroll');
+        // Stop all videos when closing
+        document.querySelectorAll('.fullview-slide video').forEach(video => {
+          video.pause();
+          video.currentTime = 0;
+        });
       }
     });
