@@ -54,10 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      modalContent.innerHTML = '';
-    }
-  });
+  document.addEventListener('DOMContentLoaded', () => {
+  const closeBtn = document.querySelector('.close-btn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      // کد بستن پنجره
+    });
+  }
 });
+
+  });
