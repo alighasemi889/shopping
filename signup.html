@@ -12,6 +12,17 @@
   font-size: 0.9em;
   margin-top: 4px;
 }
+    .content {
+      opacity: 0;
+      filter: blur(5px);
+      transition: opacity 3s ease, filter 1s ease;
+      transition-delay: 0.5s; 
+    }
+
+    body.loaded .content {
+      opacity: 1;
+      filter: blur(0);
+    }
 
   </style>
   <!-- استایل صفحه -->
@@ -27,7 +38,8 @@
   </script>
 </head>
 <body>
-  <div>
+  <div class="wrapper__general content">
+ <div>
   <h2 class="sr-only">Steps</h2>
 <div class="after:mt-4 after:block pt-4 pb-6 after:h-1 after:w-full w-1/2 mx-auto after:rounded-lg after:bg-gray-200">
   <ol class="grid grid-cols-2 text-sm font-medium text-gray-500">
@@ -117,8 +129,15 @@
   <button type="submit">ثبت نام</button>
 </form>
 
-
-  <!-- لود ماژول signup.js -->
+  </div>
+ 
+  <!-- javascript codes and path -->
+    <script>
+    // وقتی صفحه کاملاً لود شد، کلاس .loaded به body اضافه می‌کنیم
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
   <script type="module" src="src/js/signup.js"></script>
 </body>
 </html>
