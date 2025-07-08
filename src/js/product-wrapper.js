@@ -24,16 +24,21 @@ const swiper3 = new Swiper(".cosmeticSlider", {
 
 // card click function``
 const modalwrapper = document.getElementById("modalwrapper");
-const dragImage = document.getElementById("drag")
+const card = document.querySelectorAll(".product-card")
 const closeModal = document.getElementById("closeModal")
 // function to hide the modal
 modalwrapper.style.display = "none";
 
 
-dragImage.addEventListener("click", () => {
-  modalwrapper.style.display = "flex";
-});
+// dragImage.addEventListener("click", () => {
+//   modalwrapper.style.display = "flex";
+// });
 
+card.forEach(card => {
+  card.addEventListener("click" , () => {
+    modalwrapper.style.display = "flex"
+  })
+})
 
 
 closeModal.addEventListener("click", (e) => {
