@@ -1,0 +1,269 @@
+    *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        /* search bar  */
+        /* From Uiverse.io by TimTrayler */ 
+        ul {
+    display: flex
+;
+    /* background: blue; */
+    width: 100%;
+    /* height: 100px; */
+    flex-direction: row-reverse;
+}
+        .right__section {
+    /* background: gray; */
+    display: flex
+;
+    width: 50%;
+    /* gap: 10px; */
+    flex-direction: row-reverse;
+    position: relative;
+        align-items: anchor-center;
+}
+.left__section {
+    width: 50%;
+    /* background: red; */
+    display: flex
+;
+    max-width: 100%;
+}
+.searchbar {
+ font-size: 14px;
+    font-family: arial, sans-serif;
+    color: #202124;
+    display: flex
+;
+    z-index: 3;
+    height: 44px;
+    background: white;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: auto;
+    /* max-width: 224px; */
+    width: 70%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.searchbar:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223,225,229,0);
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.searchbar-left {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  /* color: #202124; */
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.search-icon-wrapper {
+  margin: auto;
+}
+
+.search-icon {
+  margin-top: 3px;
+  color: #9aa0a6;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.searchbar-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.searchbar-center {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.searchbar-input-spacer {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  height: 34px;
+  font-size: 16px;
+}
+
+.searchbar-input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  /* color: rgba(0, 0, 0, .87); */
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.searchbar-right {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: -5px;
+  align-items: stretch;
+  flex-direction: row
+}
+
+.searchbar-clear-icon {
+  margin-right: 12px
+}
+ul#results {
+    padding: 100px;
+    display: flex
+;
+    flex-direction: column;
+    list-style: none;
+    /* border: 1px solid red; */
+}
+
+ul
+.voice-search {
+  flex: 1 0 auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0 8px;
+  width: 2.8em;
+}
+#searchModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+}
+header {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 10px 0 10px;
+}
+/* second navbar */
+ul.list__second {
+    // padding: 20px;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.left__side__btn {
+    /* margin-left: auto; */
+    margin-right: auto;
+    /* width: 100px; */
+    /* background: red; */
+    /* text-align: center; */
+}
+.left__header__btn {
+   padding: 10px;
+    border-radius: 10px;
+    all: unme;
+    all: unset;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    /* display: flex
+; */
+    /* width: 100px; */
+    text-align: center;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+/* test debug */
+#suggestions {
+  border: 1px solid #ccc;
+    max-width: 300px;
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+    background: white;
+    position: absolute;
+    width: 300px;
+    z-index: 1000;
+    top: 40px;
+    width: 100%;
+    display: flex
+;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+#suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#suggestions li:hover {
+  background-color: #eee;
+}
+
+.btn__header{
+   padding: 10px;
+    border-radius: 10px;
+    all: unme;
+    all: unset;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    /* display: flex
+; */
+    width: 100px;
+    text-align: center;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+}
+// mobile sidebar section
+.sidebar{
+  display: none;
+}
