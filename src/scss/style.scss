@@ -311,3 +311,8 @@ img.story__image__one{
   width: 200px;
   height: 200px;
 }
+img.full-width {
+    width: 100%;
+    overflow: hidden;
+    max-width: 100%;
+}

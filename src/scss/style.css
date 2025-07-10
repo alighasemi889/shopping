@@ -280,4 +280,19 @@ section.routin__wrapper {
   width: 70vw;
   height: auto;
   border-radius: 1em;
+}
+
+.login__btn {
+  text-decoration: none;
+}
+
+img.story__image__one {
+  width: 200px;
+  height: 200px;
+}
+
+img.full-width {
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
