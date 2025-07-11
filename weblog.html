@@ -7,8 +7,9 @@
 
    <link rel="stylesheet" href="src/scss/footer.css">
    <link rel="stylesheet" href="src/scss/style.css">
-    <link rel="stylesheet" href="src/scss/sidebar.css">
+    <link rel="stylesheet" href="src/scss/mobilenav.css">
     <link rel="stylesheet" href="src/scss/responsive.css">
+    
 <style>
   
 
@@ -78,8 +79,8 @@
 
     @media screen and (max-width: 480px) {
       .gallery {
-        grid-template-columns: 1fr; /* یک ستون برای موبایل‌ها */
-        gap: 10px;
+       grid-template-columns: 1fr;
+        padding: 40px;
       }
 
       .button {
@@ -94,44 +95,171 @@
   </style>
 </head>
 <body>
-    <!-- header section -->
-     <header>
-        <div id="header-container"></div>
+    
+<header>
+    <nav class="header__desktop">
+      <div class="list">
+        <ul>
+          <div class="right__side__logo">
+            <div class="hamberger">
+              <svg
+                id="mobile__hamberger"
+                class="hidden svg__mobile"
+                aria-hidden="true"
+                role="img"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="16"
+                viewBox="0 0 24 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.00056 2.28571H16.8577C17.1608 2.28571 17.4515 2.16531 17.6658 1.95098C17.8802 1.73665 18.0006 1.44596 18.0006 1.14286C18.0006 0.839753 17.8802 0.549063 17.6658 0.334735C17.4515 0.120408 17.1608 0 16.8577 0H2.00056C1.69745 0 1.40676 0.120408 1.19244 0.334735C0.978109 0.549063 0.857702 0.839753 0.857702 1.14286C0.857702 1.44596 0.978109 1.73665 1.19244 1.95098C1.40676 2.16531 1.69745 2.28571 2.00056 2.28571ZM0.857702 8C0.857702 7.6969 0.978109 7.40621 1.19244 7.19188C1.40676 6.97755 1.69745 6.85714 2.00056 6.85714H22.572C22.8751 6.85714 23.1658 6.97755 23.3801 7.19188C23.5944 7.40621 23.7148 7.6969 23.7148 8C23.7148 8.30311 23.5944 8.59379 23.3801 8.80812C23.1658 9.02245 22.8751 9.14286 22.572 9.14286H2.00056C1.69745 9.14286 1.40676 9.02245 1.19244 8.80812C0.978109 8.59379 0.857702 8.30311 0.857702 8ZM0.857702 14.8571C0.857702 14.554 0.978109 14.2633 1.19244 14.049C1.40676 13.8347 1.69745 13.7143 2.00056 13.7143H12.2863C12.5894 13.7143 12.8801 13.8347 13.0944 14.049C13.3087 14.2633 13.4291 14.554 13.4291 14.8571C13.4291 15.1602 13.3087 15.4509 13.0944 15.6653C12.8801 15.8796 12.5894 16 12.2863 16H2.00056C1.69745 16 1.40676 15.8796 1.19244 15.6653C0.978109 15.4509 0.857702 15.1602 0.857702 14.8571Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <img
+              id="click"
+              class="header__logo mobile__logo"
+              src="images/logo-cosmetics.png"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="main__menu">
+            <li><a class="hidden" href="contactus.html">درباره با ما</a></li>
+            <li><a class="hidden" href="men-healthcare.html"> مراقبت از مو</a></li>
+            <li><a class="hidden" href="product-page.html">محصولات</a></li>
+            <li><a class="hidden" href="404.html">مراقبت از پوست</a></li>
+            <li><a class="hidden" href="weblog.html">لوازم آرایشی</a></li>
+          </div>
+          <div class="left__side__icons">
+            <svg
+              aria-hidden="true"
+              role="img"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="currentColor"
+            >
+              <path
+                d="M17.7241 16.1932L13.6436 12.1127C14.626 10.8049 15.1563 9.21299 15.1546 7.57728C15.1546 3.39919 11.7554 0 7.57728 0C3.39919 0 0 3.39919 0 7.57728C0 11.7554 3.39919 15.1546 7.57728 15.1546C9.21299 15.1563 10.8049 14.626 12.1127 13.6436L16.1932 17.7241C16.3998 17.9088 16.6692 18.0073 16.9461 17.9996C17.2231 17.9918 17.4865 17.8783 17.6824 17.6824C17.8783 17.4865 17.9918 17.2231 17.9996 16.9461C18.0073 16.6692 17.9088 16.3998 17.7241 16.1932ZM2.16494 7.57728C2.16494 6.50682 2.48237 5.4604 3.07708 4.57034C3.6718 3.68029 4.51709 2.98657 5.50607 2.57693C6.49504 2.16728 7.58328 2.0601 8.63318 2.26893C9.68307 2.47777 10.6475 2.99325 11.4044 3.75018C12.1613 4.5071 12.6768 5.47149 12.8856 6.52138C13.0945 7.57128 12.9873 8.65952 12.5776 9.64849C12.168 10.6375 11.4743 11.4828 10.5842 12.0775C9.69416 12.6722 8.64774 12.9896 7.57728 12.9896C6.14237 12.9879 4.76672 12.4171 3.75208 11.4025C2.73744 10.3878 2.16666 9.01219 2.16494 7.57728Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <svg
+              aria-hidden="true"
+              role="img"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 64 64"
+              fill="currentColor"
+            >
+              <path
+                d="M56,64V57.48A8.43,8.43,0,0,0,47.56,49H16.44A8.43,8.43,0,0,0,8,57.48V64H.9V57.48A15.53,15.53,0,0,1,16.44,41.94H47.56A15.53,15.53,0,0,1,63.1,57.48V64Zm-23.47-27a18.66,18.66,0,0,1-13.11-5.43,18.54,18.54,0,0,1,0-26.22A18.53,18.53,0,0,1,51.07,18.51,18.52,18.52,0,0,1,32.54,37.05Zm0-30a11.44,11.44,0,1,0,8.09,3.35A11.36,11.36,0,0,0,32.54,7.07Z"
+              ></path>
+            </svg>
+          </div>
+        </ul>
+      </div>
+      <ul></ul>
+    </nav>
+    <!-- mobile navbar -->
+     <!-- <nav id="mobile__header" class="header__mobile">
+        <div class="wrapper__mobile">
+          <ul class="nav__mobile">
+            <li><a class="mobile__link" href="#">لوازم آرایشی</a></li>
+            <hr class="line" />
+            <li><a class="mobile__link" href="#">مراقبت از پوست</a></li>
+            <hr class="line" />
+            <li><a class="mobile__link" href="#">مراقبت از مو</a></li>
+            <hr class="line" />
+            <li><a class="mobile__link" href="product.html">وبلاگ</a></li>
+            <hr class="line" />
+            <li>
+              <a class="mobile__link" href="contact.html">درباره با ما</a>
+            </li>
+            <hr class="line" />
 
-     </header>
+            <li><a class="mobile__link" href="#">تماس با ما</a></li>
+          </ul>
+        </div>
+      </nav>  -->
+    <div id="mobile__header" class="sidebar header__mobile">
+      <div class="logo">
+        <img
+          src="images/logo-cosmetics.png"
+          alt="لوگو فروشگاه"
+          loading="lazy"
+        />
+      </div>
+      <ul class="navbar__list">
+        <li>
+          <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+        </li>
+        <li>
+          <a href="product-page.html"
+            ><i class="fas fa-shopping-cart"></i> محصولات</a
+          >
+        </li>
+        <li>
+          <a href="404.html"><i class="fas fa-tags"></i> دسته‌بندی‌ها</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="fas fa-user"></i> پروفایل</a>
+        </li>
+        <li>
+          <a href="404.html"><i class="fas fa-headset"></i> پشتیبانی</a>
+        </li>
+      </ul>
+      <div class="discount-progress">
+        <p>تخفیف ها به زودی</p>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <a href="signup.html" class="signup-btn">ثبت نام</a>
+    </div>
+  </header> 
   <div class="gallery">
     <!-- ردیف اول تصاویر -->
     <div class="gallery-item">
       <img src="images/weblog__picture.webp" alt="Image 1" / loading="lazy">
-      <div class="button">دکمه 1</div>
-      <div class="text">متن 1</div>
+      <div class="button">مقاله اول</div>
+      <!-- <div class="text">متن 1</div> -->
     </div>
     <div class="gallery-item">
       <img src="images/weblog__picture.webp" alt="Image 2" / loading="lazy">
-      <div class="button">دکمه 2</div>
-      <div class="text">متن 2</div>
+      <div class="button">مقاله دوم</div>
+      <!-- <div class="text">متن 2</div> -->
     </div>
     <div class="gallery-item">
       <img src="images/weblog__picture.webp" alt="Image 3" / loading="lazy">
-      <div class="button">دکمه 3</div>
-      <div class="text">متن 3</div>
+      <div class="button">مقاله سوم</div>
+      <!-- <div class="text">متن 3</div> -->
     </div>
 
     <!-- ردیف دوم تصاویر -->
     <div class="gallery-item">
-      <img src="images/weblog__picture.webp" alt="Image 4" />
-      <div class="button">دکمه 4</div>
-      <div class="text">متن 4</div>
+      <img src="images/weblog__picture.webp" alt="Image 4" / loading="lazy">
+      <div class="button">مقاله چهارم</div>
+      <!-- <div class="text">متن 4</div> -->
     </div>
     <div class="gallery-item">
-      <img src="images/weblog__picture.webp" alt="Image 5" />
-      <div class="button">دکمه 5</div>
-      <div class="text">متن 5</div>
+      <img src="images/weblog__picture.webp" alt="Image 5" / loading="lazy">
+      <div class="button">مقاله پنجم</div>
+      <!-- <div class="text">متن 5</div> -->
     </div>
     <div class="gallery-item">
-      <img src="images/weblog__picture.webp" alt="Image 6" />
-      <div class="button">دکمه 6</div>
-      <div class="text">متن 6</div>
+      <img src="images/weblog__picture.webp" alt="Image 6" / loading="lazy">
+      <div class="button">مقاله ششم</div>
+      <!-- <div class="text">متن 6</div> -->
     </div>
   </div>
   <!-- footer section -->
@@ -149,7 +277,7 @@
         </div>
         <nav id="footer__responsive" class="footer footer__flex__responsive">
           <div class="right__side__footer">
-            <ul class="footer__first__list">
+            <ul class="footer__first__list ">
               <h4>دسترسی سریع</h4>
               <li><a href="#">لوازم آرایشی</a></li>
               <li><a href="#"> مراقبت از پوست</a></li>
@@ -273,17 +401,9 @@
           </div>
         </div>
       </footer>
-  <script>
-    // بارگذاری فایل فوتر.html
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('خطا در بارگذاری فوتر:', error);
-        });
-</script>
-<script src="src/js/header.js"></script>
+
+
+     <script src="src/js/main.js"></script>
+
 </body>
 </html>
