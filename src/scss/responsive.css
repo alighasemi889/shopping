@@ -10,7 +10,6 @@
     padding: 10px;
     overflow: hidden;
     max-width: 100%;
-    /* height: auto; */
   }
   .container__images__flex {
     display: flex;
@@ -151,4 +150,4 @@
     display: flex;
     flex-direction: column;
   }
-}/*# sourceMappingURL=reponsive.css.map */
+}/*# sourceMappingURL=responsive.css.map */
