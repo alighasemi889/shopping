@@ -509,11 +509,24 @@
   <script>
     const fbtn = document.getElementById("first");
     const hiddenCards = document.getElementById("hidden_cards");
-
+    const secondBtn = document.getElementById("second")
+    const thirdBtn = document.getElementById("third")
+    // console.log(first); for debug it is written
+    
+    console.log(hiddenCards);
+    
     fbtn.addEventListener("click", () => {
       hiddenCards.classList.toggle("men-products__hidden");
     });
-    
+   const clicked = function () {
+    secondBtn.onclick = () => {
+      alert("it is clicked")
+    }
+    thirdBtn.onclick = () => {
+      alert("it is clicked")
+    }
+   }
+   document.addEventListener("click",clicked())
   </script>
   
     <script src="src/js/main.js"></script>
